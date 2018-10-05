@@ -1,1 +1,1 @@
-python main.py ../../Corpus/little_corefCorpus/
+python main.py ../data/Corpus/ ../data/QuestionsPatterns

@@ -1,108 +1,135 @@
 # encoding=utf8
 
+
+def powerset(seq):
+    if len(seq) <= 1:
+        yield seq
+        yield []
+    else:
+        for item in powerset(seq[1:]):
+            yield [seq[0]] + item
+            yield item
+
+
 class Rule:
-    def __init__(self, frameName, question, answer) :
+    def __init__(self, frame_name, question, answer):
         self.question = question
         self.answer = answer
-        self.frameName = frameName
-        self.optional = []
+        self.frame_name = frame_name
+        self.options = []
         self.mandatory = []
         optional = False
         for word in question:
-            if word == '[' :
+            if word == '[':
                 optional = True
-            elif word == ']' :
+            elif word == ']':
                 optional = False
-            elif word[0] == '$' :
-                if optional :
-                    self.optional.append(word[1:])
+            elif word[0] == '$':
+                if optional:
+                    self.options.append(word[1:])
                 else:
-                    self.mandatory.append(word[1:])                
+                    self.mandatory.append(word[1:])
         for word in answer:
-            if word == '[' :
+            if word == '[':
                 optional = True
-            elif word == ']' :
+            elif word == ']':
                 optional = False
-            elif word[0] == '$' :
-                if optional :
-                    self.optional.append(word[1:])
+            elif word[0] == '$':
+                if optional:
+                    self.options.append(word[1:])
                 else:
-                    self.mandatory.append(word[1:])                
+                    self.mandatory.append(word[1:])
 
-    def isApplicable(self, frame) :
-        if self.frameName != frame.semanticFrame:
+    def is_applicable(self, frame, mandatory):
+        if self.frame_name != frame.semantic_frame:
             return False
-        for m in self.mandatory :
-            if m not in frame.frameElements:
+        for m in mandatory:
+            if m not in frame.frame_elements:
                 return False
         return True
-        
-             
-    def apply(self, frame, corefs):
+
+    def get_frame_element(self, frame_element):
+        if frame_element.coref:
+            return frame_element.get_string_of_coref()
+        return frame_element.get_string_of_superficial_form()
+
+    def get_question(self, frame, options):
+        question = ''
+        optional = False
+        flag = False
+        tmp = ''
+        for word in self.question:
+            if word == '[':
+                flag = False
+                optional = True
+                tmp = ''
+            elif word == ']':
+                optional = False
+                if flag:
+                    question += tmp
+            elif word[0] != '$':
+                if optional:
+                    tmp += word + ' '
+                else:
+                    question += word + ' '
+            else:
+                frame_element = word[1:]
+                if optional:
+                    if frame_element in options:
+                        flag = True
+                        tmp += self.get_frame_element(frame.frame_elements[frame_element])
+                else:
+                    question += self.get_frame_element(frame.frame_elements[frame_element])
+        return question
+
+    def get_answer(self, frame, options):
+        answer = ''
+        optional = False
+        flag = False
+        tmp = ''
+        for word in self.answer:
+            if word == '[':
+                flag = False
+                optional = True
+                tmp = ''
+            elif word == ']':
+                optional = False
+                if flag:
+                    answer += tmp
+            elif word[0] != '$':
+                if optional:
+                    tmp += word + ' '
+                else:
+                    answer += word + ' '
+            else:
+                frame_element = word[1:]
+                if optional:
+                    if frame_element in options:
+                        flag = True
+                        tmp += self.get_frame_element(frame.frame_elements[frame_element])
+                else:
+                    answer += self.get_frame_element(frame.frame_elements[frame_element])
+        return answer
+
+    def apply(self, frame):
         questions = []
         answers = []
-        if not self.isApplicable(frame) :
+        if not self.is_applicable(frame, self.mandatory):
             return questions, answers
-        newQuestion = ''
-        newAnswer = ''
-        optional = False
-        tmp = ''
-        for word in self.question :
-            if word == '[' :
-                flag = False
-                optional = True
-            elif word == ']' :
-                optional = False
-                if flag :
-                    newQuestion += tmp 
-            elif word[0] != '$' :
-                if optional :
-                    tmp += word + ' '
-                else : 
-                    newQuestion += word + ' '
-            else :    
-                frameElement = word[1:]
-                if optional : 
-                    if frameElement in frame.frameElements:
-                        flag = True
-                        tmp += frame.frameElements[frameElement].getStringOfSuperficialForm()
-                else :
-                    newQuestion += frame.frameElements[frameElement].getStringOfSuperficialForm() 
-
-
-        for word in self.answer :
-            if word == '[' :
-                flag = False
-                optional = True
-            elif word == ']' :
-                optional == False
-                if flag :
-                    newAnswer += tmp 
-            elif word[0] != '$' :
-                if optional :
-                    tmp += word
-                else : 
-                    newAnswer += word + ' '
-            else :    
-                frameElement = word[1:]
-                if optional : 
-                    if frameElement in frame.frameElements:
-                        flag = True
-                        tmp += frame.frameElements[frameElement].getStringOfSuperficialForm() 
-                else :
-                    newAnswer += frame.frameElements[frameElement].getStringOfSuperficialForm() 
-
-            
-        questions.append(newQuestion)
-        answers.append(newAnswer)
-               
+        for options in powerset(self.options):
+            if not self.is_applicable(frame, options):
+                continue
+            new_question = self.get_question(frame, options)
+            new_answer = self.get_answer(frame, options)
+            questions.append(new_question)
+            answers.append(new_answer)
         return questions, answers
-    
-    def __str__(self) :
-        s = "Question applicable à la frame : " + self.frameName + '\nQuestion : ' 
-        for word in self.question :
+
+    def __str__(self):
+        s = "Question applicable à la frame : " + self.frame_name + '\nQuestion : '
+        for word in self.question:
             s += word + ' '
         s += '\nRéponse : '
-        for word in self.answer :
+        for word in self.answer:
             s += word + ' '
         return s

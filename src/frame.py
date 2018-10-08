@@ -1,56 +1,68 @@
-class FrameElement :
-    def __init__(self, name, mention) :
+class FrameElement:
+    def __init__(self, name, mention, index):
         self.name = name
+        self.index = index
         self.words = []
         self.lemmas = []
-        if mention == "TARGET" :
+        self.coref = None
+        if mention == "TARGET":
             self.mention = True
-        else : 
+        else:
             self.mention = False
-            
-    def isAMention(self) :
+
+    def is_a_mention(self):
         return self.mention
 
-    def addWord(self, word, lemma) :
+    def add_word(self, word, lemma):
         self.words.append(word)
         self.lemmas.append(lemma)
 
-    def getStringOfSuperficialForm(self) :
+    def get_string_of_superficial_form(self):
         s = ""
-        for word in self.words :
+        for word in self.words:
             s += word + ' '
-        return s    
-
-    def getStringOfLemmas(self) :
-        s = ""
-        for word in self.lemmas :
-            s += word + ' '
-        return s  
-        
-    def __str__(self) :
-        s = self.name + ' : ' + self.getStringOfSuperficialForm() + '\n'     
         return s
+
+    def get_string_of_lemmas(self):
+        s = ""
+        for word in self.lemmas:
+            s += word + ' '
+        return s
+
+    def get_string_of_coref(self):
+        return self.coref.get_string_of_superficial_form()
+
+    def resolve_corefs(self, corefs):
+        if self.index in corefs:
+            self.coref = corefs[self.index]
+
+    def __str__(self):
+        s = self.name + ' : ' + self.get_string_of_superficial_form() + '\n'
+        return s
+
 
 ######################################################################################################################
 
-             
-class Frame :
-    def __init__(self, index, semanticFrame) :
-        self.semanticFrame = semanticFrame
+
+class Frame:
+    def __init__(self, index, semantic_frame):
+        self.semantic_frame = semantic_frame
         self.index = index
-        self.frameElements = {}
-        
-    def addWord(self, row, annot) :
-        if annot[0] == "B" :
-            self.frameElements[annot[3]] = FrameElement(annot[3], annot[2])
-        self.frameElements[annot[3]].addWord(row[3], row[4])
-        
+        self.frame_elements = {}
+
+    def add_word(self, row, annot):
+        if annot[0] == "B":
+            self.frame_elements[annot[3]] = FrameElement(annot[3], annot[2], row[1])
+        self.frame_elements[annot[3]].add_word(row[3], row[4])
+
     def __str__(self):
-        s = self.semanticFrame + ', ' + self.index + ' : \n'
-        for key in self.frameElements :
-            s += str(self.frameElements[key])
+        s = self.semantic_frame + ', ' + self.index + ' : \n'
+        for key in self.frame_elements:
+            s += str(self.frame_elements[key])
         s += '\n'
         return s
 
+    def resolve_corefs(self, corefs):
+        for _,frame_element in self.frame_elements.items():
+            frame_element.resolve_corefs(corefs)
 
-######################################################################################################################

@@ -1,14 +1,20 @@
 # encoding=utf8
 
+from itertools import chain, combinations
 
-def powerset(seq):
-    if len(seq) <= 1:
-        yield seq
-        yield []
-    else:
-        for item in powerset(seq[1:]):
-            yield [seq[0]] + item
-            yield item
+# def powerset(seq):
+#     if len(seq) <= 1:
+#         yield seq
+#         yield []
+#     else:
+#         for item in powerset(seq[1:]):
+#             yield [seq[0]] + item
+#             yield item
+
+def powerset(iterable):
+    "powerset([1,2,3]) --> () (1,) (2,) (3,) (1,2) (1,3) (2,3) (1,2,3)"
+    s = list(iterable)
+    return chain.from_iterable(combinations(s, r) for r in range(len(s)+1))
 
 
 class Rule:
@@ -49,7 +55,7 @@ class Rule:
         return True
 
     def get_frame_element(self, frame_element):
-        if frame_element.coref:
+        if frame_element.coref and frame_element.coref.mention == frame_element.words:
             return frame_element.get_string_of_coref()
         return frame_element.get_string_of_superficial_form()
 
@@ -123,6 +129,7 @@ class Rule:
             new_answer = self.get_answer(frame, options)
             questions.append(new_question)
             answers.append(new_answer)
+
         return questions, answers
 
     def __str__(self):

@@ -31,11 +31,13 @@ class Text:
             if s.startswith("B:") or s.startswith("I:"):
                 annot = s.split(":")
                 index = annot[len(annot) - 1]
-                if annot[1] == "COREF-TARGET-INDIRECT" or annot[1] == "COREF-TARGET-DIRECT":
-                    if annot[0] == 'B':
-                        self.corefs[index] = Coref(index, row[3], row[4])
-                    if annot[0] == 'I':
-                        self.corefs[index].add_word(row[3], row[4])
+                if annot[1] == "COREF-TARGET-INDIRECT" or annot[1] == "COREF-TARGET-DIRECT" or annot[1] == "MENTION":
+                    if index not in self.corefs:
+                        self.corefs[index] = Coref(index)
+                    if annot[1] == "COREF-TARGET-INDIRECT" or annot[1] == "COREF-TARGET-DIRECT":
+                        self.corefs[index].add_coref(row[3], row[4])
+                    else:
+                        self.corefs[index].add_mention(row[3])
                 if annot[2] == "FE" or annot[2] == "TARGET":
                     semantic_frame = annot[1]
                     if (index, semantic_frame) not in self.frames:
@@ -53,8 +55,8 @@ class Corpus:
     def __init__(self, dir_name, corpus_name):
         self.name = corpus_name
         self.texts = {}
-        for fname in os.listdir(dir_name):
-            f = open(os.path.join(dir_name, fname), encoding='utf8')
+        for f in os.listdir(dir_name):
+            f = open(os.path.join(dir_name, f), encoding='utf8')
             self.add_texts(f)
 
     def add_texts(self, f):
@@ -79,6 +81,6 @@ class Corpus:
 ######################################################################################################################
         
 if __name__ == "__main__":
-    for fname in os.listdir("../../Corpus/corefCorpus"):
-        c = Corpus(os.path.join("../../Corpus/corefCorpus", fname), fname)  
+    for f in os.listdir("../../Corpus/corefCorpus"):
+        c = Corpus(os.path.join("../../Corpus/corefCorpus", f), f)
         print(c)

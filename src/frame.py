@@ -30,7 +30,16 @@ class FrameElement:
         return s
 
     def get_string_of_coref(self):
-        return self.coref.get_string_of_superficial_form()
+        mention = ''
+        coref = ''
+        frame_element = ''
+        for word in self.words:
+            frame_element += word + ' '
+        for word in self.coref.mention:
+            mention += word + ' '
+        for word in self.coref.coref:
+            coref += word + ' '
+        return frame_element.replace(mention, coref)
 
     def resolve_corefs(self, corefs):
         if self.index in corefs:
@@ -63,6 +72,5 @@ class Frame:
         return s
 
     def resolve_corefs(self, corefs):
-        for _,frame_element in self.frame_elements.items():
+        for _, frame_element in self.frame_elements.items():
             frame_element.resolve_corefs(corefs)
-

@@ -1,2 +1,5 @@
-Qui a attaqué $Victim [ $Place ] [ $Time ] [ avec $Weapon ] ?
+Qui a attaqué $Victim [ $Place ] [ $Time ] [ avec $Weapon ] [ pour $Purpose ] ?
 $Assaillant .
+
+Qui a été attaqué par $Assaillant [ $Place ] [ $Time ] [ avec $Weapon ] [ pour $Purpose ] ?
+$Victim

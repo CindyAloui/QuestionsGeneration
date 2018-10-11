@@ -15,7 +15,7 @@ class QuestionsGenerator:
             i = 0
             while i < len(lines):
                 line = lines[i]
-                if line[0] == '#':
+                if line[0] == '#' or not line.strip():
                     i += 1
                     continue
                 question = line.split()
@@ -23,7 +23,7 @@ class QuestionsGenerator:
                 self.rules.append(Rule(frame_name, question, answer))
                 i += 2
 
-    def generate(self, frame, corefs):
+    def generate(self, frame):
         questions = []
         answers = []
         for rule in self.rules:
@@ -39,21 +39,20 @@ class QuestionsGenerator:
         s += '\n'
         return s
 
-    def generateFromCorpus(self, corpus, display):
+    def generate_from_corpus(self, corpus, display):
         questions = []
         answers = []
         if display:
             print("Corpus : " + corpus.name)
         for _, text in corpus.texts.items():
             for _, frame in text.frames.items():
-                new_questions, new_answers = self.generate(frame, text.corefs)
-                if new_questions:
-                    if display:
-                        print(
-                            "Pour la Frame : \n" + str(frame) + "Nous avons généré les questions/réponses suivantes :")
-                        for i in range(len(new_questions)):
-                            print(new_questions[i] + " " + new_answers[i])
-                        print("\n")
+                new_questions, new_answers = self.generate(frame)
+                if new_questions and display:
+                    print(
+                        'Pour la Frame : \n' + str(frame) + 'Nous avons généré les questions/réponses suivantes :')
+                    for i in range(len(new_questions)):
+                        print(new_questions[i] + " " + new_answers[i])
+                    print("\n")
                 questions = questions + new_questions
                 answers = answers + new_answers
         return questions, answers

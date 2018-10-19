@@ -1,0 +1,63 @@
+qui Déclarer [ $Message ] [ $Time ] [ $Place ] [ $Addressee ] [ $Topic ] [ $Medium ] ?
+$Speaker .
+
+quoi Déclarer [ $Speaker ] [ $Time ] [ $Place ] [ $Addressee ] [ $Topic ] [ $Medium ] ?
+$Message .
+
+quand Déclarer [ $Speaker ] [ $Message ] [ $Place ] [ $Addressee ] [ $Topic ] [ $Medium ] ?
+$Time .
+
+où Déclarer [ $Speaker ] [ $Message ] [ $Time ] [ $Addressee ] [ $Topic ] [ $Medium ] ?
+$Place .
+
+à_qui Déclarer [ $Speaker ] [ $Message ] [ $Time ] [ $Place ] [ $Topic ] [ $Medium ] ?
+$Addressee .
+
+à_quel_sujet Déclarer [ $Speaker ] [ $Message ] [ $Time ] [ $Place ] [ $Addressee ] [ $Medium ] ?
+$Topic .
+
+de_quelle_manière Déclarer [ $Speaker ] [ $Message ] [ $Time ] [ $Place ] [ $Addressee ] [ $Topic ] ?
+$Medium .
+
+qui Écrire [ $Message ] [ $Time ] [ $Place ] [ $Addressee ] [ $Topic ] [ $Medium ] ?
+$Speaker .
+
+quoi Écrire [ $Speaker ] [ $Time ] [ $Place ] [ $Addressee ] [ $Topic ] [ $Medium ] ?
+$Message .
+
+quand Écrire [ $Speaker ] [ $Message ] [ $Place ] [ $Addressee ] [ $Topic ] [ $Medium ] ?
+$Time .
+
+où Écrire [ $Speaker ] [ $Message ] [ $Time ] [ $Addressee ] [ $Topic ] [ $Medium ] ?
+$Place .
+
+à_qui Écrire [ $Speaker ] [ $Message ] [ $Time ] [ $Place ] [ $Topic ] [ $Medium ] ?
+$Addressee .
+
+à_quel_sujet Écrire [ $Speaker ] [ $Message ] [ $Time ] [ $Place ] [ $Addressee ] [ $Medium ] ?
+$Topic .
+
+de_quelle_manière Écrire [ $Speaker ] [ $Message ] [ $Time ] [ $Place ] [ $Addressee ] [ $Topic ] ?
+$Medium .
+
+qui Dire [ $Message ] [ $Time ] [ $Place ] [ $Addressee ] [ $Topic ] [ $Medium ] ?
+$Speaker .
+
+quoi Dire [ $Speaker ] [ $Time ] [ $Place ] [ $Addressee ] [ $Topic ] [ $Medium ] ?
+$Message .
+
+quand Dire [ $Speaker ] [ $Message ] [ $Place ] [ $Addressee ] [ $Topic ] [ $Medium ] ?
+$Time .
+
+où Dire [ $Speaker ] [ $Message ] [ $Time ] [ $Addressee ] [ $Topic ] [ $Medium ] ?
+$Place .
+
+à_qui Dire [ $Speaker ] [ $Message ] [ $Time ] [ $Place ] [ $Topic ] [ $Medium ] ?
+$Addressee .
+
+à_quel_sujet Dire [ $Speaker ] [ $Message ] [ $Time ] [ $Place ] [ $Addressee ] [ $Medium ] ?
+$Topic .
+
+de_quelle_manière Dire [ $Speaker ] [ $Message ] [ $Time ] [ $Place ] [ $Addressee ] [ $Topic ] ?
+$Medium .
+

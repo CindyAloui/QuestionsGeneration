@@ -1,0 +1,24 @@
+qui Utiliser [ $Instrument ] [ $Time ] [ $Place ] [ $Duration ] [ $Explanation ] [ $Purpose ] [ $Role ] ?
+$Agent .
+
+quoi Utiliser [ $Agent ] [ $Time ] [ $Place ] [ $Duration ] [ $Explanation ] [ $Purpose ] [ $Role ] ?
+$Instrument .
+
+quand Utiliser [ $Agent ] [ $Instrument ] [ $Place ] [ $Duration ] [ $Explanation ] [ $Purpose ] [ $Role ] ?
+$Time .
+
+où Utiliser [ $Agent ] [ $Instrument ] [ $Time ] [ $Duration ] [ $Explanation ] [ $Purpose ] [ $Role ] ?
+$Place .
+
+combien_de_temps Utiliser [ $Agent ] [ $Instrument ] [ $Time ] [ $Place ] [ $Explanation ] [ $Purpose ] [ $Role ] ?
+$Duration .
+
+pour_quelle_raison Utiliser [ $Agent ] [ $Instrument ] [ $Time ] [ $Place ] [ $Duration ] [ $Purpose ] [ $Role ] ?
+$Explanation .
+
+dans_quel_but Utiliser [ $Agent ] [ $Instrument ] [ $Time ] [ $Place ] [ $Duration ] [ $Explanation ] [ $Role ] ?
+$Purpose .
+
+en_tant_que_quoi Utiliser [ $Agent ] [ $Instrument ] [ $Time ] [ $Place ] [ $Duration ] [ $Explanation ] [ $Purpose ] ?
+$Role .
+

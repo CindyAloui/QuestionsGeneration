@@ -1,0 +1,12 @@
+qui Affecter [ $Influencing_situation ] [ $Time ] [ $Place ] ?
+$Dependent_situation .
+
+quoi_agent Affecter [ $Dependent_situation ] [ $Time ] [ $Place ] ?
+$Influencing_situation .
+
+quand Affecter [ $Dependent_situation ] [ $Influencing_situation ] [ $Place ] ?
+$Time .
+
+où Affecter [ $Dependent_situation ] [ $Influencing_situation ] [ $Time ] ?
+$Place .
+

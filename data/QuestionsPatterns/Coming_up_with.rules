@@ -1,0 +1,27 @@
+qui Inventer [ $Idea ] [ $Amount_of_progress ] [ $Material ] [ $Means ] [ $Place ] [ $Purpose ] [ $Time ] [ $Result ] ?
+$Cognizer .
+
+quoi Inventer [ $Cognizer ] [ $Amount_of_progress ] [ $Material ] [ $Means ] [ $Place ] [ $Purpose ] [ $Time ] [ $Result ] ?
+$Idea .
+
+jusqu'à_quel_point Inventer [ $Cognizer ] [ $Idea ] [ $Material ] [ $Means ] [ $Place ] [ $Purpose ] [ $Time ] [ $Result ] ?
+$Amount_of_progress .
+
+avec_quoi Inventer [ $Cognizer ] [ $Idea ] [ $Amount_of_progress ] [ $Means ] [ $Place ] [ $Purpose ] [ $Time ] [ $Result ] ?
+$Material .
+
+par_quel_moyen Inventer [ $Cognizer ] [ $Idea ] [ $Amount_of_progress ] [ $Material ] [ $Place ] [ $Purpose ] [ $Time ] [ $Result ] ?
+$Means .
+
+où Inventer [ $Cognizer ] [ $Idea ] [ $Amount_of_progress ] [ $Material ] [ $Means ] [ $Purpose ] [ $Time ] [ $Result ] ?
+$Place .
+
+dans_quel_but Inventer [ $Cognizer ] [ $Idea ] [ $Amount_of_progress ] [ $Material ] [ $Means ] [ $Place ] [ $Time ] [ $Result ] ?
+$Purpose .
+
+quand Inventer [ $Cognizer ] [ $Idea ] [ $Amount_of_progress ] [ $Material ] [ $Means ] [ $Place ] [ $Purpose ] [ $Result ] ?
+$Time .
+
+avec_quelle_conséquence Inventer [ $Cognizer ] [ $Idea ] [ $Amount_of_progress ] [ $Material ] [ $Means ] [ $Place ] [ $Purpose ] [ $Time ] ?
+$Result .
+

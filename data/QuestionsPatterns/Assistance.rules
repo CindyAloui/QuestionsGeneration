@@ -1,0 +1,33 @@
+qui Soutenir [ $Benefited_party ] [ $Time ] [ $Place ] [ $Goal ] [ $Instrument ] [ $Duration ] [ $Means ] [ $Explanation ] [ $Purpose ] [ $Focal_entity ] ?
+$Helper .
+
+qui Soutenir [ $Helper ] [ $Time ] [ $Place ] [ $Goal ] [ $Instrument ] [ $Duration ] [ $Means ] [ $Explanation ] [ $Purpose ] [ $Focal_entity ] ?
+$Benefited_party .
+
+quand Soutenir [ $Helper ] [ $Benefited_party ] [ $Place ] [ $Goal ] [ $Instrument ] [ $Duration ] [ $Means ] [ $Explanation ] [ $Purpose ] [ $Focal_entity ] ?
+$Time .
+
+où Soutenir [ $Helper ] [ $Benefited_party ] [ $Time ] [ $Goal ] [ $Instrument ] [ $Duration ] [ $Means ] [ $Explanation ] [ $Purpose ] [ $Focal_entity ] ?
+$Place .
+
+à_quel_sujet Soutenir [ $Helper ] [ $Benefited_party ] [ $Time ] [ $Place ] [ $Instrument ] [ $Duration ] [ $Means ] [ $Explanation ] [ $Purpose ] [ $Focal_entity ] ?
+$Goal .
+
+avec_quel_moyen Soutenir [ $Helper ] [ $Benefited_party ] [ $Time ] [ $Place ] [ $Goal ] [ $Duration ] [ $Means ] [ $Explanation ] [ $Purpose ] [ $Focal_entity ] ?
+$Instrument .
+
+combien_de_temps Soutenir [ $Helper ] [ $Benefited_party ] [ $Time ] [ $Place ] [ $Goal ] [ $Instrument ] [ $Means ] [ $Explanation ] [ $Purpose ] [ $Focal_entity ] ?
+$Duration .
+
+de_quelle_manière Soutenir [ $Helper ] [ $Benefited_party ] [ $Time ] [ $Place ] [ $Goal ] [ $Instrument ] [ $Duration ] [ $Explanation ] [ $Purpose ] [ $Focal_entity ] ?
+$Means .
+
+pour_quelle_raison Soutenir [ $Helper ] [ $Benefited_party ] [ $Time ] [ $Place ] [ $Goal ] [ $Instrument ] [ $Duration ] [ $Means ] [ $Purpose ] [ $Focal_entity ] ?
+$Explanation .
+
+dans_quel_but Soutenir [ $Helper ] [ $Benefited_party ] [ $Time ] [ $Place ] [ $Goal ] [ $Instrument ] [ $Duration ] [ $Means ] [ $Explanation ] [ $Focal_entity ] ?
+$Purpose .
+
+en_quoi Soutenir [ $Helper ] [ $Benefited_party ] [ $Time ] [ $Place ] [ $Goal ] [ $Instrument ] [ $Duration ] [ $Means ] [ $Explanation ] [ $Purpose ] ?
+$Focal_entity .
+

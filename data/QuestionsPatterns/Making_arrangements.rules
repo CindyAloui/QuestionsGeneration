@@ -1,0 +1,27 @@
+qui Organiser [ $Event ] [ $Time ] [ $Place ] [ $Beneficiary ] [ $Means ] [ $Explanation ] [ $Purpose ] [ $Scheduled_time ] ?
+$Agent .
+
+quoi Organiser [ $Agent ] [ $Time ] [ $Place ] [ $Beneficiary ] [ $Means ] [ $Explanation ] [ $Purpose ] [ $Scheduled_time ] ?
+$Event .
+
+quand Organiser [ $Agent ] [ $Event ] [ $Place ] [ $Beneficiary ] [ $Means ] [ $Explanation ] [ $Purpose ] [ $Scheduled_time ] ?
+$Time .
+
+où Organiser [ $Agent ] [ $Event ] [ $Time ] [ $Beneficiary ] [ $Means ] [ $Explanation ] [ $Purpose ] [ $Scheduled_time ] ?
+$Place .
+
+pour_qui Organiser [ $Agent ] [ $Event ] [ $Time ] [ $Place ] [ $Means ] [ $Explanation ] [ $Purpose ] [ $Scheduled_time ] ?
+$Beneficiary .
+
+avec_quel_moyen Organiser [ $Agent ] [ $Event ] [ $Time ] [ $Place ] [ $Beneficiary ] [ $Explanation ] [ $Purpose ] [ $Scheduled_time ] ?
+$Means .
+
+pour_quelle_raison Organiser [ $Agent ] [ $Event ] [ $Time ] [ $Place ] [ $Beneficiary ] [ $Means ] [ $Purpose ] [ $Scheduled_time ] ?
+$Explanation .
+
+dans_quel_but Organiser [ $Agent ] [ $Event ] [ $Time ] [ $Place ] [ $Beneficiary ] [ $Means ] [ $Explanation ] [ $Scheduled_time ] ?
+$Purpose .
+
+à_quel_moment Organiser [ $Agent ] [ $Event ] [ $Time ] [ $Place ] [ $Beneficiary ] [ $Means ] [ $Explanation ] [ $Purpose ] ?
+$Scheduled_time .
+

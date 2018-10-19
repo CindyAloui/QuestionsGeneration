@@ -1,0 +1,27 @@
+qui Fouiller [ $Phenomenon ] [ $Time ] [ $Ground ] [ $Instrument ] [ $Means ] [ $Purpose ] [ $Medium ] [ $Direction ] ?
+$Cognizer .
+
+quoi Fouiller [ $Cognizer ] [ $Time ] [ $Ground ] [ $Instrument ] [ $Means ] [ $Purpose ] [ $Medium ] [ $Direction ] ?
+$Phenomenon .
+
+quand Fouiller [ $Cognizer ] [ $Phenomenon ] [ $Ground ] [ $Instrument ] [ $Means ] [ $Purpose ] [ $Medium ] [ $Direction ] ?
+$Time .
+
+où Fouiller [ $Cognizer ] [ $Phenomenon ] [ $Time ] [ $Instrument ] [ $Means ] [ $Purpose ] [ $Medium ] [ $Direction ] ?
+$Ground .
+
+avec_quoi Fouiller [ $Cognizer ] [ $Phenomenon ] [ $Time ] [ $Ground ] [ $Means ] [ $Purpose ] [ $Medium ] [ $Direction ] ?
+$Instrument .
+
+de_quelle_manière Fouiller [ $Cognizer ] [ $Phenomenon ] [ $Time ] [ $Ground ] [ $Instrument ] [ $Purpose ] [ $Medium ] [ $Direction ] ?
+$Means .
+
+dans_quel_but Fouiller [ $Cognizer ] [ $Phenomenon ] [ $Time ] [ $Ground ] [ $Instrument ] [ $Means ] [ $Medium ] [ $Direction ] ?
+$Purpose .
+
+dans_quoi Fouiller [ $Cognizer ] [ $Phenomenon ] [ $Time ] [ $Ground ] [ $Instrument ] [ $Means ] [ $Purpose ] [ $Direction ] ?
+$Medium .
+
+dans_quelle_direction Fouiller [ $Cognizer ] [ $Phenomenon ] [ $Time ] [ $Ground ] [ $Instrument ] [ $Means ] [ $Purpose ] [ $Medium ] ?
+$Direction .
+

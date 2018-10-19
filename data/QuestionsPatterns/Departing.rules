@@ -1,0 +1,39 @@
+qui Quitter [ $Cotheme ] [ $Source ] [ $Time ] [ $Goal ] [ $Distance ] [ $Mode_of_transportation ] [ $Path ] [ $Explanation ] [ $Purpose ] [ $Duration_of_final_state ] [ $Frequency ] [ $Means ] ?
+$Theme .
+
+qui_agent_également Quitter [ $Theme ] [ $Source ] [ $Time ] [ $Goal ] [ $Distance ] [ $Mode_of_transportation ] [ $Path ] [ $Explanation ] [ $Purpose ] [ $Duration_of_final_state ] [ $Frequency ] [ $Means ] ?
+$Cotheme .
+
+quoi Quitter [ $Theme ] [ $Cotheme ] [ $Time ] [ $Goal ] [ $Distance ] [ $Mode_of_transportation ] [ $Path ] [ $Explanation ] [ $Purpose ] [ $Duration_of_final_state ] [ $Frequency ] [ $Means ] ?
+$Source .
+
+quand Quitter [ $Theme ] [ $Cotheme ] [ $Source ] [ $Goal ] [ $Distance ] [ $Mode_of_transportation ] [ $Path ] [ $Explanation ] [ $Purpose ] [ $Duration_of_final_state ] [ $Frequency ] [ $Means ] ?
+$Time .
+
+vers_où Quitter [ $Theme ] [ $Cotheme ] [ $Source ] [ $Time ] [ $Distance ] [ $Mode_of_transportation ] [ $Path ] [ $Explanation ] [ $Purpose ] [ $Duration_of_final_state ] [ $Frequency ] [ $Means ] ?
+$Goal .
+
+pour_quelle_distance Quitter [ $Theme ] [ $Cotheme ] [ $Source ] [ $Time ] [ $Goal ] [ $Mode_of_transportation ] [ $Path ] [ $Explanation ] [ $Purpose ] [ $Duration_of_final_state ] [ $Frequency ] [ $Means ] ?
+$Distance .
+
+avec_quel_moyen Quitter [ $Theme ] [ $Cotheme ] [ $Source ] [ $Time ] [ $Goal ] [ $Distance ] [ $Path ] [ $Explanation ] [ $Purpose ] [ $Duration_of_final_state ] [ $Frequency ] [ $Means ] ?
+$Mode_of_transportation .
+
+par_quel_chemin Quitter [ $Theme ] [ $Cotheme ] [ $Source ] [ $Time ] [ $Goal ] [ $Distance ] [ $Mode_of_transportation ] [ $Explanation ] [ $Purpose ] [ $Duration_of_final_state ] [ $Frequency ] [ $Means ] ?
+$Path .
+
+pour_quelle_raison Quitter [ $Theme ] [ $Cotheme ] [ $Source ] [ $Time ] [ $Goal ] [ $Distance ] [ $Mode_of_transportation ] [ $Path ] [ $Purpose ] [ $Duration_of_final_state ] [ $Frequency ] [ $Means ] ?
+$Explanation .
+
+dans_quel_but Quitter [ $Theme ] [ $Cotheme ] [ $Source ] [ $Time ] [ $Goal ] [ $Distance ] [ $Mode_of_transportation ] [ $Path ] [ $Explanation ] [ $Duration_of_final_state ] [ $Frequency ] [ $Means ] ?
+$Purpose .
+
+pour_combien_de_temps Quitter [ $Theme ] [ $Cotheme ] [ $Source ] [ $Time ] [ $Goal ] [ $Distance ] [ $Mode_of_transportation ] [ $Path ] [ $Explanation ] [ $Purpose ] [ $Frequency ] [ $Means ] ?
+$Duration_of_final_state .
+
+à_quelle_fréquence Quitter [ $Theme ] [ $Cotheme ] [ $Source ] [ $Time ] [ $Goal ] [ $Distance ] [ $Mode_of_transportation ] [ $Path ] [ $Explanation ] [ $Purpose ] [ $Duration_of_final_state ] [ $Means ] ?
+$Frequency .
+
+avec_quel_moyen Quitter [ $Theme ] [ $Cotheme ] [ $Source ] [ $Time ] [ $Goal ] [ $Distance ] [ $Mode_of_transportation ] [ $Path ] [ $Explanation ] [ $Purpose ] [ $Duration_of_final_state ] [ $Frequency ] ?
+$Means .
+

@@ -1,0 +1,132 @@
+quoi Élire [ $Cognizer ] [ $Possibilities ] [ $Contrast ] [ $Explanation ] [ $Inherent_purpose ] [ $Semantic ] [ $Manner ] [ $Means ] [ $Place ] [ $Time ] ?
+$Chosen .
+
+qui Élire [ $Chosen ] [ $Possibilities ] [ $Contrast ] [ $Explanation ] [ $Inherent_purpose ] [ $Semantic ] [ $Manner ] [ $Means ] [ $Place ] [ $Time ] ?
+$Cognizer .
+
+parmi_quoi Élire [ $Chosen ] [ $Cognizer ] [ $Contrast ] [ $Explanation ] [ $Inherent_purpose ] [ $Semantic ] [ $Manner ] [ $Means ] [ $Place ] [ $Time ] ?
+$Possibilities .
+
+contre_quoi Élire [ $Chosen ] [ $Cognizer ] [ $Possibilities ] [ $Explanation ] [ $Inherent_purpose ] [ $Semantic ] [ $Manner ] [ $Means ] [ $Place ] [ $Time ] ?
+$Contrast .
+
+pour_quelle_raison Élire [ $Chosen ] [ $Cognizer ] [ $Possibilities ] [ $Contrast ] [ $Inherent_purpose ] [ $Semantic ] [ $Manner ] [ $Means ] [ $Place ] [ $Time ] ?
+$Explanation .
+
+dans_quel_but Élire [ $Chosen ] [ $Cognizer ] [ $Possibilities ] [ $Contrast ] [ $Explanation ] [ $Semantic ] [ $Manner ] [ $Means ] [ $Place ] [ $Time ] ?
+$Inherent_purpose .
+
+NULL Élire [ $Chosen ] [ $Cognizer ] [ $Possibilities ] [ $Contrast ] [ $Explanation ] [ $Inherent_purpose ] [ $Manner ] [ $Means ] [ $Place ] [ $Time ] ?
+$Semantic .
+
+de_quelle_manière Élire [ $Chosen ] [ $Cognizer ] [ $Possibilities ] [ $Contrast ] [ $Explanation ] [ $Inherent_purpose ] [ $Semantic ] [ $Means ] [ $Place ] [ $Time ] ?
+$Manner .
+
+par_quel_moyen Élire [ $Chosen ] [ $Cognizer ] [ $Possibilities ] [ $Contrast ] [ $Explanation ] [ $Inherent_purpose ] [ $Semantic ] [ $Manner ] [ $Place ] [ $Time ] ?
+$Means .
+
+où Élire [ $Chosen ] [ $Cognizer ] [ $Possibilities ] [ $Contrast ] [ $Explanation ] [ $Inherent_purpose ] [ $Semantic ] [ $Manner ] [ $Means ] [ $Time ] ?
+$Place .
+
+quand Élire [ $Chosen ] [ $Cognizer ] [ $Possibilities ] [ $Contrast ] [ $Explanation ] [ $Inherent_purpose ] [ $Semantic ] [ $Manner ] [ $Means ] [ $Place ] ?
+$Time .
+
+quoi Choisir [ $Cognizer ] [ $Possibilities ] [ $Contrast ] [ $Explanation ] [ $Inherent_purpose ] [ $Semantic ] [ $Manner ] [ $Means ] [ $Place ] [ $Time ] ?
+$Chosen .
+
+qui Choisir [ $Chosen ] [ $Possibilities ] [ $Contrast ] [ $Explanation ] [ $Inherent_purpose ] [ $Semantic ] [ $Manner ] [ $Means ] [ $Place ] [ $Time ] ?
+$Cognizer .
+
+parmi_quoi Choisir [ $Chosen ] [ $Cognizer ] [ $Contrast ] [ $Explanation ] [ $Inherent_purpose ] [ $Semantic ] [ $Manner ] [ $Means ] [ $Place ] [ $Time ] ?
+$Possibilities .
+
+contre_quoi Choisir [ $Chosen ] [ $Cognizer ] [ $Possibilities ] [ $Explanation ] [ $Inherent_purpose ] [ $Semantic ] [ $Manner ] [ $Means ] [ $Place ] [ $Time ] ?
+$Contrast .
+
+pour_quelle_raison Choisir [ $Chosen ] [ $Cognizer ] [ $Possibilities ] [ $Contrast ] [ $Inherent_purpose ] [ $Semantic ] [ $Manner ] [ $Means ] [ $Place ] [ $Time ] ?
+$Explanation .
+
+dans_quel_but Choisir [ $Chosen ] [ $Cognizer ] [ $Possibilities ] [ $Contrast ] [ $Explanation ] [ $Semantic ] [ $Manner ] [ $Means ] [ $Place ] [ $Time ] ?
+$Inherent_purpose .
+
+NULL Choisir [ $Chosen ] [ $Cognizer ] [ $Possibilities ] [ $Contrast ] [ $Explanation ] [ $Inherent_purpose ] [ $Manner ] [ $Means ] [ $Place ] [ $Time ] ?
+$Semantic .
+
+de_quelle_manière Choisir [ $Chosen ] [ $Cognizer ] [ $Possibilities ] [ $Contrast ] [ $Explanation ] [ $Inherent_purpose ] [ $Semantic ] [ $Means ] [ $Place ] [ $Time ] ?
+$Manner .
+
+par_quel_moyen Choisir [ $Chosen ] [ $Cognizer ] [ $Possibilities ] [ $Contrast ] [ $Explanation ] [ $Inherent_purpose ] [ $Semantic ] [ $Manner ] [ $Place ] [ $Time ] ?
+$Means .
+
+où Choisir [ $Chosen ] [ $Cognizer ] [ $Possibilities ] [ $Contrast ] [ $Explanation ] [ $Inherent_purpose ] [ $Semantic ] [ $Manner ] [ $Means ] [ $Time ] ?
+$Place .
+
+quand Choisir [ $Chosen ] [ $Cognizer ] [ $Possibilities ] [ $Contrast ] [ $Explanation ] [ $Inherent_purpose ] [ $Semantic ] [ $Manner ] [ $Means ] [ $Place ] ?
+$Time .
+
+quoi Désigner [ $Cognizer ] [ $Possibilities ] [ $Contrast ] [ $Explanation ] [ $Inherent_purpose ] [ $Semantic ] [ $Manner ] [ $Means ] [ $Place ] [ $Time ] ?
+$Chosen .
+
+qui Désigner [ $Chosen ] [ $Possibilities ] [ $Contrast ] [ $Explanation ] [ $Inherent_purpose ] [ $Semantic ] [ $Manner ] [ $Means ] [ $Place ] [ $Time ] ?
+$Cognizer .
+
+parmi_quoi Désigner [ $Chosen ] [ $Cognizer ] [ $Contrast ] [ $Explanation ] [ $Inherent_purpose ] [ $Semantic ] [ $Manner ] [ $Means ] [ $Place ] [ $Time ] ?
+$Possibilities .
+
+contre_quoi Désigner [ $Chosen ] [ $Cognizer ] [ $Possibilities ] [ $Explanation ] [ $Inherent_purpose ] [ $Semantic ] [ $Manner ] [ $Means ] [ $Place ] [ $Time ] ?
+$Contrast .
+
+pour_quelle_raison Désigner [ $Chosen ] [ $Cognizer ] [ $Possibilities ] [ $Contrast ] [ $Inherent_purpose ] [ $Semantic ] [ $Manner ] [ $Means ] [ $Place ] [ $Time ] ?
+$Explanation .
+
+dans_quel_but Désigner [ $Chosen ] [ $Cognizer ] [ $Possibilities ] [ $Contrast ] [ $Explanation ] [ $Semantic ] [ $Manner ] [ $Means ] [ $Place ] [ $Time ] ?
+$Inherent_purpose .
+
+NULL Désigner [ $Chosen ] [ $Cognizer ] [ $Possibilities ] [ $Contrast ] [ $Explanation ] [ $Inherent_purpose ] [ $Manner ] [ $Means ] [ $Place ] [ $Time ] ?
+$Semantic .
+
+de_quelle_manière Désigner [ $Chosen ] [ $Cognizer ] [ $Possibilities ] [ $Contrast ] [ $Explanation ] [ $Inherent_purpose ] [ $Semantic ] [ $Means ] [ $Place ] [ $Time ] ?
+$Manner .
+
+par_quel_moyen Désigner [ $Chosen ] [ $Cognizer ] [ $Possibilities ] [ $Contrast ] [ $Explanation ] [ $Inherent_purpose ] [ $Semantic ] [ $Manner ] [ $Place ] [ $Time ] ?
+$Means .
+
+où Désigner [ $Chosen ] [ $Cognizer ] [ $Possibilities ] [ $Contrast ] [ $Explanation ] [ $Inherent_purpose ] [ $Semantic ] [ $Manner ] [ $Means ] [ $Time ] ?
+$Place .
+
+quand Désigner [ $Chosen ] [ $Cognizer ] [ $Possibilities ] [ $Contrast ] [ $Explanation ] [ $Inherent_purpose ] [ $Semantic ] [ $Manner ] [ $Means ] [ $Place ] ?
+$Time .
+
+quoi Sélectionner [ $Cognizer ] [ $Possibilities ] [ $Contrast ] [ $Explanation ] [ $Inherent_purpose ] [ $Semantic ] [ $Manner ] [ $Means ] [ $Place ] [ $Time ] ?
+$Chosen .
+
+qui Sélectionner [ $Chosen ] [ $Possibilities ] [ $Contrast ] [ $Explanation ] [ $Inherent_purpose ] [ $Semantic ] [ $Manner ] [ $Means ] [ $Place ] [ $Time ] ?
+$Cognizer .
+
+parmi_quoi Sélectionner [ $Chosen ] [ $Cognizer ] [ $Contrast ] [ $Explanation ] [ $Inherent_purpose ] [ $Semantic ] [ $Manner ] [ $Means ] [ $Place ] [ $Time ] ?
+$Possibilities .
+
+contre_quoi Sélectionner [ $Chosen ] [ $Cognizer ] [ $Possibilities ] [ $Explanation ] [ $Inherent_purpose ] [ $Semantic ] [ $Manner ] [ $Means ] [ $Place ] [ $Time ] ?
+$Contrast .
+
+pour_quelle_raison Sélectionner [ $Chosen ] [ $Cognizer ] [ $Possibilities ] [ $Contrast ] [ $Inherent_purpose ] [ $Semantic ] [ $Manner ] [ $Means ] [ $Place ] [ $Time ] ?
+$Explanation .
+
+dans_quel_but Sélectionner [ $Chosen ] [ $Cognizer ] [ $Possibilities ] [ $Contrast ] [ $Explanation ] [ $Semantic ] [ $Manner ] [ $Means ] [ $Place ] [ $Time ] ?
+$Inherent_purpose .
+
+NULL Sélectionner [ $Chosen ] [ $Cognizer ] [ $Possibilities ] [ $Contrast ] [ $Explanation ] [ $Inherent_purpose ] [ $Manner ] [ $Means ] [ $Place ] [ $Time ] ?
+$Semantic .
+
+de_quelle_manière Sélectionner [ $Chosen ] [ $Cognizer ] [ $Possibilities ] [ $Contrast ] [ $Explanation ] [ $Inherent_purpose ] [ $Semantic ] [ $Means ] [ $Place ] [ $Time ] ?
+$Manner .
+
+par_quel_moyen Sélectionner [ $Chosen ] [ $Cognizer ] [ $Possibilities ] [ $Contrast ] [ $Explanation ] [ $Inherent_purpose ] [ $Semantic ] [ $Manner ] [ $Place ] [ $Time ] ?
+$Means .
+
+où Sélectionner [ $Chosen ] [ $Cognizer ] [ $Possibilities ] [ $Contrast ] [ $Explanation ] [ $Inherent_purpose ] [ $Semantic ] [ $Manner ] [ $Means ] [ $Time ] ?
+$Place .
+
+quand Sélectionner [ $Chosen ] [ $Cognizer ] [ $Possibilities ] [ $Contrast ] [ $Explanation ] [ $Inherent_purpose ] [ $Semantic ] [ $Manner ] [ $Means ] [ $Place ] ?
+$Time .
+

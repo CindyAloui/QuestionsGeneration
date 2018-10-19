@@ -1,0 +1,72 @@
+qui Affecter [ $Official ] [ $Role ] [ $Body ] [ $Time ] [ $Place ] [ $Result ] [ $Function ] ?
+$Selector .
+
+qui Affecter [ $Selector ] [ $Role ] [ $Body ] [ $Time ] [ $Place ] [ $Result ] [ $Function ] ?
+$Official .
+
+quoi Affecter [ $Selector ] [ $Official ] [ $Body ] [ $Time ] [ $Place ] [ $Result ] [ $Function ] ?
+$Role .
+
+de_quoi Affecter [ $Selector ] [ $Official ] [ $Role ] [ $Time ] [ $Place ] [ $Result ] [ $Function ] ?
+$Body .
+
+quand Affecter [ $Selector ] [ $Official ] [ $Role ] [ $Body ] [ $Place ] [ $Result ] [ $Function ] ?
+$Time .
+
+où Affecter [ $Selector ] [ $Official ] [ $Role ] [ $Body ] [ $Time ] [ $Result ] [ $Function ] ?
+$Place .
+
+avec_quelle_conséquence Affecter [ $Selector ] [ $Official ] [ $Role ] [ $Body ] [ $Time ] [ $Place ] [ $Function ] ?
+$Result .
+
+dans_quel_but Affecter [ $Selector ] [ $Official ] [ $Role ] [ $Body ] [ $Time ] [ $Place ] [ $Result ] ?
+$Function .
+
+qui Nommer [ $Official ] [ $Role ] [ $Body ] [ $Time ] [ $Place ] [ $Result ] [ $Function ] ?
+$Selector .
+
+qui Nommer [ $Selector ] [ $Role ] [ $Body ] [ $Time ] [ $Place ] [ $Result ] [ $Function ] ?
+$Official .
+
+quoi Nommer [ $Selector ] [ $Official ] [ $Body ] [ $Time ] [ $Place ] [ $Result ] [ $Function ] ?
+$Role .
+
+de_quoi Nommer [ $Selector ] [ $Official ] [ $Role ] [ $Time ] [ $Place ] [ $Result ] [ $Function ] ?
+$Body .
+
+quand Nommer [ $Selector ] [ $Official ] [ $Role ] [ $Body ] [ $Place ] [ $Result ] [ $Function ] ?
+$Time .
+
+où Nommer [ $Selector ] [ $Official ] [ $Role ] [ $Body ] [ $Time ] [ $Result ] [ $Function ] ?
+$Place .
+
+avec_quelle_conséquence Nommer [ $Selector ] [ $Official ] [ $Role ] [ $Body ] [ $Time ] [ $Place ] [ $Function ] ?
+$Result .
+
+dans_quel_but Nommer [ $Selector ] [ $Official ] [ $Role ] [ $Body ] [ $Time ] [ $Place ] [ $Result ] ?
+$Function .
+
+qui Désigner [ $Official ] [ $Role ] [ $Body ] [ $Time ] [ $Place ] [ $Result ] [ $Function ] ?
+$Selector .
+
+qui Désigner [ $Selector ] [ $Role ] [ $Body ] [ $Time ] [ $Place ] [ $Result ] [ $Function ] ?
+$Official .
+
+quoi Désigner [ $Selector ] [ $Official ] [ $Body ] [ $Time ] [ $Place ] [ $Result ] [ $Function ] ?
+$Role .
+
+de_quoi Désigner [ $Selector ] [ $Official ] [ $Role ] [ $Time ] [ $Place ] [ $Result ] [ $Function ] ?
+$Body .
+
+quand Désigner [ $Selector ] [ $Official ] [ $Role ] [ $Body ] [ $Place ] [ $Result ] [ $Function ] ?
+$Time .
+
+où Désigner [ $Selector ] [ $Official ] [ $Role ] [ $Body ] [ $Time ] [ $Result ] [ $Function ] ?
+$Place .
+
+avec_quelle_conséquence Désigner [ $Selector ] [ $Official ] [ $Role ] [ $Body ] [ $Time ] [ $Place ] [ $Function ] ?
+$Result .
+
+dans_quel_but Désigner [ $Selector ] [ $Official ] [ $Role ] [ $Body ] [ $Time ] [ $Place ] [ $Result ] ?
+$Function .
+

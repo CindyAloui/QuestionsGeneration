@@ -1,0 +1,21 @@
+qui Agir [ $Manner ] [ $Affected_party ] [ $Circumstances ] [ $Means ] [ $Place ] [ $Time ] ?
+$Agent .
+
+de_quelle_manière Agir [ $Agent ] [ $Affected_party ] [ $Circumstances ] [ $Means ] [ $Place ] [ $Time ] ?
+$Manner .
+
+quoi Agir [ $Agent ] [ $Manner ] [ $Circumstances ] [ $Means ] [ $Place ] [ $Time ] ?
+$Affected_party .
+
+dans_quelles_circonstances Agir [ $Agent ] [ $Manner ] [ $Affected_party ] [ $Means ] [ $Place ] [ $Time ] ?
+$Circumstances .
+
+par_quel_moyen Agir [ $Agent ] [ $Manner ] [ $Affected_party ] [ $Circumstances ] [ $Place ] [ $Time ] ?
+$Means .
+
+où Agir [ $Agent ] [ $Manner ] [ $Affected_party ] [ $Circumstances ] [ $Means ] [ $Time ] ?
+$Place .
+
+quand Agir [ $Agent ] [ $Manner ] [ $Affected_party ] [ $Circumstances ] [ $Means ] [ $Place ] ?
+$Time .
+

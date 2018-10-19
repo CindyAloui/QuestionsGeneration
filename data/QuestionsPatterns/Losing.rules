@@ -1,0 +1,18 @@
+qui Perdre [ $Possession ] [ $Time ] [ $Place ] [ $Means ] [ $Explanation ] ?
+$Owner .
+
+quoi Perdre [ $Owner ] [ $Time ] [ $Place ] [ $Means ] [ $Explanation ] ?
+$Possession .
+
+quand Perdre [ $Owner ] [ $Possession ] [ $Place ] [ $Means ] [ $Explanation ] ?
+$Time .
+
+où Perdre [ $Owner ] [ $Possession ] [ $Time ] [ $Means ] [ $Explanation ] ?
+$Place .
+
+de_quelle_manière Perdre [ $Owner ] [ $Possession ] [ $Time ] [ $Place ] [ $Explanation ] ?
+$Means .
+
+pour_quelle_raison Perdre [ $Owner ] [ $Possession ] [ $Time ] [ $Place ] [ $Means ] ?
+$Explanation .
+

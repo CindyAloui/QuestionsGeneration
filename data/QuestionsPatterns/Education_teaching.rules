@@ -1,0 +1,171 @@
+quoi Étudier [ $Fact ] [ $Institution ] [ $Material ] [ $Precept ] [ $Qualification ] [ $Role ] [ $Skill ] [ $Student ] [ $Subject ] [ $Teacher ] [ $Duration ] [ $Level ] [ $Manner ] [ $Means ] [ $Place ] [ $Purpose ] [ $Result ] [ $Time ] ?
+$Course .
+
+quoi_précisément Étudier [ $Course ] [ $Institution ] [ $Material ] [ $Precept ] [ $Qualification ] [ $Role ] [ $Skill ] [ $Student ] [ $Subject ] [ $Teacher ] [ $Duration ] [ $Level ] [ $Manner ] [ $Means ] [ $Place ] [ $Purpose ] [ $Result ] [ $Time ] ?
+$Fact .
+
+où_précisément Étudier [ $Course ] [ $Fact ] [ $Material ] [ $Precept ] [ $Qualification ] [ $Role ] [ $Skill ] [ $Student ] [ $Subject ] [ $Teacher ] [ $Duration ] [ $Level ] [ $Manner ] [ $Means ] [ $Place ] [ $Purpose ] [ $Result ] [ $Time ] ?
+$Institution .
+
+avec_quoi Étudier [ $Course ] [ $Fact ] [ $Institution ] [ $Precept ] [ $Qualification ] [ $Role ] [ $Skill ] [ $Student ] [ $Subject ] [ $Teacher ] [ $Duration ] [ $Level ] [ $Manner ] [ $Means ] [ $Place ] [ $Purpose ] [ $Result ] [ $Time ] ?
+$Material .
+
+quoi_précisément Étudier [ $Course ] [ $Fact ] [ $Institution ] [ $Material ] [ $Qualification ] [ $Role ] [ $Skill ] [ $Student ] [ $Subject ] [ $Teacher ] [ $Duration ] [ $Level ] [ $Manner ] [ $Means ] [ $Place ] [ $Purpose ] [ $Result ] [ $Time ] ?
+$Precept .
+
+vers_quel_niveau Étudier [ $Course ] [ $Fact ] [ $Institution ] [ $Material ] [ $Precept ] [ $Role ] [ $Skill ] [ $Student ] [ $Subject ] [ $Teacher ] [ $Duration ] [ $Level ] [ $Manner ] [ $Means ] [ $Place ] [ $Purpose ] [ $Result ] [ $Time ] ?
+$Qualification .
+
+quoi Étudier [ $Course ] [ $Fact ] [ $Institution ] [ $Material ] [ $Precept ] [ $Qualification ] [ $Skill ] [ $Student ] [ $Subject ] [ $Teacher ] [ $Duration ] [ $Level ] [ $Manner ] [ $Means ] [ $Place ] [ $Purpose ] [ $Result ] [ $Time ] ?
+$Role .
+
+quoi Étudier [ $Course ] [ $Fact ] [ $Institution ] [ $Material ] [ $Precept ] [ $Qualification ] [ $Role ] [ $Student ] [ $Subject ] [ $Teacher ] [ $Duration ] [ $Level ] [ $Manner ] [ $Means ] [ $Place ] [ $Purpose ] [ $Result ] [ $Time ] ?
+$Skill .
+
+à_qui Étudier [ $Course ] [ $Fact ] [ $Institution ] [ $Material ] [ $Precept ] [ $Qualification ] [ $Role ] [ $Skill ] [ $Subject ] [ $Teacher ] [ $Duration ] [ $Level ] [ $Manner ] [ $Means ] [ $Place ] [ $Purpose ] [ $Result ] [ $Time ] ?
+$Student .
+
+quoi Étudier [ $Course ] [ $Fact ] [ $Institution ] [ $Material ] [ $Precept ] [ $Qualification ] [ $Role ] [ $Skill ] [ $Student ] [ $Teacher ] [ $Duration ] [ $Level ] [ $Manner ] [ $Means ] [ $Place ] [ $Purpose ] [ $Result ] [ $Time ] ?
+$Subject .
+
+qui Étudier [ $Course ] [ $Fact ] [ $Institution ] [ $Material ] [ $Precept ] [ $Qualification ] [ $Role ] [ $Skill ] [ $Student ] [ $Subject ] [ $Duration ] [ $Level ] [ $Manner ] [ $Means ] [ $Place ] [ $Purpose ] [ $Result ] [ $Time ] ?
+$Teacher .
+
+combien_de_temps Étudier [ $Course ] [ $Fact ] [ $Institution ] [ $Material ] [ $Precept ] [ $Qualification ] [ $Role ] [ $Skill ] [ $Student ] [ $Subject ] [ $Teacher ] [ $Level ] [ $Manner ] [ $Means ] [ $Place ] [ $Purpose ] [ $Result ] [ $Time ] ?
+$Duration .
+
+à_quel_niveau Étudier [ $Course ] [ $Fact ] [ $Institution ] [ $Material ] [ $Precept ] [ $Qualification ] [ $Role ] [ $Skill ] [ $Student ] [ $Subject ] [ $Teacher ] [ $Duration ] [ $Manner ] [ $Means ] [ $Place ] [ $Purpose ] [ $Result ] [ $Time ] ?
+$Level .
+
+de_quelle_manière Étudier [ $Course ] [ $Fact ] [ $Institution ] [ $Material ] [ $Precept ] [ $Qualification ] [ $Role ] [ $Skill ] [ $Student ] [ $Subject ] [ $Teacher ] [ $Duration ] [ $Level ] [ $Means ] [ $Place ] [ $Purpose ] [ $Result ] [ $Time ] ?
+$Manner .
+
+par_quel_moyen Étudier [ $Course ] [ $Fact ] [ $Institution ] [ $Material ] [ $Precept ] [ $Qualification ] [ $Role ] [ $Skill ] [ $Student ] [ $Subject ] [ $Teacher ] [ $Duration ] [ $Level ] [ $Manner ] [ $Place ] [ $Purpose ] [ $Result ] [ $Time ] ?
+$Means .
+
+où Étudier [ $Course ] [ $Fact ] [ $Institution ] [ $Material ] [ $Precept ] [ $Qualification ] [ $Role ] [ $Skill ] [ $Student ] [ $Subject ] [ $Teacher ] [ $Duration ] [ $Level ] [ $Manner ] [ $Means ] [ $Purpose ] [ $Result ] [ $Time ] ?
+$Place .
+
+dans_quel_but Étudier [ $Course ] [ $Fact ] [ $Institution ] [ $Material ] [ $Precept ] [ $Qualification ] [ $Role ] [ $Skill ] [ $Student ] [ $Subject ] [ $Teacher ] [ $Duration ] [ $Level ] [ $Manner ] [ $Means ] [ $Place ] [ $Result ] [ $Time ] ?
+$Purpose .
+
+avec_quelle_conséquence Étudier [ $Course ] [ $Fact ] [ $Institution ] [ $Material ] [ $Precept ] [ $Qualification ] [ $Role ] [ $Skill ] [ $Student ] [ $Subject ] [ $Teacher ] [ $Duration ] [ $Level ] [ $Manner ] [ $Means ] [ $Place ] [ $Purpose ] [ $Time ] ?
+$Result .
+
+quand Étudier [ $Course ] [ $Fact ] [ $Institution ] [ $Material ] [ $Precept ] [ $Qualification ] [ $Role ] [ $Skill ] [ $Student ] [ $Subject ] [ $Teacher ] [ $Duration ] [ $Level ] [ $Manner ] [ $Means ] [ $Place ] [ $Purpose ] [ $Result ] ?
+$Time .
+
+quoi Enseigner [ $Fact ] [ $Institution ] [ $Material ] [ $Precept ] [ $Qualification ] [ $Role ] [ $Skill ] [ $Student ] [ $Subject ] [ $Teacher ] [ $Duration ] [ $Level ] [ $Manner ] [ $Means ] [ $Place ] [ $Purpose ] [ $Result ] [ $Time ] ?
+$Course .
+
+quoi_précisément Enseigner [ $Course ] [ $Institution ] [ $Material ] [ $Precept ] [ $Qualification ] [ $Role ] [ $Skill ] [ $Student ] [ $Subject ] [ $Teacher ] [ $Duration ] [ $Level ] [ $Manner ] [ $Means ] [ $Place ] [ $Purpose ] [ $Result ] [ $Time ] ?
+$Fact .
+
+où_précisément Enseigner [ $Course ] [ $Fact ] [ $Material ] [ $Precept ] [ $Qualification ] [ $Role ] [ $Skill ] [ $Student ] [ $Subject ] [ $Teacher ] [ $Duration ] [ $Level ] [ $Manner ] [ $Means ] [ $Place ] [ $Purpose ] [ $Result ] [ $Time ] ?
+$Institution .
+
+avec_quoi Enseigner [ $Course ] [ $Fact ] [ $Institution ] [ $Precept ] [ $Qualification ] [ $Role ] [ $Skill ] [ $Student ] [ $Subject ] [ $Teacher ] [ $Duration ] [ $Level ] [ $Manner ] [ $Means ] [ $Place ] [ $Purpose ] [ $Result ] [ $Time ] ?
+$Material .
+
+quoi_précisément Enseigner [ $Course ] [ $Fact ] [ $Institution ] [ $Material ] [ $Qualification ] [ $Role ] [ $Skill ] [ $Student ] [ $Subject ] [ $Teacher ] [ $Duration ] [ $Level ] [ $Manner ] [ $Means ] [ $Place ] [ $Purpose ] [ $Result ] [ $Time ] ?
+$Precept .
+
+vers_quel_niveau Enseigner [ $Course ] [ $Fact ] [ $Institution ] [ $Material ] [ $Precept ] [ $Role ] [ $Skill ] [ $Student ] [ $Subject ] [ $Teacher ] [ $Duration ] [ $Level ] [ $Manner ] [ $Means ] [ $Place ] [ $Purpose ] [ $Result ] [ $Time ] ?
+$Qualification .
+
+quoi Enseigner [ $Course ] [ $Fact ] [ $Institution ] [ $Material ] [ $Precept ] [ $Qualification ] [ $Skill ] [ $Student ] [ $Subject ] [ $Teacher ] [ $Duration ] [ $Level ] [ $Manner ] [ $Means ] [ $Place ] [ $Purpose ] [ $Result ] [ $Time ] ?
+$Role .
+
+quoi Enseigner [ $Course ] [ $Fact ] [ $Institution ] [ $Material ] [ $Precept ] [ $Qualification ] [ $Role ] [ $Student ] [ $Subject ] [ $Teacher ] [ $Duration ] [ $Level ] [ $Manner ] [ $Means ] [ $Place ] [ $Purpose ] [ $Result ] [ $Time ] ?
+$Skill .
+
+à_qui Enseigner [ $Course ] [ $Fact ] [ $Institution ] [ $Material ] [ $Precept ] [ $Qualification ] [ $Role ] [ $Skill ] [ $Subject ] [ $Teacher ] [ $Duration ] [ $Level ] [ $Manner ] [ $Means ] [ $Place ] [ $Purpose ] [ $Result ] [ $Time ] ?
+$Student .
+
+quoi Enseigner [ $Course ] [ $Fact ] [ $Institution ] [ $Material ] [ $Precept ] [ $Qualification ] [ $Role ] [ $Skill ] [ $Student ] [ $Teacher ] [ $Duration ] [ $Level ] [ $Manner ] [ $Means ] [ $Place ] [ $Purpose ] [ $Result ] [ $Time ] ?
+$Subject .
+
+qui Enseigner [ $Course ] [ $Fact ] [ $Institution ] [ $Material ] [ $Precept ] [ $Qualification ] [ $Role ] [ $Skill ] [ $Student ] [ $Subject ] [ $Duration ] [ $Level ] [ $Manner ] [ $Means ] [ $Place ] [ $Purpose ] [ $Result ] [ $Time ] ?
+$Teacher .
+
+combien_de_temps Enseigner [ $Course ] [ $Fact ] [ $Institution ] [ $Material ] [ $Precept ] [ $Qualification ] [ $Role ] [ $Skill ] [ $Student ] [ $Subject ] [ $Teacher ] [ $Level ] [ $Manner ] [ $Means ] [ $Place ] [ $Purpose ] [ $Result ] [ $Time ] ?
+$Duration .
+
+à_quel_niveau Enseigner [ $Course ] [ $Fact ] [ $Institution ] [ $Material ] [ $Precept ] [ $Qualification ] [ $Role ] [ $Skill ] [ $Student ] [ $Subject ] [ $Teacher ] [ $Duration ] [ $Manner ] [ $Means ] [ $Place ] [ $Purpose ] [ $Result ] [ $Time ] ?
+$Level .
+
+de_quelle_manière Enseigner [ $Course ] [ $Fact ] [ $Institution ] [ $Material ] [ $Precept ] [ $Qualification ] [ $Role ] [ $Skill ] [ $Student ] [ $Subject ] [ $Teacher ] [ $Duration ] [ $Level ] [ $Means ] [ $Place ] [ $Purpose ] [ $Result ] [ $Time ] ?
+$Manner .
+
+par_quel_moyen Enseigner [ $Course ] [ $Fact ] [ $Institution ] [ $Material ] [ $Precept ] [ $Qualification ] [ $Role ] [ $Skill ] [ $Student ] [ $Subject ] [ $Teacher ] [ $Duration ] [ $Level ] [ $Manner ] [ $Place ] [ $Purpose ] [ $Result ] [ $Time ] ?
+$Means .
+
+où Enseigner [ $Course ] [ $Fact ] [ $Institution ] [ $Material ] [ $Precept ] [ $Qualification ] [ $Role ] [ $Skill ] [ $Student ] [ $Subject ] [ $Teacher ] [ $Duration ] [ $Level ] [ $Manner ] [ $Means ] [ $Purpose ] [ $Result ] [ $Time ] ?
+$Place .
+
+dans_quel_but Enseigner [ $Course ] [ $Fact ] [ $Institution ] [ $Material ] [ $Precept ] [ $Qualification ] [ $Role ] [ $Skill ] [ $Student ] [ $Subject ] [ $Teacher ] [ $Duration ] [ $Level ] [ $Manner ] [ $Means ] [ $Place ] [ $Result ] [ $Time ] ?
+$Purpose .
+
+avec_quelle_conséquence Enseigner [ $Course ] [ $Fact ] [ $Institution ] [ $Material ] [ $Precept ] [ $Qualification ] [ $Role ] [ $Skill ] [ $Student ] [ $Subject ] [ $Teacher ] [ $Duration ] [ $Level ] [ $Manner ] [ $Means ] [ $Place ] [ $Purpose ] [ $Time ] ?
+$Result .
+
+quand Enseigner [ $Course ] [ $Fact ] [ $Institution ] [ $Material ] [ $Precept ] [ $Qualification ] [ $Role ] [ $Skill ] [ $Student ] [ $Subject ] [ $Teacher ] [ $Duration ] [ $Level ] [ $Manner ] [ $Means ] [ $Place ] [ $Purpose ] [ $Result ] ?
+$Time .
+
+quoi Apprendre [ $Fact ] [ $Institution ] [ $Material ] [ $Precept ] [ $Qualification ] [ $Role ] [ $Skill ] [ $Student ] [ $Subject ] [ $Teacher ] [ $Duration ] [ $Level ] [ $Manner ] [ $Means ] [ $Place ] [ $Purpose ] [ $Result ] [ $Time ] ?
+$Course .
+
+quoi_précisément Apprendre [ $Course ] [ $Institution ] [ $Material ] [ $Precept ] [ $Qualification ] [ $Role ] [ $Skill ] [ $Student ] [ $Subject ] [ $Teacher ] [ $Duration ] [ $Level ] [ $Manner ] [ $Means ] [ $Place ] [ $Purpose ] [ $Result ] [ $Time ] ?
+$Fact .
+
+où_précisément Apprendre [ $Course ] [ $Fact ] [ $Material ] [ $Precept ] [ $Qualification ] [ $Role ] [ $Skill ] [ $Student ] [ $Subject ] [ $Teacher ] [ $Duration ] [ $Level ] [ $Manner ] [ $Means ] [ $Place ] [ $Purpose ] [ $Result ] [ $Time ] ?
+$Institution .
+
+avec_quoi Apprendre [ $Course ] [ $Fact ] [ $Institution ] [ $Precept ] [ $Qualification ] [ $Role ] [ $Skill ] [ $Student ] [ $Subject ] [ $Teacher ] [ $Duration ] [ $Level ] [ $Manner ] [ $Means ] [ $Place ] [ $Purpose ] [ $Result ] [ $Time ] ?
+$Material .
+
+quoi_précisément Apprendre [ $Course ] [ $Fact ] [ $Institution ] [ $Material ] [ $Qualification ] [ $Role ] [ $Skill ] [ $Student ] [ $Subject ] [ $Teacher ] [ $Duration ] [ $Level ] [ $Manner ] [ $Means ] [ $Place ] [ $Purpose ] [ $Result ] [ $Time ] ?
+$Precept .
+
+vers_quel_niveau Apprendre [ $Course ] [ $Fact ] [ $Institution ] [ $Material ] [ $Precept ] [ $Role ] [ $Skill ] [ $Student ] [ $Subject ] [ $Teacher ] [ $Duration ] [ $Level ] [ $Manner ] [ $Means ] [ $Place ] [ $Purpose ] [ $Result ] [ $Time ] ?
+$Qualification .
+
+quoi Apprendre [ $Course ] [ $Fact ] [ $Institution ] [ $Material ] [ $Precept ] [ $Qualification ] [ $Skill ] [ $Student ] [ $Subject ] [ $Teacher ] [ $Duration ] [ $Level ] [ $Manner ] [ $Means ] [ $Place ] [ $Purpose ] [ $Result ] [ $Time ] ?
+$Role .
+
+quoi Apprendre [ $Course ] [ $Fact ] [ $Institution ] [ $Material ] [ $Precept ] [ $Qualification ] [ $Role ] [ $Student ] [ $Subject ] [ $Teacher ] [ $Duration ] [ $Level ] [ $Manner ] [ $Means ] [ $Place ] [ $Purpose ] [ $Result ] [ $Time ] ?
+$Skill .
+
+à_qui Apprendre [ $Course ] [ $Fact ] [ $Institution ] [ $Material ] [ $Precept ] [ $Qualification ] [ $Role ] [ $Skill ] [ $Subject ] [ $Teacher ] [ $Duration ] [ $Level ] [ $Manner ] [ $Means ] [ $Place ] [ $Purpose ] [ $Result ] [ $Time ] ?
+$Student .
+
+quoi Apprendre [ $Course ] [ $Fact ] [ $Institution ] [ $Material ] [ $Precept ] [ $Qualification ] [ $Role ] [ $Skill ] [ $Student ] [ $Teacher ] [ $Duration ] [ $Level ] [ $Manner ] [ $Means ] [ $Place ] [ $Purpose ] [ $Result ] [ $Time ] ?
+$Subject .
+
+qui Apprendre [ $Course ] [ $Fact ] [ $Institution ] [ $Material ] [ $Precept ] [ $Qualification ] [ $Role ] [ $Skill ] [ $Student ] [ $Subject ] [ $Duration ] [ $Level ] [ $Manner ] [ $Means ] [ $Place ] [ $Purpose ] [ $Result ] [ $Time ] ?
+$Teacher .
+
+combien_de_temps Apprendre [ $Course ] [ $Fact ] [ $Institution ] [ $Material ] [ $Precept ] [ $Qualification ] [ $Role ] [ $Skill ] [ $Student ] [ $Subject ] [ $Teacher ] [ $Level ] [ $Manner ] [ $Means ] [ $Place ] [ $Purpose ] [ $Result ] [ $Time ] ?
+$Duration .
+
+à_quel_niveau Apprendre [ $Course ] [ $Fact ] [ $Institution ] [ $Material ] [ $Precept ] [ $Qualification ] [ $Role ] [ $Skill ] [ $Student ] [ $Subject ] [ $Teacher ] [ $Duration ] [ $Manner ] [ $Means ] [ $Place ] [ $Purpose ] [ $Result ] [ $Time ] ?
+$Level .
+
+de_quelle_manière Apprendre [ $Course ] [ $Fact ] [ $Institution ] [ $Material ] [ $Precept ] [ $Qualification ] [ $Role ] [ $Skill ] [ $Student ] [ $Subject ] [ $Teacher ] [ $Duration ] [ $Level ] [ $Means ] [ $Place ] [ $Purpose ] [ $Result ] [ $Time ] ?
+$Manner .
+
+par_quel_moyen Apprendre [ $Course ] [ $Fact ] [ $Institution ] [ $Material ] [ $Precept ] [ $Qualification ] [ $Role ] [ $Skill ] [ $Student ] [ $Subject ] [ $Teacher ] [ $Duration ] [ $Level ] [ $Manner ] [ $Place ] [ $Purpose ] [ $Result ] [ $Time ] ?
+$Means .
+
+où Apprendre [ $Course ] [ $Fact ] [ $Institution ] [ $Material ] [ $Precept ] [ $Qualification ] [ $Role ] [ $Skill ] [ $Student ] [ $Subject ] [ $Teacher ] [ $Duration ] [ $Level ] [ $Manner ] [ $Means ] [ $Purpose ] [ $Result ] [ $Time ] ?
+$Place .
+
+dans_quel_but Apprendre [ $Course ] [ $Fact ] [ $Institution ] [ $Material ] [ $Precept ] [ $Qualification ] [ $Role ] [ $Skill ] [ $Student ] [ $Subject ] [ $Teacher ] [ $Duration ] [ $Level ] [ $Manner ] [ $Means ] [ $Place ] [ $Result ] [ $Time ] ?
+$Purpose .
+
+avec_quelle_conséquence Apprendre [ $Course ] [ $Fact ] [ $Institution ] [ $Material ] [ $Precept ] [ $Qualification ] [ $Role ] [ $Skill ] [ $Student ] [ $Subject ] [ $Teacher ] [ $Duration ] [ $Level ] [ $Manner ] [ $Means ] [ $Place ] [ $Purpose ] [ $Time ] ?
+$Result .
+
+quand Apprendre [ $Course ] [ $Fact ] [ $Institution ] [ $Material ] [ $Precept ] [ $Qualification ] [ $Role ] [ $Skill ] [ $Student ] [ $Subject ] [ $Teacher ] [ $Duration ] [ $Level ] [ $Manner ] [ $Means ] [ $Place ] [ $Purpose ] [ $Result ] ?
+$Time .
+

@@ -81,6 +81,6 @@ class Corpus:
 ######################################################################################################################
         
 if __name__ == "__main__":
-    for f in os.listdir("../../Corpus/corefCorpus"):
-        c = Corpus(os.path.join("../../Corpus/corefCorpus", f), f)
+    for f in os.listdir("../../Corpus/corefsCorpus"):
+        c = Corpus(os.path.join("../../Corpus/corefsCorpus", f), f)
         print(c)

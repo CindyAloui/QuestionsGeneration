@@ -1,0 +1,39 @@
+qui Exprimer [ $Content ] [ $Medium ] [ $Addressee ] [ $Circumstances ] [ $Explanation ] [ $Frequency ] [ $Internal_cause ] [ $Manner ] [ $Means ] [ $Place ] [ $Purpose ] [ $Time ] ?
+$Communicator .
+
+quoi Exprimer [ $Communicator ] [ $Medium ] [ $Addressee ] [ $Circumstances ] [ $Explanation ] [ $Frequency ] [ $Internal_cause ] [ $Manner ] [ $Means ] [ $Place ] [ $Purpose ] [ $Time ] ?
+$Content .
+
+à_travers_quoi Exprimer [ $Communicator ] [ $Content ] [ $Addressee ] [ $Circumstances ] [ $Explanation ] [ $Frequency ] [ $Internal_cause ] [ $Manner ] [ $Means ] [ $Place ] [ $Purpose ] [ $Time ] ?
+$Medium .
+
+à_qui Exprimer [ $Communicator ] [ $Content ] [ $Medium ] [ $Circumstances ] [ $Explanation ] [ $Frequency ] [ $Internal_cause ] [ $Manner ] [ $Means ] [ $Place ] [ $Purpose ] [ $Time ] ?
+$Addressee .
+
+dans_quelles_circonstances Exprimer [ $Communicator ] [ $Content ] [ $Medium ] [ $Addressee ] [ $Explanation ] [ $Frequency ] [ $Internal_cause ] [ $Manner ] [ $Means ] [ $Place ] [ $Purpose ] [ $Time ] ?
+$Circumstances .
+
+pour_quelle_raison Exprimer [ $Communicator ] [ $Content ] [ $Medium ] [ $Addressee ] [ $Circumstances ] [ $Frequency ] [ $Internal_cause ] [ $Manner ] [ $Means ] [ $Place ] [ $Purpose ] [ $Time ] ?
+$Explanation .
+
+à_quelle_fréquence Exprimer [ $Communicator ] [ $Content ] [ $Medium ] [ $Addressee ] [ $Circumstances ] [ $Explanation ] [ $Internal_cause ] [ $Manner ] [ $Means ] [ $Place ] [ $Purpose ] [ $Time ] ?
+$Frequency .
+
+pour_quelle_raison_personelle Exprimer [ $Communicator ] [ $Content ] [ $Medium ] [ $Addressee ] [ $Circumstances ] [ $Explanation ] [ $Frequency ] [ $Manner ] [ $Means ] [ $Place ] [ $Purpose ] [ $Time ] ?
+$Internal_cause .
+
+de_quelle_manière Exprimer [ $Communicator ] [ $Content ] [ $Medium ] [ $Addressee ] [ $Circumstances ] [ $Explanation ] [ $Frequency ] [ $Internal_cause ] [ $Means ] [ $Place ] [ $Purpose ] [ $Time ] ?
+$Manner .
+
+par_quel_moyen Exprimer [ $Communicator ] [ $Content ] [ $Medium ] [ $Addressee ] [ $Circumstances ] [ $Explanation ] [ $Frequency ] [ $Internal_cause ] [ $Manner ] [ $Place ] [ $Purpose ] [ $Time ] ?
+$Means .
+
+où Exprimer [ $Communicator ] [ $Content ] [ $Medium ] [ $Addressee ] [ $Circumstances ] [ $Explanation ] [ $Frequency ] [ $Internal_cause ] [ $Manner ] [ $Means ] [ $Purpose ] [ $Time ] ?
+$Place .
+
+dans_quel_but Exprimer [ $Communicator ] [ $Content ] [ $Medium ] [ $Addressee ] [ $Circumstances ] [ $Explanation ] [ $Frequency ] [ $Internal_cause ] [ $Manner ] [ $Means ] [ $Place ] [ $Time ] ?
+$Purpose .
+
+quand Exprimer [ $Communicator ] [ $Content ] [ $Medium ] [ $Addressee ] [ $Circumstances ] [ $Explanation ] [ $Frequency ] [ $Internal_cause ] [ $Manner ] [ $Means ] [ $Place ] [ $Purpose ] ?
+$Time .
+

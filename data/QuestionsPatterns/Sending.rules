@@ -1,0 +1,36 @@
+qui Envoyer [ $Theme ] [ $Time ] [ $Source ] [ $Goal ] [ $Recipient ] [ $Cotheme ] [ $Transport_means ] [ $Path ] [ $Explanation ] [ $Purpose ] [ $Container ] ?
+$Sender .
+
+quoi Envoyer [ $Sender ] [ $Time ] [ $Source ] [ $Goal ] [ $Recipient ] [ $Cotheme ] [ $Transport_means ] [ $Path ] [ $Explanation ] [ $Purpose ] [ $Container ] ?
+$Theme .
+
+quand Envoyer [ $Sender ] [ $Theme ] [ $Source ] [ $Goal ] [ $Recipient ] [ $Cotheme ] [ $Transport_means ] [ $Path ] [ $Explanation ] [ $Purpose ] [ $Container ] ?
+$Time .
+
+d'où Envoyer [ $Sender ] [ $Theme ] [ $Time ] [ $Goal ] [ $Recipient ] [ $Cotheme ] [ $Transport_means ] [ $Path ] [ $Explanation ] [ $Purpose ] [ $Container ] ?
+$Source .
+
+vers_où Envoyer [ $Sender ] [ $Theme ] [ $Time ] [ $Source ] [ $Recipient ] [ $Cotheme ] [ $Transport_means ] [ $Path ] [ $Explanation ] [ $Purpose ] [ $Container ] ?
+$Goal .
+
+à_qui Envoyer [ $Sender ] [ $Theme ] [ $Time ] [ $Source ] [ $Goal ] [ $Cotheme ] [ $Transport_means ] [ $Path ] [ $Explanation ] [ $Purpose ] [ $Container ] ?
+$Recipient .
+
+avec_qui Envoyer [ $Sender ] [ $Theme ] [ $Time ] [ $Source ] [ $Goal ] [ $Recipient ] [ $Transport_means ] [ $Path ] [ $Explanation ] [ $Purpose ] [ $Container ] ?
+$Cotheme .
+
+avec_quel_moyen Envoyer [ $Sender ] [ $Theme ] [ $Time ] [ $Source ] [ $Goal ] [ $Recipient ] [ $Cotheme ] [ $Path ] [ $Explanation ] [ $Purpose ] [ $Container ] ?
+$Transport_means .
+
+par_quel_chemin Envoyer [ $Sender ] [ $Theme ] [ $Time ] [ $Source ] [ $Goal ] [ $Recipient ] [ $Cotheme ] [ $Transport_means ] [ $Explanation ] [ $Purpose ] [ $Container ] ?
+$Path .
+
+pour_quelle_raison Envoyer [ $Sender ] [ $Theme ] [ $Time ] [ $Source ] [ $Goal ] [ $Recipient ] [ $Cotheme ] [ $Transport_means ] [ $Path ] [ $Purpose ] [ $Container ] ?
+$Explanation .
+
+dans_quel_but Envoyer [ $Sender ] [ $Theme ] [ $Time ] [ $Source ] [ $Goal ] [ $Recipient ] [ $Cotheme ] [ $Transport_means ] [ $Path ] [ $Explanation ] [ $Container ] ?
+$Purpose .
+
+dans_quoi Envoyer [ $Sender ] [ $Theme ] [ $Time ] [ $Source ] [ $Goal ] [ $Recipient ] [ $Cotheme ] [ $Transport_means ] [ $Path ] [ $Explanation ] [ $Purpose ] ?
+$Container .
+

@@ -1,0 +1,12 @@
+qui Tirer [ $Projectile ] ?
+$Agent .
+
+quoi Tirer [ $Agent ] ?
+$Projectile .
+
+qui Décocher [ $Projectile ] ?
+$Agent .
+
+quoi Décocher [ $Agent ] ?
+$Projectile .
+

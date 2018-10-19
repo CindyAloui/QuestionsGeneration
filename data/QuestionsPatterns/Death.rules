@@ -1,0 +1,21 @@
+qui Mourir [ $Time ] [ $Place ] [ $Explanation ] [ $Result ] [ $Containing_event ] [ $Inclusion_event ] ?
+$Protagonist .
+
+quand Mourir [ $Protagonist ] [ $Place ] [ $Explanation ] [ $Result ] [ $Containing_event ] [ $Inclusion_event ] ?
+$Time .
+
+où Mourir [ $Protagonist ] [ $Time ] [ $Explanation ] [ $Result ] [ $Containing_event ] [ $Inclusion_event ] ?
+$Place .
+
+de_quelle_façon Mourir [ $Protagonist ] [ $Time ] [ $Place ] [ $Result ] [ $Containing_event ] [ $Inclusion_event ] ?
+$Explanation .
+
+avec_quelle_conséquence Mourir [ $Protagonist ] [ $Time ] [ $Place ] [ $Explanation ] [ $Containing_event ] [ $Inclusion_event ] ?
+$Result .
+
+dans_quelles_circonstances Mourir [ $Protagonist ] [ $Time ] [ $Place ] [ $Explanation ] [ $Result ] [ $Inclusion_event ] ?
+$Containing_event .
+
+dans_quelles_circonstances Mourir [ $Protagonist ] [ $Time ] [ $Place ] [ $Explanation ] [ $Result ] [ $Containing_event ] ?
+$Inclusion_event .
+

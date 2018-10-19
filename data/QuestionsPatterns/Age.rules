@@ -1,0 +1,18 @@
+de_quand Dater [ $Attribute ] [ $Degree ] [ $Entity ] [ $Expressor ] [ $Duration ] ?
+$Age .
+
+de_quel_type Dater [ $Age ] [ $Degree ] [ $Entity ] [ $Expressor ] [ $Duration ] ?
+$Attribute .
+
+à_quel_degré Dater [ $Age ] [ $Attribute ] [ $Entity ] [ $Expressor ] [ $Duration ] ?
+$Degree .
+
+qui Dater [ $Age ] [ $Attribute ] [ $Degree ] [ $Expressor ] [ $Duration ] ?
+$Entity .
+
+par_quel_critère Dater [ $Age ] [ $Attribute ] [ $Degree ] [ $Entity ] [ $Duration ] ?
+$Expressor .
+
+combien_de_temps Dater [ $Age ] [ $Attribute ] [ $Degree ] [ $Entity ] [ $Expressor ] ?
+$Duration .
+

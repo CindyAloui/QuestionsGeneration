@@ -1,0 +1,120 @@
+quoi Manger [ $Ingestor ] [ $Duration ] [ $Instrument ] [ $Manner ] [ $Means ] [ $Place ] [ $Purpose ] [ $Source ] [ $Time ] ?
+$Ingestibles .
+
+qui Manger [ $Ingestibles ] [ $Duration ] [ $Instrument ] [ $Manner ] [ $Means ] [ $Place ] [ $Purpose ] [ $Source ] [ $Time ] ?
+$Ingestor .
+
+combien_de_temps Manger [ $Ingestibles ] [ $Ingestor ] [ $Instrument ] [ $Manner ] [ $Means ] [ $Place ] [ $Purpose ] [ $Source ] [ $Time ] ?
+$Duration .
+
+avec_quel_moyen Manger [ $Ingestibles ] [ $Ingestor ] [ $Duration ] [ $Manner ] [ $Means ] [ $Place ] [ $Purpose ] [ $Source ] [ $Time ] ?
+$Instrument .
+
+de_quelle_manière Manger [ $Ingestibles ] [ $Ingestor ] [ $Duration ] [ $Instrument ] [ $Means ] [ $Place ] [ $Purpose ] [ $Source ] [ $Time ] ?
+$Manner .
+
+par_quel_moyen Manger [ $Ingestibles ] [ $Ingestor ] [ $Duration ] [ $Instrument ] [ $Manner ] [ $Place ] [ $Purpose ] [ $Source ] [ $Time ] ?
+$Means .
+
+où Manger [ $Ingestibles ] [ $Ingestor ] [ $Duration ] [ $Instrument ] [ $Manner ] [ $Means ] [ $Purpose ] [ $Source ] [ $Time ] ?
+$Place .
+
+dans_quel_but Manger [ $Ingestibles ] [ $Ingestor ] [ $Duration ] [ $Instrument ] [ $Manner ] [ $Means ] [ $Place ] [ $Source ] [ $Time ] ?
+$Purpose .
+
+d'où Manger [ $Ingestibles ] [ $Ingestor ] [ $Duration ] [ $Instrument ] [ $Manner ] [ $Means ] [ $Place ] [ $Purpose ] [ $Time ] ?
+$Source .
+
+quand Manger [ $Ingestibles ] [ $Ingestor ] [ $Duration ] [ $Instrument ] [ $Manner ] [ $Means ] [ $Place ] [ $Purpose ] [ $Source ] ?
+$Time .
+
+quoi Déguster [ $Ingestor ] [ $Duration ] [ $Instrument ] [ $Manner ] [ $Means ] [ $Place ] [ $Purpose ] [ $Source ] [ $Time ] ?
+$Ingestibles .
+
+qui Déguster [ $Ingestibles ] [ $Duration ] [ $Instrument ] [ $Manner ] [ $Means ] [ $Place ] [ $Purpose ] [ $Source ] [ $Time ] ?
+$Ingestor .
+
+combien_de_temps Déguster [ $Ingestibles ] [ $Ingestor ] [ $Instrument ] [ $Manner ] [ $Means ] [ $Place ] [ $Purpose ] [ $Source ] [ $Time ] ?
+$Duration .
+
+avec_quel_moyen Déguster [ $Ingestibles ] [ $Ingestor ] [ $Duration ] [ $Manner ] [ $Means ] [ $Place ] [ $Purpose ] [ $Source ] [ $Time ] ?
+$Instrument .
+
+de_quelle_manière Déguster [ $Ingestibles ] [ $Ingestor ] [ $Duration ] [ $Instrument ] [ $Means ] [ $Place ] [ $Purpose ] [ $Source ] [ $Time ] ?
+$Manner .
+
+par_quel_moyen Déguster [ $Ingestibles ] [ $Ingestor ] [ $Duration ] [ $Instrument ] [ $Manner ] [ $Place ] [ $Purpose ] [ $Source ] [ $Time ] ?
+$Means .
+
+où Déguster [ $Ingestibles ] [ $Ingestor ] [ $Duration ] [ $Instrument ] [ $Manner ] [ $Means ] [ $Purpose ] [ $Source ] [ $Time ] ?
+$Place .
+
+dans_quel_but Déguster [ $Ingestibles ] [ $Ingestor ] [ $Duration ] [ $Instrument ] [ $Manner ] [ $Means ] [ $Place ] [ $Source ] [ $Time ] ?
+$Purpose .
+
+d'où Déguster [ $Ingestibles ] [ $Ingestor ] [ $Duration ] [ $Instrument ] [ $Manner ] [ $Means ] [ $Place ] [ $Purpose ] [ $Time ] ?
+$Source .
+
+quand Déguster [ $Ingestibles ] [ $Ingestor ] [ $Duration ] [ $Instrument ] [ $Manner ] [ $Means ] [ $Place ] [ $Purpose ] [ $Source ] ?
+$Time .
+
+quoi Boire [ $Ingestor ] [ $Duration ] [ $Instrument ] [ $Manner ] [ $Means ] [ $Place ] [ $Purpose ] [ $Source ] [ $Time ] ?
+$Ingestibles .
+
+qui Boire [ $Ingestibles ] [ $Duration ] [ $Instrument ] [ $Manner ] [ $Means ] [ $Place ] [ $Purpose ] [ $Source ] [ $Time ] ?
+$Ingestor .
+
+combien_de_temps Boire [ $Ingestibles ] [ $Ingestor ] [ $Instrument ] [ $Manner ] [ $Means ] [ $Place ] [ $Purpose ] [ $Source ] [ $Time ] ?
+$Duration .
+
+avec_quel_moyen Boire [ $Ingestibles ] [ $Ingestor ] [ $Duration ] [ $Manner ] [ $Means ] [ $Place ] [ $Purpose ] [ $Source ] [ $Time ] ?
+$Instrument .
+
+de_quelle_manière Boire [ $Ingestibles ] [ $Ingestor ] [ $Duration ] [ $Instrument ] [ $Means ] [ $Place ] [ $Purpose ] [ $Source ] [ $Time ] ?
+$Manner .
+
+par_quel_moyen Boire [ $Ingestibles ] [ $Ingestor ] [ $Duration ] [ $Instrument ] [ $Manner ] [ $Place ] [ $Purpose ] [ $Source ] [ $Time ] ?
+$Means .
+
+où Boire [ $Ingestibles ] [ $Ingestor ] [ $Duration ] [ $Instrument ] [ $Manner ] [ $Means ] [ $Purpose ] [ $Source ] [ $Time ] ?
+$Place .
+
+dans_quel_but Boire [ $Ingestibles ] [ $Ingestor ] [ $Duration ] [ $Instrument ] [ $Manner ] [ $Means ] [ $Place ] [ $Source ] [ $Time ] ?
+$Purpose .
+
+d'où Boire [ $Ingestibles ] [ $Ingestor ] [ $Duration ] [ $Instrument ] [ $Manner ] [ $Means ] [ $Place ] [ $Purpose ] [ $Time ] ?
+$Source .
+
+quand Boire [ $Ingestibles ] [ $Ingestor ] [ $Duration ] [ $Instrument ] [ $Manner ] [ $Means ] [ $Place ] [ $Purpose ] [ $Source ] ?
+$Time .
+
+quoi Alimenter [ $Ingestor ] [ $Duration ] [ $Instrument ] [ $Manner ] [ $Means ] [ $Place ] [ $Purpose ] [ $Source ] [ $Time ] ?
+$Ingestibles .
+
+qui Alimenter [ $Ingestibles ] [ $Duration ] [ $Instrument ] [ $Manner ] [ $Means ] [ $Place ] [ $Purpose ] [ $Source ] [ $Time ] ?
+$Ingestor .
+
+combien_de_temps Alimenter [ $Ingestibles ] [ $Ingestor ] [ $Instrument ] [ $Manner ] [ $Means ] [ $Place ] [ $Purpose ] [ $Source ] [ $Time ] ?
+$Duration .
+
+avec_quel_moyen Alimenter [ $Ingestibles ] [ $Ingestor ] [ $Duration ] [ $Manner ] [ $Means ] [ $Place ] [ $Purpose ] [ $Source ] [ $Time ] ?
+$Instrument .
+
+de_quelle_manière Alimenter [ $Ingestibles ] [ $Ingestor ] [ $Duration ] [ $Instrument ] [ $Means ] [ $Place ] [ $Purpose ] [ $Source ] [ $Time ] ?
+$Manner .
+
+par_quel_moyen Alimenter [ $Ingestibles ] [ $Ingestor ] [ $Duration ] [ $Instrument ] [ $Manner ] [ $Place ] [ $Purpose ] [ $Source ] [ $Time ] ?
+$Means .
+
+où Alimenter [ $Ingestibles ] [ $Ingestor ] [ $Duration ] [ $Instrument ] [ $Manner ] [ $Means ] [ $Purpose ] [ $Source ] [ $Time ] ?
+$Place .
+
+dans_quel_but Alimenter [ $Ingestibles ] [ $Ingestor ] [ $Duration ] [ $Instrument ] [ $Manner ] [ $Means ] [ $Place ] [ $Source ] [ $Time ] ?
+$Purpose .
+
+d'où Alimenter [ $Ingestibles ] [ $Ingestor ] [ $Duration ] [ $Instrument ] [ $Manner ] [ $Means ] [ $Place ] [ $Purpose ] [ $Time ] ?
+$Source .
+
+quand Alimenter [ $Ingestibles ] [ $Ingestor ] [ $Duration ] [ $Instrument ] [ $Manner ] [ $Means ] [ $Place ] [ $Purpose ] [ $Source ] ?
+$Time .
+

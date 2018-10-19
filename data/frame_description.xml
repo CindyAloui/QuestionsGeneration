@@ -1,0 +1,736 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<config>
+
+<frameList>
+	<frame name="Accomplishment" tgv="Réaliser" tgn="Réalisation">
+		<feList>
+			<fe use="true"  question="qui_agent" value="Agent" comment="la personne qui a réalisé le Goal"/>
+			<fe use="true"  question="quoi" value="Goal" comment="le but à atteindre"/>
+			<fe use="true"  question="quand" value="Time" comment="quand la réalisation a eu lieu"/>
+			<fe use="true"  question="où" value="Place" comment="où la réalisation a eu lieu"/>
+			<fe use="true"  question="avec_quoi" value="Instrument" comment="les outils utilisés pour réaliser le Goal"/>
+			<fe use="true"  question="de_quelle_manière" value="Means" comment="de quelle manière l'Agent a réalisé le Goal"/>
+			<fe use="false" question="pour_quelle_raison" value="Explanation" comment="état à partir duquel la réalisation peut être prédite"/>
+		</feList>
+	</frame>
+	
+	<frame name="Activity_start" tgv="Commencer,Débuter" tgn="Commencement,Début" >
+		<feList>
+		    <fe use="" question="quoi" value="Activity" comment="activité qui commence" />
+		    <fe use="" question="qui_agent" value="Agent" comment="la personne qui organise l'activité" />
+		    <fe use="" question="dans_quelles_circonstances" value="Circumstances" comment="les circonstances dont l'activité commence" />
+		    <fe use="" question="dans_quelles_circonstances" value="Co-timed_event" comment="événements qui se déroulent en meme temps que l'activité commence" />
+		    <fe use="" question="dans_quelles_circonstances" value="Containing_event" comment="____on avait di de l'enlever____" />
+		    <fe use="" question="quoi_précisément" value="Event_description" comment="description de Activity" />
+		    <fe use="" question="pour_quelle_raison" value="Explanation" comment="pour quelle raison l'activité commence" />
+		    <fe use="" question="de_quelle_manière" value="Manner" comment="de quelle manière l'activité commence" />
+		    <fe use="" question="par_quel_moyen" value="Means" comment="par quels moyens l'activité commence" />
+		    <fe use="" question="où" value="Place" comment="lieu où l'activié commence" />
+		    <fe use="" question="dans_quel_but" value="Purpose" comment="quel est le but de commencer l'activité" />
+		    <fe use="" question="quand" value="Time" comment="quand commence l'activité" />
+		</feList>
+	</frame>
+
+	<frame name="Age" tgv="Dater" tgn="Date,Datation" >
+		<feList>
+			<fe use="" question="de_quand" value="Age" comment="l'entité date de quand" />
+***			<fe use="" question="de_quel_type" value="Attribute" comment="caractéristique importante de l'entité due à l'age (utilisé à tort)" />
+***			<fe use="" question="à_quel_degré" value="Degree" comment="" />
+			<fe use="" question="qui_agent" value="Entity" comment="l'entité qui date" />
+***			<fe use="" question="par_quel_critère" value="Expressor" comment="" />
+			<fe use="" question="combien_de_temps" value="Duration" comment="pour combien de temps l'entité a été dans son état actual" />			
+		</feList>
+	</frame>	
+	
+	<frame name="Appointing" tgv="Affecter,Nommer,Désigner" tgn="Nomination,Promotion" >
+		<feList>
+			<fe use="true"  question="qui_agent" value="Selector" comment="la personne qui nomme l'Official à son Role"/>
+			<fe use="true"  question="qui" value="Official" comment="la personne qui va être désignée pour un certain poste"/>
+			<fe use="true"  question="quoi" value="Role" comment="le poste qui va être occupé par une certaine personne"/>
+			<fe use="true"  question="de_quoi" value="Body" comment="le groupe ou l'organisation pour lequel l'Official est nommé à son Role"/>
+			<fe use="true"  question="quand" value="Time" comment="moment où la désignation a eu lieu"/>
+			<fe use="true"  question="où" value="Place" comment="lieu où la désignation a eu lieu"/>
+			<fe use="" question="avec_quelle_conséquence" value="Result" comment="quel effet a eu cette désignation" />
+			<fe use="" question="dans_quel_but" value="Function" comment="quel est la mission d'Official dans son souveau Role" />
+		</feList>
+	</frame>
+	
+	<frame name="Arrest" tgv="Arrêter" tgn="">
+		<feList>
+			<fe use="true"  question="qui_agent" value="Authorities" comment="la ou les personnes qui interpellent le suspect"/>
+			<fe use="true"  question="qui_agent_également" value="Co-participant" comment="une personne qui participe à l’événement du coté du suspect ou des autorités"/>
+			<fe use="true"  question="qui" value="Suspect" comment="la personne qui est interpellée"/>
+			<fe use="true"  question="quand" value="Time" comment="moment ou l'arrestation a eu lieu"/>
+			<fe use="true"  question="où" value="Place" comment="lieu l'arrestation a eu lieu"/>
+			<fe use="true"  question="pour_quelle_raison" value="Charges" comment="pour quelle raison on arrête cette personne"/>
+			<fe use="true"  question="dans_quel_but" value="Purpose" comment="le but pour lequel les autorités ont arrêtes le suspect"/>
+			<fe use="false"  question="pour_quelle_raison" value="Offense" comment="utiliser Charges plutôt que celui ci"/>
+		</feList>
+	</frame>
+	
+	<frame name="Arriving" tgv="Arriver,Atteindre" tgn="Arrivée">
+		<feList>
+			<fe use="true"  question="qui_agent" value="Theme" comment="l'entité qui se déplace"/>
+			<fe use="true"  question="qui_agent_également" value="Cotheme" comment="une deuxième entité se déplaçant avec la première"/>
+			<fe use="true"  question="quand" value="Time" comment="le moment auquel a eu lieu le déplacement"/>
+			<fe use="true"  question="où_précisément" value="Goal" comment="la destination"/>
+			<fe use="true"  question="d'où" value="Source" comment="l'endroit duquel le Theme à commencer son déplacement"/>
+			<fe use="true"  question="avec_quel_moyen" value="Mode_of_transportation" comment="le moyen de transport"/>
+			<fe use="true"  question="par_quel_chemin" value="Path" comment="le chemin par lequel le Theme est passé pour aller de la source à la destination"/>
+			<fe use="true"  question="dans_quel_but" value="Purpose" comment="la raison du déplacement"/>
+			<fe use="" question="où" value="Place" comment="le lieu d'arrivé" />
+		</feList>
+	</frame>
+	
+	<frame name="Assistance" tgv="Soutenir" tgn="Aide,Soutien">
+		<feList>
+			<fe use="true"  question="qui_agent" value="Helper" comment="la personne ou le groupe de personne qui viennent en aide à quelqu'un"/>
+			<fe use="true"  question="qui" value="Benefited_party" comment="la personne ou le groupe de personne a qui on porte assistance"/>
+			<fe use="true"  question="quand" value="Time" comment="moment où l'aide s'est déroulée"/>
+			<fe use="true"  question="où" value="Place" comment="lieu où l'aide s'est déroulée"/>
+			<fe use="true"  question="à_quel_sujet" value="Goal" comment="le sujet sur lequel le Helper aide le Benefited_party (peu utilisé)"/>
+			<fe use="true"  question="avec_quel_moyen" value="Instrument" comment="objet servant à venir en aide, utilisé par le Helper"/>
+			<fe use="true"  question="combien_de_temps" value="Duration" comment="combien de temps a duré l'aide"/>
+			<fe use="true"  question="de_quelle_manière" value="Means" comment="de quelle manière le Helper est venu en aide au Benefited_party"/>
+			<fe use="true"  question="pour_quelle_raison" value="Explanation" comment="explique comment on en est arrivé à la situation d'aide"/>
+			<fe use="true"  question="dans_quel_but" value="Purpose" comment="le but qui a poussé le Helper à aider le Benefited_party"/>
+			<fe use="false" question="en_quoi" value="Focal_entity" comment="entité qui fait l'objet d'une assistance"/>
+		</feList>
+	</frame>
+	
+	<frame name="Attack" tgv="Attaquer" tgn="Attaque,Offensive,Bombardement,Contre-attaque">
+		<feList>
+			<fe use="true"  question="qui_agent" value="Assaillant" comment="l'attaquant"/>
+			<fe use="true"  question="qui" value="Victim" comment="l'attaqué"/>
+			<fe use="true"  question="quand" value="Time" comment="moment de l'attaque"/>
+			<fe use="true"  question="où" value="Place" comment="lieu de l'attaque"/>
+			<fe use="true"  question="avec_quel_moyen" value="Weapon" comment="l'arme utilisée durant l'attaque"/>
+			<fe use="true"  question="de_quelle_manière" value="Means" comment="l'attaque a eu lieu de quelle manière"/>
+			<fe use="true"  question="combien_de_temps" value="Duration" comment="la durée de l'attaque"/>
+			<fe use="true"  question="pour_quelle_raison" value="Explanation" comment="les raisons qui ont mené à l'attaque"/>
+			<fe use="true"  question="dans_quel_but" value="Purpose" comment="le but de l'attaque"/>
+			<fe use="true"  question="avec_quelle_conséquence" value="Result" comment="ce qui a résulté de l'attaque (peu utilisé)"/>
+			<fe use="false" question="d'où" value="Source" comment="origine du projectile"/>
+			<fe use="false" question="à_quelle_fréquence" value="Frequency" comment="nombre de fois pendant une période donnée"/>
+		</feList>
+	</frame>
+	
+	<frame name="Awareness" tgv="Comprendre,Connaître" tgn="Compréhension,Connaissance">
+		<feList>
+		    <fe use="" question="qui_agent" value="Cognizer" comment="la personne qui sait" />
+		    <fe use="" question="quoi" value="Content" comment="la chose à savoir (un objet, ou bien un événement)" />
+		    <fe use="" question="qui_agent_également" value="Expressor" comment="" />   
+		    <fe use="" question="à_quel_sujet" value="Topic" comment="" /> 
+		    <fe use="" question="à_la_suite_de_quoi" value="Explanation" comment="comment le Cognizer a pris connaissance de Topic or Content " />
+		    <fe use="" question="comment" value="Role" comment="l'interprétation donnée à Content" />
+		    <fe use="" question="où" value="Place" comment="lieu de la prise de connaissance" />
+		    <fe use="" question="quand" value="Time" comment="quand la réalisation a eu lieu" />
+		    <fe use="" question="NULL" value="NULL" comment="NULL" />
+		</feList>
+	</frame>
+
+	<frame name="Becoming" tgv="Devenir" tgn="">
+		<feList>
+		    <fe use="" question="qui_agent" value="Entity" comment="l'entité qui change" />
+		    <fe use="" question="quoi" value="Final_category" comment="ce que l'entité devienne" />
+		    <fe use="" question="comment" value="Final_quality" comment="caractéristique de l'entité après le changement" />
+		    <fe use="" question="dans_quelles_circonstances" value="Circumstances" comment="dans quelles circonstances a eu lieu le changement" />
+		    <fe use="" question="pour_combien_de_temps" value="Duration_of_final_state" comment="quelle est la durée de l'état final" />
+		    <fe use="" question="pour_quelle_raison" value="Explanation" comment="la raison du changement" />
+		    <fe use="" question="de_quelle_manière" value="Manner" comment="de que manière a eu lieu le changement" />
+		    <fe use="" question="où" value="Place" comment="lieu du changement" />
+		    <fe use="" question="quand" value="Time" comment="quand le changement a eu lieu" />
+		</feList>
+	</frame>
+
+	<frame name="Becoming_aware" tgv="Découvrir" tgn="Découverte">
+		<feList>
+			<fe use="true"  question="qui_agent" value="Cognizer" comment="la personne qui a fait la découverte"/>
+			<fe use="true"  question="quoi" value="Phenomenon" comment="la chose découverte (un objet, ou bien un événement)"/>
+			<fe use="true"  question="quand" value="Time" comment="à quel moment le Phenomenon a été découvert"/>
+			<fe use="true"  question="où" value="Ground" comment="la zone de découverte"/>
+			<fe use="true"  question="dans_quel_état" value="State" comment="dans quel état le Phenomenon a été découvert"/>
+			<fe use="true"  question="avec_quel_moyen" value="Instrument" comment="quel outil a servi à la découverte"/>
+			<fe use="true"  question="de_quelle_manière" value="Means" comment="de quelle manière on a découvert le Phenomenon"/>
+			<fe use="true"  question="dans_quel_but" value="Purpose" comment="dans quel but le Cognizer voulait découvrir le Phenomenon"/>
+			<fe use="false" question="à_quel_sujet" value="Topic" comment="domaine de la découverte"/>
+			<fe use="false" question="à_la_suite_de_quoi" value="Explanation" comment="proposition dont découle la découverte"/>
+		</feList>
+	</frame>
+	
+	<frame name="Buildings" tgv="Construire,Élever,Fabriquer" tgn="Construction,Fabrication">
+		<feList>
+			<fe use="true"  question="qui_agent" value="Agent" comment="la personne ayant construit ou ayant ordonné de construire la Created_entity"/>
+			<fe use="true"  question="quoi" value="Created_entity" comment="ce qui a été construit"/>
+			<fe use="true"  question="quand" value="Time" comment="à quel moment a eu lieu la construction"/>
+			<fe use="true"  question="où" value="Place" comment="où a eu lieu la construction"/>
+			<fe use="true"  question="pour_qui" value="Beneficiary" comment="la personne pour qui la Created_entity a été construite"/>
+			<fe use="true"  question="en_quoi" value="Components" comment="en quoi est fait la Created_entity"/>
+			<fe use="true"  question="avec_quoi" value="Instrument" comment="les outils utilisés pour la construction"/>
+			<fe use="true"  question="de_quelle_manière" value="Manner" comment="de quelle manière a été construit la Created_entity"/>
+			<fe use="true"  question="par_quel_moyen" value="Means" comment="par quel moyen a été construit la Created_entity"/>
+			<fe use="true"  question="en_combien_de_temps" value="Duration" comment="combien de temps a duré la construction"/>
+			<fe use="true"  question="dans_quel_but" value="Purpose" comment="dans quel but la Created_entity a été construite"/>
+			<fe use="true"  question="avec_quelle_conséquence" value="Result" comment="qu'est-ce qu'a provoqué la construction"/>
+***			<fe use="false"  question="qui_agent" value="Agent#Components" comment="la personne ayant construit ou ayant ordonné de construire la Created_entity"/>
+		</feList>
+	</frame>
+
+	<frame name="Change_of_leadership" tgv="Élire,Désigner" tgn="Élection,Désignation">
+		<feList>
+		    <fe use="" question="dans_quelle_entité" value="Body" comment="" />
+		    <fe use="" question="à_quelle_fonction" value="Function" comment="" />
+		    <fe use="" question="qui" value="New_leader" comment="la nouvelle personne dans le poste" />
+		    <fe use="" question="à_la_place_de_qui" value="Old_leader" comment="l'ancienne personne dans le poste" />
+		    <fe use="" question="à_la_place_de_quoi" value="Old_order" comment="l'ancien ordre, direction" />
+		    <fe use="" question="qui_agent" value="Selector" comment="personne ou groupe responsable du changement" />
+		    <fe use="" question="dans_quelles_circonstances" value="Circumstances" comment="dans quelles circonstances a eu lieu le changement" />
+		    <fe use="" question="de_quelle_manière" value="Manner" comment="de que manière a eu lieu le changement" />
+		    <fe use="" question="par_quel_moyen" value="Means" comment="par quel moyen a eu lieu le changement" />
+		    <fe use="" question="où" value="Place" comment="lieu du changement" />
+		    <fe use="" question="avec_quelle_conséquence" value="Result" comment="" />
+		    <fe use="" question="quand" value="Time" comment="quand le changement a eu lieu" />
+		</feList>
+	</frame>
+	
+	<frame name="Choosing" tgv="Élire,Choisir,Désigner,Sélectionner" tgn="Choix">
+		<feList>
+		    <fe use="" question="quoi" value="Chosen" comment="l'option choisie" />
+		    <fe use="" question="qui_agent" value="Cognizer" comment="la personne qui fait le choix" />
+		    <fe use="" question="parmi_quoi" value="Possibilities" comment="l'ensemble des options" />
+		    <fe use="" question="contre_quoi" value="Contrast" comment="une autre option moins intéressante" />
+		    <fe use="" question="pour_quelle_raison" value="Explanation" comment="pour quelle raison Cognizer fait ce choix" />
+		    <fe use="" question="dans_quel_but" value="Inherent_purpose" comment="quelle est le but pour lequel est destiné Chosen" />
+***		    <fe use="" question="NULL" value="Semantic" comment="NULL" />   *** Not Even in FrameNet
+		    <fe use="" question="de_quelle_manière" value="Manner" comment="de quelle manière a eu lieu l'élection" />
+		    <fe use="" question="par_quel_moyen" value="Means" comment="par quel moyen a eu lieu l'élection" />
+		    <fe use="" question="où" value="Place" comment="lieu où le choix a été faite" />
+		    <fe use="" question="quand" value="Time" comment="quand le choix a eu lieu" />
+		</feList>
+	</frame>
+	
+	<frame name="Colonization" tgv="Installer,Coloniser,Peupler" tgn="Installation,Colonisation,Peuplement">
+		<feList>
+		    <fe use="" question="qui" value="Colonists" comment="le groupe qui se déplace dehors Homeland pour s'intaller" />
+		    <fe use="" question="d'où" value="Homeland" comment="le lieu d'origine des Colonists" />
+		    <fe use="" question="quoi" value="New_area" comment="le lieu où les Colonist vont s'installer" />
+		    <fe use="" question="pour_quelle_raison" value="Explanation" comment="raison qui amène aux Colonists à partir" />
+		    <fe use="" question="dans_quel_but" value="Purpose" comment="quelle est le but des Colonists" />
+		    <fe use="" question="quand" value="Time" comment="quand a eu lieu la colonisation" />		    
+		</feList>
+	</frame>
+
+	<frame name="Coming_to_believe" tgv="Réaliser,Comprendre" tgn="Compréhension">
+		<feList>
+			<fe use="true"  question="qui_agent" value="Cognizer" comment="la personne qui prend conscience du Content"/>
+			<fe use="true"  question="quoi" value="Content" comment="la chose que réalise le Cognizer"/>
+			<fe use="true"  question="quand" value="Time" comment="quand le Cognizer a pris conscience du Content"/>
+			<fe use="true"  question="où" value="Place" comment="où le Cognizer a pris conscience du Content"/>
+			<fe use="true"  question="par_quel_moyen" value="Means" comment="par quel moyen le Cognizer a réalisé le Content"/>
+		</feList>
+	</frame>
+
+	<frame name="Coming_up_with" tgv="Inventer" tgn="Invention">
+		<feList>
+		    <fe use="" question="qui_agent" value="Cognizer" comment="la personne qui a une idée ou fait une invention" />
+		    <fe use="" question="quoi" value="Idea" comment="chose inventé par le Cognizer" />
+		    <fe use="" question="jusqu'à_quel_point" value="Amount_of_progress" comment="jusqu'à où Cognizer réussi avec son Idea" />
+		    <fe use="" question="avec_quoi" value="Material" comment="le material avec lequel le Cognizer fait son invention" />
+		    <fe use="" question="par_quel_moyen" value="Means" comment="par quel moyen le Cognizer fait son invention" />
+		    <fe use="" question="où" value="Place" comment="le lieu où le Cognizer fait son invention" />
+		    <fe use="" question="dans_quel_but" value="Purpose" comment="quel est le but de l'invention" />
+		    <fe use="" question="quand" value="Time" comment="le moment où le Cognizer fait son invention" />
+		    <fe use="" question="avec_quelle_conséquence" value="Result" comment="quel consequences a l'invention" />
+		</feList>
+	</frame>
+	
+	<frame name="Conduct" tgv="Agir" tgn="">
+		<feList>
+		    <fe use="" question="qui_agent" value="Agent" comment="l'entité qui agit" />
+		    <fe use="" question="de_quelle_manière" value="Manner" comment="la manière dont l'entité agit" />
+		    <fe use="" question="quoi" value="Affected_party" comment="l'entité vers laquelle Agent agit" />
+		    <fe use="" question="dans_quelles_circonstances" value="Circumstances" comment="dans quelles circonstances l'accion a lieu" />
+		    <fe use="" question="par_quel_moyen" value="Means" comment="par quel moyen agit l'Agent" />
+		    <fe use="" question="où" value="Place" comment="l'endroit où l'action a eu lieu" />
+		    <fe use="" question="quand" value="Time" comment="le moment ou l'action a eu lieu" />
+		</feList>
+	</frame>
+	
+	<frame name="Contacting" tgv="Appeler" tgn="">
+		<feList> 
+		    <fe use="" question="pour quelle destination" value="Address" comment="localisation de l'Addressee (peut_être une metaphore)" />
+		    <fe use="" question="à_qui" value="Addressee" comment="l'entité à laquelle Communicator contacte" />
+		    <fe use="" question="quoi" value="Communication" comment="l'information à transmettre à Addressee" />
+		    <fe use="" question="qui_agent" value="Communicator" comment="la personne qui essaie de se communiquer" />
+		    <fe use="" question="à_quel_sujet" value="Topic" comment="le sujet de l'appel" />
+		    <fe use="" question="où" value="Place" comment="l'endroit où le contacte à lieu" />
+		    <fe use="" question="quand" value="Time" comment="le moment où le contacte à lieu" />
+		</feList>
+	</frame>
+	
+	<frame name="Creating" tgv="Créer,Réaliser" tgn="Exécution,Fabrication,Réalisation">
+		<feList>
+			<fe use="true"  question="qui_agent" value="Creator" comment="l’être humain ayant créé la Created_entity"/>
+			<fe use="true"  question="qui_agent_également" value="Co-participant" comment="une autre personne aidant le Creator"/>
+			<fe use="true"  question="quoi" value="Created_entity" comment="l'entité qui a été créée ( pas forcément un objet, ça peut être une association, une loi…)"/>
+			<fe use="true"  question="quand" value="Time" comment="moment où la création a eu lieu"/>
+			<fe use="true"  question="où" value="Place" comment="endroit où la création a eu lieu"/>
+			<fe use="true"  question="pour_qui" value="Beneficiary" comment="la personne qui profite de la création"/>
+			<fe use="true"  question="avec_quel_moyen" value="Instrument" comment="objet servant à la création de la Created_entity (peu utilisé)"/>
+			<fe use="true"  question="pour_quelle_fonction" value="Role" comment="le rôle de la Created_entity"/>
+			<fe use="true"  question="pour_quelle_raison" value="Cause" comment="l'entité, l’événement, la force qui a poussé à la création de la Created_entity"/>
+			<fe use="true"  question="dans_quel_but" value="Purpose" comment="le but qui a poussé à la création de la Created_entity"/>
+		</feList>
+	</frame>
+	
+	<frame name="Death" tgv="Mourir" tgn="Mort,Décès">
+		<feList>
+			<fe use="true"  question="qui_agent" value="Protagonist" comment="la personne décédée"/>
+			<fe use="true"  question="quand" value="Time" comment="moment où le protagonist est décédé"/>
+			<fe use="true"  question="où" value="Place" comment="endroit où le protagonist est décédé"/>
+			<fe use="true"  question="de_quelle_façon" value="Explanation" comment="les causes de la mort"/>
+			<fe use="true"  question="avec_quelle_conséquence" value="Result" comment="le résultat du décès (peu utilisé)"/>
+			<fe use="false" question="dans_quelles_circonstances" value="Containing_event" comment="événement au cours duquel le décès a eu lieu"/>
+			<fe use="false" question="dans_quelles_circonstances" value="Inclusion_event" comment="événement au cours duquel le décès a eu lieu"/>
+		</feList>
+	</frame>
+	
+	<frame name="Deciding" tgv="Décider" tgn="">
+		<feList>
+			<fe use="true"  question="qui_agent" value="Cognizer" comment="la personne qui prend la décision"/>
+			<fe use="true"  question="quoi" value="Decision" comment="la décision qui est prise"/>
+			<fe use="true"  question="quand" value="Time" comment="moment où la décision s'est déroulée"/>
+			<fe use="true"  question="où" value="Place" comment="lieu où la décision s'est déroulée"/>
+			<fe use="true"  question="pour_quelle_raison" value="Explanation" comment="explication sur pourquoi cette décision a été prise"/>
+			<fe use="false" question="parmi_quoi" value="Possibilities" comment="possibilités parmi lesquelles est prise la décision"/>
+		</feList>
+	</frame>
+	
+	<frame name="Departing" tgv="Quitter" tgn="Départ">
+		<feList>
+			<fe use="true"  question="qui_agent" value="Theme" comment="l'entité qui subit le départ"/>
+			<fe use="true"  question="qui_agent_également" value="Cotheme" comment="une deuxième entité qui part avec le Theme"/>
+			<fe use="true"  question="quoi" value="Source" comment="l'endroit, l'organisme que l'on quitte"/>
+			<fe use="true"  question="quand" value="Time" comment="à quel moment a eu lieu le départ"/>
+			<fe use="true"  question="vers_où" value="Goal" comment="le point d'arrivé"/>
+			<fe use="true"  question="pour_quelle_distance" value="Distance" comment="la distance parcourue entre le point de départ et d'arrivée (peu utilisé)"/>
+			<fe use="true"  question="avec_quel_moyen" value="Mode_of_transportation" comment="le moyen de transport"/>
+			<fe use="true"  question="par_quel_chemin" value="Path" comment="le chemin parcouru pour arriver au Goal depuis la Source"/>
+			<fe use="true"  question="pour_quelle_raison" value="Explanation" comment="pourquoi le départ était nécessaire"/>
+			<fe use="true"  question="dans_quel_but" value="Purpose" comment="dans quel but le Theme a quitté la Source"/>
+			<fe use="false"  question="pour_combien_de_temps" value="Duration_of_final_state" comment="durée pendant laquelle l'entité reste dans l'état final"/>
+			<fe use="false" question="à_quelle_fréquence" value="Frequency" comment="fréquence à laquelle l'entité part"/>
+			<fe use=""  question="avec_quel_moyen" value="Means" comment="le moyen de transport"/>
+		</feList>
+	</frame>
+
+	<frame name="Dimension" tgv="Mesurer,Peser" tgn="Taille,Poids">
+		<feList>
+			<fe use="true"  question="quoi_agent" value="Object" comment="l'objet dont on cherche à connaître l’âge"/>
+			<fe use="true"  question="combien" value="Measurement" comment="la date de construction où l’âge de l'objet"/>
+			<fe use="false" question="en_quoi" value="Dimension" comment="dimension dans laquelle la mesure est faite"/>
+			<fe use="false" question="quelle_partie" value="Locus" comment="sous-region de l'objet qui est mesurée"/>
+		</feList>
+	</frame>
+
+	<frame name="Education_teaching" tgv="Étudier,Enseigner,Apprendre" tgn="Étude,Enseignement,Enseignant">
+		<feList>
+		    <fe use="" question="quoi" value="Course" comment="le cours suivi par Student ou enseigné par le Teacher" />
+		    <fe use="" question="quoi_précisément" value="Fact" comment="une information bien précise qui a été transmise" />
+		    <fe use="" question="où_précisément" value="Institution" comment="l'institution où l'enseignement se dérroule" />
+		    <fe use="" question="avec_quoi" value="Material" comment="les matériaux utilisés pour l'apprentissage" />
+		    <fe use="" question="quoi_précisément" value="Precept" comment="une information de caracter morale qui a été transmise" />
+		    <fe use="" question="vers_quel_niveau" value="Qualification" comment="le niveu du diplome que Student prépare" />
+		    <fe use="" question="quoi" value="Role" comment="le métier que Student apprends" />
+		    <fe use="" question="quoi" value="Skill" comment="une compétence que Student dévéloppe" />
+		    <fe use="" question="à_qui" value="Student" comment="la personne qui apprends" />
+		    <fe use="" question="quoi" value="Subject" comment="le sujet étudié" />
+		    <fe use="" question="qui_agent" value="Teacher" comment="la personne qui enseigne" />
+		    <fe use="" question="combien_de_temps" value="Duration" comment="la durée des cours" />
+		    <fe use="" question="à_quel_niveau" value="Level" comment="le niveau de éducation de Student" />
+		    <fe use="" question="de_quelle_manière" value="Manner" comment="de quelle manière a lieu l'apprentissage" />		    
+		    <fe use="" question="par_quel_moyen" value="Means" comment="de quel moyen a lieu l'apprentissage" />
+		    <fe use="" question="où" value="Place" comment="l'endroit ou a lieu l'apprentissage" />
+		    <fe use="" question="dans_quel_but" value="Purpose" comment="quel est le but d'apprendre ou enseigner" />
+		    <fe use="" question="avec_quelle_conséquence" value="Result" comment="les conséquences de cette éducation" />
+		    <fe use="" question="quand" value="Time" comment="le moment de l'apprentissage" />
+		</feList>
+	</frame>
+	
+	<frame name="Existence" tgv="Exister" tgn="Existence">
+		<feList>
+		    <fe use="" question="qui_agent" value="Entity" comment="l'entité qui existe" />
+		    <fe use="" question="dans_quelles_circonstances" value="Circumstances" comment="les conditions sous lequelles l'entité existe" />
+		    <fe use="" question="pour_combien_de_temps" value="Duration" comment="la durée de l'existence de l'entité" />
+		    <fe use="" question="pour_quelle_raison" value="Explanation" comment="la raison qui justifie ou donne origine à l'entité" />
+		    <fe use="" question="dans_quel_but" value="Inherent_purpose" comment="quel est le but de cette entité" />
+		    <fe use="" question="où" value="Place" comment="le lieu où l'entité existe" />
+		    <fe use="" question="quand" value="Time" comment="le moment où l'entité existe" />
+		</feList>
+	</frame>
+	
+	<frame name="Expressing_publicly" tgv="Exprimer" tgn="Expression">
+		<feList>
+			<fe use="" question="qui_agent" value="Communicator" comment="la personne qui se communique" />
+		    <fe use="" question="quoi" value="Content" comment="le message qui exprime" />
+		    <fe use="" question="à_travers_quoi" value="Medium" comment="quel est l'action ou l'élément qui comunique" />
+		    <fe use="" question="à_qui" value="Addressee" comment="la personne à qui Communicator s'adresse" />
+		    <fe use="" question="dans_quelles_circonstances" value="Circumstances" comment="les conditions sous lequelles la communication a lieu" />
+		    <fe use="" question="pour_quelle_raison" value="Explanation" comment="la raison qui motive cette expression" />
+		    <fe use="" question="à_quelle_fréquence" value="Frequency" comment="la fréquence avec laquelle cette communication a lieu" />
+		    <fe use="" question="pour_quelle_raison_personelle" value="Internal_cause" comment="raison personelle du Communicator pour s'exprimer" />
+		    <fe use="" question="de_quelle_manière" value="Manner" comment="de quelle manière a lieu la communication" />
+		    <fe use="" question="par_quel_moyen" value="Means" comment="par quel moyen a lieu la communication" />
+		    <fe use="" question="où" value="Place" comment="le lieu de la communication" />
+		    <fe use="" question="dans_quel_but" value="Purpose" comment="quelle est le but de cette expression" />
+		    <fe use="" question="quand" value="Time" comment="le temps de la communication" />
+		</feList>
+	</frame>
+	
+
+	
+	<frame name="Finish_competition" tgv="Perdre" tgn="Victoire,Succès,Défaite">
+		<feList>
+			<fe use="true"  question="qui_agent" value="Competitor" comment="le premier participant, qui doit gagner contre l'Opponent"/>
+			<fe use="true"  question="qui_agent_également" value="Competitors" comment="les participants"/>
+			<fe use="true"  question="quoi" value="Competition" comment="la competition qui a été perdue, exemples : une guerre, une bataille, un jeu…"/>
+			<fe use="true"  question="quand" value="Time" comment="moment où s'est déroulé la competition"/>
+			<fe use="true"  question="où" value="Place" comment="endroit où s'est déroulé la competition"/>
+			<fe use="true"  question="contre_qui" value="Opponent" comment="le deuxième participant, qui doit gagner contre le Competitor"/>
+			<fe use="true"  question="de_quelle_manière" value="Means" comment="de quelle manière le Competitor s'y est pris pour gagner/perdre"/>
+		</feList>
+	</frame>
+	
+	<frame name="Giving" tgv="Donner,Offrir" tgn="Don">
+		<feList>
+                	    <fe use="" question="qui_agent" value="Donor" comment="l'entité qui done quelque-chose" />
+		    <fe use="" question="à_qui" value="Recipient" comment="l'entité reçoit quelque-chose" />
+		    <fe use="" question="quoi" value="Theme" comment="ce que Donor donne a Recipient" />
+		    <fe use="" question="dans_quelles_circonstances" value="Circumstances" comment="les conditions sous lequelles le don est fait" />
+		    <fe use="" question="pour_quelle_raison" value="Explanation" comment="la raison du don" />
+		    <fe use="" question="de_quelle_manière" value="Manner" comment="de quelle manière a lieu le don" />
+		    <fe use="" question="par_quel_moyen" value="Means" comment="par quel moyen a lieu le don" />
+		    <fe use="" question="où" value="Place" comment="le lieu du don" />
+		    <fe use="" question="dans_quel_but" value="Purpose" comment="quelle est le but de ce don" />
+		    <fe use="" question="quand" value="Time" comment="le temps du don" />
+		</feList>
+	</frame>
+	
+	<frame name="Hiding_objects" tgv="Cacher" tgn="">
+		<feList>
+			<fe use="" question="qui_agent" value="Agent" comment="l'entité qui cache" />
+		    <fe use="" question="quoi" value="Hidden_object" comment="ce qui est caché" />
+		    <fe use="" question="où_précisément" value="Hiding_place" comment="ou est caché Hidden_object" />
+		    <fe use="" question="avec_quoi" value="Obstruction" comment="qu'est ce qui empeche Hidden_object d'être retrouvé" />
+		    <fe use="" question="où" value="Place" comment="lieu de l'action" />
+		    <fe use="" question="dans_quel_but" value="Purpose" comment="quelle est le but de cacher Hidde_object" />
+		    <fe use="" question="quand" value="Time" comment="le temps de l'action" />
+		</feList>
+	</frame>
+	
+	<frame name="Hostile_encounter" tgv="Combattre" tgn="Combat">
+		<feList>
+			<fe use="true"  question="qui_agent" value="Sides" comment="les combattants"/>
+			<fe use="true"  question="qui_agent" value="Side1" comment="la première personne/groupe de personne à combattre (contre Side2)"/>
+			<fe use="true"  question="contre_qui" value="Side2" comment="la deuxième personne/groupe de personne à combattre (contre Side1)"/>
+			<fe use="true"  question="quand" value="Time" comment="moment où se déroule le combat"/>
+			<fe use="true"  question="où" value="Place" comment="lieu où se déroule le combat"/>
+			<fe use="true"  question="avec_quel_moyen" value="Instrument" comment="quels objets utilisent les participants pour leur combat"/>
+			<fe use="true"  question="combien_de_temps" value="Duration" comment="la durée du combat"/>
+			<fe use="true"  question="pour_quelle_raison" value="Explanation" comment="comment les participants en sont arrivés à se battre"/>
+			<fe use="true"  question="dans_quel_but" value="Purpose" comment="les deux côtés se battent dans quel but"/>
+			<fe use="true"  question="avec_quelle_conséquence" value="Result" comment="qu'est ce le combat à provoqué après coup (peu utilisé)"/>
+			<fe use="false" question="à_propos_de_quoi" value="Issue" comment="motif du désaccord"/>
+		</feList>
+	</frame>
+	
+	<frame name="Hunting" tgv="Chasser,Traquer,Pêcher" tgn="Chasse,Traque,Pêche">
+		<feList>
+		    <fe use="" question="quoi" value="Food" comment="entité cible a être chassé" />
+		    <fe use="" question="où_précisément" value="Ground" comment="localisation de la cible a être chassé" />
+		    <fe use="" question="qui_agent" value="Hunter" comment="personne qui chasse" />
+		    <fe use="" question="avec_quoi" value="Instrument" comment="instrument qui serve a chasser l'entité" />
+		    <fe use="" question="où" value="Place" comment="lieu general ou la chasse se produit" />
+		    <fe use="" question="dans_quel_but" value="Purpose" comment="quelle est le but de chasser Food" />
+		    <fe use="" question="quand" value="Time" comment="moment où la chasse a lieu" />		    		
+		</feList>
+	</frame>
+	
+	<frame name="Inclusion" tgv="Contenir" tgn="">
+		<feList>
+			<fe use="true"  question="qui_agent" value="Total" comment="l'entité contenant le Part"/>
+			<fe use="true"  question="quoi" value="Part" comment="l'entité contenue dans le Total"/>
+			<fe use="true"  question="dans_quel_but" value="Purpose" comment="dans quel but le Total contient le Part"/>
+			<fe use="false" question="quand" value="Time" comment="moment où l'inclusion a lieu"/>
+			<fe use="false" question="où" value="Place" comment="endroit où l'inclusion se produit"/>
+			<fe use="false" question="pour_quelle_raison" value="Explanation" comment="raison expliquant l'inclusion"/>
+		</feList>
+	</frame>
+
+	<frame name="Ingestion" tgv="Manger,Déguster,Boire,Alimenter" tgn="Repas,Boisson,Aliment">
+		<feList>
+		    <fe use="" question="quoi" value="Ingestibles" comment="ce qui se mange" />
+		    <fe use="" question="qui_agent" value="Ingestor" comment="l'entité qui mange" />
+		    <fe use="" question="combien_de_temps" value="Duration" comment="la durée de l'action" />
+		    <fe use="" question="avec_quel_moyen" value="Instrument" comment="avec quel outil Ingestor mange" />
+		    <fe use="" question="de_quelle_manière" value="Manner" comment="de quelle manière Ingestor mange" />
+		    <fe use="" question="par_quel_moyen" value="Means" comment="par quel moyen Ingestor mange" />
+		    <fe use="" question="où" value="Place" comment="endroit où l'action se produit" />
+		    <fe use="" question="dans_quel_but" value="Purpose" comment="dans quel but Ingestor a mange Ingestibles" />
+		    <fe use="" question="d'où" value="Source" comment="d'où est sorti Ingestor les Ingestibles" />
+		    <fe use="" question="quand" value="Time" comment="moment dans lequel Ingestor mange Ingestibles" />
+		</feList>
+	</frame>
+
+	<frame name="Installing" tgv="Installer" tgn="Installation">
+		<feList>
+		    <fe use="" question="qui_agent" value="Agent" comment="l'entité qui fait l'installation" />
+		    <fe use="" question="quoi" value="Component" comment="ce qui s'installe" />
+		    <fe use="" question="où_précisément" value="Fixed_location" comment="sur quelle entité s'installe le Component" />
+		    <fe use="" question="où" value="Area" comment="sur quelle surface s'installe le Component" />
+		    <fe use="" question="pour_quelle_raison" value="Explanation" comment="quelle est la raison à l'origine de cette installation" />
+		    <fe use="" question="de_quelle_manière" value="Manner" comment="de quelle manière se fait l'installation" />
+		    <fe use="" question="par_quel_moyen" value="Means" comment="par quel moyen se fait l'installation" />
+		    <fe use="" question="où" value="Place" comment="endroit où se fait l'installation" />
+		    <fe use="" question="dans_quel_but" value="Purpose" comment="quelle est le but de cette installation" />
+		    <fe use="" question="quand" value="Time" comment="moment où se fait l'installation" />
+		</feList>
+	</frame>
+	
+	<frame name="Killing" tgv="Tuer" tgn="Génocide,Exécution,Assassinat">
+		<feList>
+			<fe use="true"  question="qui_agent" value="Killer" comment="le tueur"/>
+			<fe use="true"  question="qui" value="Victim" comment="la victime"/>
+			<fe use="true"  question="quand" value="Time" comment="moment où a eu lieu le meurtre"/>
+			<fe use="true"  question="où" value="Place" comment="lieu où a eu lieu le meurtre"/>
+			<fe use="true"  question="à_cause_de_quoi" value="Cause" comment="l'événement ayant causé la mort (crash d'avion, avalanche…)"/>
+			<fe use="true"  question="avec_quel_moyen" value="Instrument" comment="l'objet (utilisé par le Killer) responsable de la mort"/>
+			<fe use="true"  question="de_quelle_manière" value="Means" comment="de quelle manière a eu lieu le meurtre"/>
+			<fe use="true"  question="pour_quelle_raison" value="Explanation" comment="pourquoi le Killer a tué la Victim"/>
+			<fe use="true"  question="dans_quel_but" value="Purpose" comment="dans quel but le Killer a tué la Victim"/>
+			<fe use="true"  question="avec_quelle_conséquence" value="Result" comment="qu'est ce le meurtre a provoqué après coup (peu utilisé)"/>
+		</feList>
+	</frame>
+	
+	<frame name="Leadership" tgv="Commander,Diriger" tgn="Commandement">
+		<feList>
+			<fe use="true"  question="qui_agent" value="Leader" comment="la personne qui dirige"/>
+			<fe use="true"  question="quoi" value="Governed" comment="ce qui est gouverné"/>
+			<fe use="true"  question="quand" value="Time" comment="date du commandement"/>
+			<fe use="true"  question="où" value="Place" comment="lieu du commandement"/>
+			<fe use="true"  question="en_tant_que_quoi" value="Role" comment="Le titre, le rôle joué par le leader, qui lui confère sa capacité à gouverner en tant que (en tant que roi, en tant que général…)"/>
+			<fe use="true"  question="combien_de_temps" value="Duration" comment="combien de temps le Leader a commandé le Governed"/>
+			<fe use="false" question="quoi" value="Activity" comment="activité dirigée"/>
+		</feList>
+	</frame>
+
+	<frame name="Locating" tgv="Retrouver,Trouver" tgn="Localisation">
+		<feList>
+			<fe use="true"  question="qui_agent" value="Perceiver" comment="la personne qui a découvert la Sought_entity"/>
+			<fe use="true"  question="quoi" value="Sought_entity" comment="l'entité découverte"/>
+			<fe use="true"  question="quand" value="Time" comment="le moment où la Sought_entity a été trouvée"/>
+			<fe use="true"  question="où" value="Ground" comment="l'endroit où se trouve la Sought_entity, endroit indéterminé sur la planète, parmi d'autres objet, ou, exemples : « dans une grotte », « sous une chaise »"/>
+			<fe use="true"  question="où_précisément" value="Location" comment="l'endroit où se trouve la Sought_entity, endroit déterminé sur la planète, exemples : « en France », « À 5 km au sud de la tour Eiffel »"/>
+		</feList>
+	</frame>
+	
+	<frame name="Losing" tgv="Perdre" tgn="Perte">
+		<feList>
+			<fe use="true"  question="qui_agent" value="Owner" comment="la personne qui perd une entité"/>
+			<fe use="true"  question="quoi" value="Possession" comment="l'entité perdue"/>
+			<fe use="true"  question="quand" value="Time" comment="moment de la perte"/>
+			<fe use="true"  question="où" value="Place" comment="lieu de la perte"/>
+			<fe use="true"  question="de_quelle_manière" value="Means" comment="la manière dont la Possession a été perdue"/>
+			<fe use="false" question="pour_quelle_raison" value="Explanation" comment="situation dont découle la perte"/>
+		</feList>
+	</frame>
+	
+	<frame name="Making_arrangements" tgv="Organiser" tgn="">
+		<feList>
+			<fe use="true"  question="qui_agent" value="Agent" comment="la personne qui organise l'événement"/>
+			<fe use="true"  question="quoi" value="Event" comment="l'événement"/>
+			<fe use="true"  question="quand" value="Time" comment="moment de l'Event"/>
+			<fe use="true"  question="où" value="Place" comment="lieu de l'Event"/>
+			<fe use="true"  question="pour_qui" value="Beneficiary" comment="on organise l'Event au bénéfice du Beneficiary"/>
+			<fe use="true"  question="avec_quel_moyen" value="Means" comment="le moyen utilisé pour mettre en place l'Event (peu utilisé)"/>
+			<fe use="true"  question="pour_quelle_raison" value="Explanation" comment="pourquoi on a organisé l'Event"/>
+			<fe use="true"  question="dans_quel_but" value="Purpose" comment="on a organisé l'Event dans le but de…"/>
+			<fe use="false" question="à_quel_moment" value="Scheduled_time" comment="moment où l'arrangement est programmé"/>
+		</feList>
+	</frame>
+	
+	<frame name="Motion" tgv="Déplacer,Bouger" tgn="Déplacement">
+		<feList>
+			<fe use="" question="où" value="Area" comment="lieu géneral ou le déplacement se produit" />
+		    <fe use="" question="dans_quelle_direction" value="Direction" comment="dans quelle direction se fait le déplacement" />
+		    <fe use="" question="pour_quelle_distance" value="Distance" comment="quelle est la distance du déplacement" />
+		    <fe use="" question="vers_où" value="Goal" comment="quelle est la destination final du déplacement" />
+		    <fe use="" question="par_quel_chemin" value="Path" comment="quelle est le chemin parcouru pendant le déplacement" />
+		    <fe use="" question="d'où" value="Source" comment="quelle est la localisation initial de l'entité qui se déplace" />
+***		    <fe use="" question="quoi" value="Theme" comment="l'entité qui se déplace" />
+***		    <fe use="" question="qui_agent" value="Carrier" comment="par quelle moyen Theme se déplace" />
+		    <fe use="" question="combien_de_temps" value="Duration" comment="quelle est la durée du déplacement" />
+		    <fe use="" question="à_quelle_fréquence" value="Frequency" comment="à quelle fréquence ont lieu les déplacements" />
+		    <fe use="" question="de_quelle_manière" value="Manner" comment="de quelle manière a eu lieu le déplacement" />
+		    <fe use="" question="où" value="Place" comment="lieu géneral ou le déplacement se produit" />
+		    <fe use="" question="dans_quel_but" value="Purpose" comment="quelle est le but du déplacement" />
+		    <fe use="" question="avec_quelle_conséquence" value="Result" comment="quell conséquence a le déplacement" />
+		    <fe use="" question="à_quelle_vitesse" value="Speed" comment="vitesse du déplacement" />
+		    <fe use="" question="quand" value="Time" comment="moment du déplacement" />		    
+		</feList>
+	</frame>
+	
+	<frame name="Objective_influence" tgv="Affecter" tgn="">
+		<feList>
+			<fe use="true"  question="qui" value="Dependent_situation" comment="la chose qui est affecté par un événement"/>
+			<fe use="true"  question="quoi_agent" value="Influencing_situation" comment="l'événement qui influence quelqu'un, quelque chose"/>
+			<fe use="true"  question="quand" value="Time" comment="moment où se déroule l'événement"/>
+			<fe use="true"  question="où" value="Place" comment="lieu où se déroule l'événement"/>
+		</feList>
+	</frame>
+	
+	<frame name="Origin" tgv="Provenir" tgn="Origine">
+		<feList>
+			<fe use="true"  question="quoi_agent" value="Entity" comment="l'objet dont on cherche la provenance"/>
+			<fe use="true"  question="d'où" value="Origin" comment="la provenance de l'Entity"/>
+		</feList>
+	</frame>	
+	
+	<frame name="Participation" tgv="Participer" tgn="Participation">
+		<feList>
+			<fe use="true"  question="qui_agent" value="Participants" comment="les personnes participants à l'événement"/>
+			<fe use="true"  question="qui_agent" value="Participant1" comment="la personne qui participe à l'événement"/>
+			<fe use="true"  question="qui_agent_également" value="Participant2" comment="la personne qui participe à l'événement en compagnie de Participant1"/>
+			<fe use="true"  question="à_quoi" value="Event" comment="l'événement auquel on participe"/>
+			<fe use="true"  question="quand" value="Time" comment="moment de la participation à l'événement"/>
+			<fe use="true"  question="où" value="Place" comment="lieu de la participation à l'événement"/>
+			<fe use="true"  question="combien_de_temps" value="Duration" comment="la durée de la participation à l'événement"/>
+			<fe use="true"  question="dans_quel_but" value="Purpose" comment="les participants ont participé à l'événement dans le but de…"/>
+			<fe use="false" question="à_quoi" value="Institution" comment="instituion, groupe, lieu associé à l'événement"/>
+		</feList>
+	</frame>
+
+	<frame name="Request" tgv="Demander,Exiger" tgn="Demande,Requête">
+		<feList>
+		    <fe use="" question="à_qui" value="Addressee" comment="l'entité à laquelle on fait la demande" />
+		    <fe use="" question="à_travers_quoi" value="Medium" comment="le moyen de communication à travers lequel la demande est transmise" />
+		    <fe use="" question="quoi" value="Message" comment="le message qui constitue la demande" />
+		    <fe use="" question="qui_agent" value="Speaker" comment="l'entité qui fait la demande" />
+		    <fe use="" question="pour_qui" value="Beneficiary" comment="l'entité qui bénéficie de la demande" />
+		    <fe use="" question="dans_quelles_circonstances" value="Containing_event" comment="dans quelles circonstances la demande a été faite" />
+		    <fe use="" question="combien_de_fois" value="Iterations" comment="nombre de fois que la demande a été faite" />
+		    <fe use="" question="de_quelle_manière" value="Manner" comment="de quelle manière la demande est faite" />
+		    <fe use="" question="par_quel_moyen" value="Means" comment="par quel moyen la demande est faite" />  see framenet
+		    <fe use="" question="quand" value="Time" comment="moment de la demande" />
+		    <fe use="" question="à_quel_sujet" value="Topic" comment="à quel sujet est faite la demande" />  
+		    <fe use="" question="où" value="Place" comment="lieu de la demande" />
+		</feList>
+	</frame>
+
+	<frame name="Scrutiny" tgv="Fouiller" tgn="Fouille,Recherche">
+		<feList>
+			<fe use="true"  question="qui_agent" value="Cognizer" comment="la personne qui fouille"/>
+			<fe use="true"  question="quoi" value="Phenomenon" comment="ce qu'on a trouvé en fouillant"/>
+			<fe use="true"  question="quand" value="Time" comment="à quel moment on fouille"/>
+			<fe use="true"  question="où" value="Ground" comment="l'endroit qui est fouillé"/>
+			<fe use="true"  question="avec_quoi" value="Instrument" comment="quel outil sert à faire les fouilles"/>
+			<fe use="true"  question="de_quelle_manière" value="Means" comment="par quel moyen on fait les fouilles"/>
+			<fe use="true"  question="dans_quel_but" value="Purpose" comment="dans quel but on fouille"/>
+			<fe use="false" question="dans_quoi" value="Medium" comment="medium dans lequel l'information est recherchée"/>
+			<fe use="false" question="dans_quelle_direction" value="Direction" comment="direction dans laquelle s'effectue la recherche"/>
+		</feList>
+	</frame>
+
+	<frame name="Seeking" tgv="Chercher,Rechercher,Fouiller" tgn="">
+		<feList>
+			<fe use="" question="qui_agent" value="Cognizer_agent" comment="l'entité qui cherche Sought_entity" />
+		    <fe use="" question="quoi" value="Sought_entity" comment="ce qui est cherché par Cognizer_agent" />
+		    <fe use="" question="par_quel_moyen" value="Means" comment="par quel moyen se fait la recherche" />
+		    <fe use="" question="où" value="Place" comment="lieu où Cognizer_agent recherche Sought_entity" />
+		    <fe use="" question="dans_quel_but" value="Purpose" comment="dans quel but se fait ce recherche" />
+		    <fe use="" question="quand" value="Time" comment="moment où la recherche se déroule" />
+		</feList>
+	</frame>
+	
+	<frame name="Sending" tgv="Envoyer" tgn="">
+		<feList>
+			<fe use="true"  question="qui_agent" value="Sender" comment="la personne qui envoie le Theme"/>
+			<fe use="true"  question="quoi" value="Theme" comment="l'entité envoyée"/>
+			<fe use="true"  question="quand" value="Time" comment="à quel moment le Theme est envoyé"/>
+			<fe use="true"  question="d'où" value="Source" comment="depuis où le Theme est envoyé"/>
+			<fe use="true"  question="vers_où" value="Goal" comment="l'endroit où le Theme est envoyé"/>
+			<fe use="true"  question="à_qui" value="Recipient" comment="à qui le Theme est envoyé"/>
+			<fe use="true"  question="avec_qui" value="Cotheme" comment="avec quoi ou avec qui le Theme est envoyé"/>
+			<fe use="true"  question="avec_quel_moyen" value="Transport_means" comment="par quel moyen de transport le Theme est envoyé"/>
+			<fe use="true"  question="par_quel_chemin" value="Path" comment="par quel chemin le Theme passe pour arriver au Goal de la Source"/>
+			<fe use="true"  question="pour_quelle_raison" value="Explanation" comment="pourquoi le Theme est envoyé"/>
+			<fe use="true"  question="dans_quel_but" value="Purpose" comment="dans quel but le Theme est envoyé"/>
+			<fe use="false" question="dans_quoi" value="Container" comment="contenant dans lequel l'objet est envoyé"/>
+		</feList>
+	</frame>
+	
+	<frame name="Shoot_projectiles" tgv="Tirer,Décocher" tgn="">
+		<feList>
+		    <fe use="" question="qui_agent" value="Agent" comment="l'entite qui tire" />
+		    <fe use="" question="quoi" value="Projectile" comment="ce qui est tiré" />
+		</feList>
+	</frame>
+		
+	
+	<frame name="Statement" tgv="Déclarer,Écrire,Dire" tgn="Discours,Message,Déclaration">
+		<feList>
+			<fe use="true"  question="qui_agent" value="Speaker" comment="la personne qui fait passer le Message"/>
+			<fe use="true"  question="quoi" value="Message" comment="le message qui est passé"/>
+			<fe use="true"  question="quand" value="Time" comment="quand a eu lieu le passage du message"/>
+			<fe use="true"  question="où" value="Place" comment="où a eu lieu le passage du message"/>
+			<fe use="true"  question="à_qui" value="Addressee" comment="à qui s'adresse le Message"/>
+			<fe use="true"  question="à_quel_sujet" value="Topic" comment="le sujet du Message"/>
+			<fe use="true"  question="de_quelle_manière" value="Medium" comment="par quel intermédiaire le message est passé (un livre, la radio…)"/>
+		</feList>
+	</frame>
+	
+	<frame name="Subjective_influence" tgv="Inspirer,Influencer" tgn="Inspiration,Influence">
+		<feList>
+		    <fe use="" question="quoi" value="Action" comment="Action faite par Cognizer après avoir été inspiré" />
+		    <fe use="" question="qui_agent" value="Agent" comment="la personne qui inspire à Cognizer" />
+		    <fe use="" question="en_quoi" value="Behavior" comment="le comportement suivi par Cognizer après avoir été inspiré" />
+		    <fe use="" question="qui" value="Cognizer" comment="la personne inspiré par Agent" />
+		    <fe use="" question="quoi_agent" value="Entity" comment="l'entité qui inspire à Cognizer" />
+		    <fe use="" question="quoi" value="Product" comment="le produit fait à partir de l'inspiration" />
+		    <fe use="" question="quoi_agent" value="Situation" comment="une situation qui inspire à Cognizer" />
+		    <fe use="" question="à_quel_sujet" value="Domain" comment="le domaine de influence de l'entité" />
+		    <fe use="" question="où" value="Place" comment="lieu où l'influence se produit" />
+		    <fe use="" question="quand" value="Time" comment="moment où l'influence se produit" />
+		</feList>
+	</frame>
+		
+	<frame name="Using" tgv="Utiliser" tgn="Utilisation,Usage">
+		<feList>
+			<fe use="true"  question="qui_agent" value="Agent" comment="la personne qui utilise l'Instrument"/>
+			<fe use="true"  question="quoi" value="Instrument" comment="l'instrument utilisé par l'Agent"/>
+			<fe use="true"  question="quand" value="Time" comment="moment où se déroule l'utilisation de l'instrument"/>
+			<fe use="true"  question="où" value="Place" comment="lieu où se déroule l'utilisation de l'instrument"/>
+			<fe use="true"  question="combien_de_temps" value="Duration" comment="durant combien de temps on utilise l'Instrument"/>
+			<fe use="true"  question="pour_quelle_raison" value="Explanation" comment="pourquoi on utilise l'Instrument"/>
+			<fe use="true"  question="dans_quel_but" value="Purpose" comment="dans quel but on utilise l'Instrument"/>
+			<fe use="false" question="en_tant_que_quoi" value="Role" comment="fonction de l'instrument"/>
+		</feList>
+	</frame>
+	
+	<frame name="Verification" tgv="Identifier" tgn="Identification">
+		<feList>
+			<fe use="true"  question="qui_agent" value="Inspector" comment="la personne qui identifie l'Unconfirmed_content"/>
+			<fe use="true"  question="quoi" value="Unconfirmed_content" comment="l'objet qu'on cherche à identifier, et ce à quoi on l'identifie"/>
+			<fe use="true"  question="quand" value="Time" comment="moment où se déroule l'identification"/>
+			<fe use="true"  question="où" value="Place" comment="endroit où se déroule l'identification"/>
+			<fe use="true"  question="de_quelle_manière" value="Means" comment="la méthode utilisée pour vérifier l'Unconfirmed_content"/>
+			<fe use="true"  question="dans_quel_but" value="Purpose" comment="dans quel but l'Inspector identifie l'Unconfirmed_content"/>
+			<fe use="false" question="dans_quoi" value="Medium" comment="medium dans lequel l'information est recherchée"/>
+		</feList>
+	</frame>
+	
+</frameList>
+
+</config>
+

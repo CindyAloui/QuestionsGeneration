@@ -1,0 +1,6 @@
+quoi_agent Provenir [ $Origin ] ?
+$Entity .
+
+d'où Provenir [ $Entity ] ?
+$Origin .
+

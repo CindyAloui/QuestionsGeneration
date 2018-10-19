@@ -1,2 +1,42 @@
-Qui commande $Governed ?
-$Leader
+qui Commander [ $Governed ] [ $Time ] [ $Place ] [ $Role ] [ $Duration ] [ $Activity ] ?
+$Leader .
+
+quoi Commander [ $Leader ] [ $Time ] [ $Place ] [ $Role ] [ $Duration ] [ $Activity ] ?
+$Governed .
+
+quand Commander [ $Leader ] [ $Governed ] [ $Place ] [ $Role ] [ $Duration ] [ $Activity ] ?
+$Time .
+
+où Commander [ $Leader ] [ $Governed ] [ $Time ] [ $Role ] [ $Duration ] [ $Activity ] ?
+$Place .
+
+en_tant_que_quoi Commander [ $Leader ] [ $Governed ] [ $Time ] [ $Place ] [ $Duration ] [ $Activity ] ?
+$Role .
+
+combien_de_temps Commander [ $Leader ] [ $Governed ] [ $Time ] [ $Place ] [ $Role ] [ $Activity ] ?
+$Duration .
+
+quoi Commander [ $Leader ] [ $Governed ] [ $Time ] [ $Place ] [ $Role ] [ $Duration ] ?
+$Activity .
+
+qui Diriger [ $Governed ] [ $Time ] [ $Place ] [ $Role ] [ $Duration ] [ $Activity ] ?
+$Leader .
+
+quoi Diriger [ $Leader ] [ $Time ] [ $Place ] [ $Role ] [ $Duration ] [ $Activity ] ?
+$Governed .
+
+quand Diriger [ $Leader ] [ $Governed ] [ $Place ] [ $Role ] [ $Duration ] [ $Activity ] ?
+$Time .
+
+où Diriger [ $Leader ] [ $Governed ] [ $Time ] [ $Role ] [ $Duration ] [ $Activity ] ?
+$Place .
+
+en_tant_que_quoi Diriger [ $Leader ] [ $Governed ] [ $Time ] [ $Place ] [ $Duration ] [ $Activity ] ?
+$Role .
+
+combien_de_temps Diriger [ $Leader ] [ $Governed ] [ $Time ] [ $Place ] [ $Role ] [ $Activity ] ?
+$Duration .
+
+quoi Diriger [ $Leader ] [ $Governed ] [ $Time ] [ $Place ] [ $Role ] [ $Duration ] ?
+$Activity .
+

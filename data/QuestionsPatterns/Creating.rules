@@ -1,0 +1,60 @@
+qui Créer [ $Co-participant ] [ $Created_entity ] [ $Time ] [ $Place ] [ $Beneficiary ] [ $Instrument ] [ $Role ] [ $Cause ] [ $Purpose ] ?
+$Creator .
+
+qui_agent_également Créer [ $Creator ] [ $Created_entity ] [ $Time ] [ $Place ] [ $Beneficiary ] [ $Instrument ] [ $Role ] [ $Cause ] [ $Purpose ] ?
+$Co-participant .
+
+quoi Créer [ $Creator ] [ $Co-participant ] [ $Time ] [ $Place ] [ $Beneficiary ] [ $Instrument ] [ $Role ] [ $Cause ] [ $Purpose ] ?
+$Created_entity .
+
+quand Créer [ $Creator ] [ $Co-participant ] [ $Created_entity ] [ $Place ] [ $Beneficiary ] [ $Instrument ] [ $Role ] [ $Cause ] [ $Purpose ] ?
+$Time .
+
+où Créer [ $Creator ] [ $Co-participant ] [ $Created_entity ] [ $Time ] [ $Beneficiary ] [ $Instrument ] [ $Role ] [ $Cause ] [ $Purpose ] ?
+$Place .
+
+pour_qui Créer [ $Creator ] [ $Co-participant ] [ $Created_entity ] [ $Time ] [ $Place ] [ $Instrument ] [ $Role ] [ $Cause ] [ $Purpose ] ?
+$Beneficiary .
+
+avec_quel_moyen Créer [ $Creator ] [ $Co-participant ] [ $Created_entity ] [ $Time ] [ $Place ] [ $Beneficiary ] [ $Role ] [ $Cause ] [ $Purpose ] ?
+$Instrument .
+
+pour_quelle_fonction Créer [ $Creator ] [ $Co-participant ] [ $Created_entity ] [ $Time ] [ $Place ] [ $Beneficiary ] [ $Instrument ] [ $Cause ] [ $Purpose ] ?
+$Role .
+
+pour_quelle_raison Créer [ $Creator ] [ $Co-participant ] [ $Created_entity ] [ $Time ] [ $Place ] [ $Beneficiary ] [ $Instrument ] [ $Role ] [ $Purpose ] ?
+$Cause .
+
+dans_quel_but Créer [ $Creator ] [ $Co-participant ] [ $Created_entity ] [ $Time ] [ $Place ] [ $Beneficiary ] [ $Instrument ] [ $Role ] [ $Cause ] ?
+$Purpose .
+
+qui Réaliser [ $Co-participant ] [ $Created_entity ] [ $Time ] [ $Place ] [ $Beneficiary ] [ $Instrument ] [ $Role ] [ $Cause ] [ $Purpose ] ?
+$Creator .
+
+qui_agent_également Réaliser [ $Creator ] [ $Created_entity ] [ $Time ] [ $Place ] [ $Beneficiary ] [ $Instrument ] [ $Role ] [ $Cause ] [ $Purpose ] ?
+$Co-participant .
+
+quoi Réaliser [ $Creator ] [ $Co-participant ] [ $Time ] [ $Place ] [ $Beneficiary ] [ $Instrument ] [ $Role ] [ $Cause ] [ $Purpose ] ?
+$Created_entity .
+
+quand Réaliser [ $Creator ] [ $Co-participant ] [ $Created_entity ] [ $Place ] [ $Beneficiary ] [ $Instrument ] [ $Role ] [ $Cause ] [ $Purpose ] ?
+$Time .
+
+où Réaliser [ $Creator ] [ $Co-participant ] [ $Created_entity ] [ $Time ] [ $Beneficiary ] [ $Instrument ] [ $Role ] [ $Cause ] [ $Purpose ] ?
+$Place .
+
+pour_qui Réaliser [ $Creator ] [ $Co-participant ] [ $Created_entity ] [ $Time ] [ $Place ] [ $Instrument ] [ $Role ] [ $Cause ] [ $Purpose ] ?
+$Beneficiary .
+
+avec_quel_moyen Réaliser [ $Creator ] [ $Co-participant ] [ $Created_entity ] [ $Time ] [ $Place ] [ $Beneficiary ] [ $Role ] [ $Cause ] [ $Purpose ] ?
+$Instrument .
+
+pour_quelle_fonction Réaliser [ $Creator ] [ $Co-participant ] [ $Created_entity ] [ $Time ] [ $Place ] [ $Beneficiary ] [ $Instrument ] [ $Cause ] [ $Purpose ] ?
+$Role .
+
+pour_quelle_raison Réaliser [ $Creator ] [ $Co-participant ] [ $Created_entity ] [ $Time ] [ $Place ] [ $Beneficiary ] [ $Instrument ] [ $Role ] [ $Purpose ] ?
+$Cause .
+
+dans_quel_but Réaliser [ $Creator ] [ $Co-participant ] [ $Created_entity ] [ $Time ] [ $Place ] [ $Beneficiary ] [ $Instrument ] [ $Role ] [ $Cause ] ?
+$Purpose .
+

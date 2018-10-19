@@ -1,7 +1,7 @@
 import sys
 import os
 from corpus import Corpus
-from generator import QuestionsGenerator
+from questionsGenerator import QuestionsGenerator
 
 
 def print_usage_and_exit():

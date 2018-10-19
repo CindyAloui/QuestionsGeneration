@@ -1,0 +1,18 @@
+qui Décider [ $Decision ] [ $Time ] [ $Place ] [ $Explanation ] [ $Possibilities ] ?
+$Cognizer .
+
+quoi Décider [ $Cognizer ] [ $Time ] [ $Place ] [ $Explanation ] [ $Possibilities ] ?
+$Decision .
+
+quand Décider [ $Cognizer ] [ $Decision ] [ $Place ] [ $Explanation ] [ $Possibilities ] ?
+$Time .
+
+où Décider [ $Cognizer ] [ $Decision ] [ $Time ] [ $Explanation ] [ $Possibilities ] ?
+$Place .
+
+pour_quelle_raison Décider [ $Cognizer ] [ $Decision ] [ $Time ] [ $Place ] [ $Possibilities ] ?
+$Explanation .
+
+parmi_quoi Décider [ $Cognizer ] [ $Decision ] [ $Time ] [ $Place ] [ $Explanation ] ?
+$Possibilities .
+

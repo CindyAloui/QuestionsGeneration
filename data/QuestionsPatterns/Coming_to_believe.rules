@@ -1,0 +1,30 @@
+qui Réaliser [ $Content ] [ $Time ] [ $Place ] [ $Means ] ?
+$Cognizer .
+
+quoi Réaliser [ $Cognizer ] [ $Time ] [ $Place ] [ $Means ] ?
+$Content .
+
+quand Réaliser [ $Cognizer ] [ $Content ] [ $Place ] [ $Means ] ?
+$Time .
+
+où Réaliser [ $Cognizer ] [ $Content ] [ $Time ] [ $Means ] ?
+$Place .
+
+par_quel_moyen Réaliser [ $Cognizer ] [ $Content ] [ $Time ] [ $Place ] ?
+$Means .
+
+qui Comprendre [ $Content ] [ $Time ] [ $Place ] [ $Means ] ?
+$Cognizer .
+
+quoi Comprendre [ $Cognizer ] [ $Time ] [ $Place ] [ $Means ] ?
+$Content .
+
+quand Comprendre [ $Cognizer ] [ $Content ] [ $Place ] [ $Means ] ?
+$Time .
+
+où Comprendre [ $Cognizer ] [ $Content ] [ $Time ] [ $Means ] ?
+$Place .
+
+par_quel_moyen Comprendre [ $Cognizer ] [ $Content ] [ $Time ] [ $Place ] ?
+$Means .
+

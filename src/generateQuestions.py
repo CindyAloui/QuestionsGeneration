@@ -1,5 +1,6 @@
 import sys
 import os
+import io
 from corpus import Corpus
 from questionsGenerator import QuestionsGenerator
 
@@ -18,6 +19,9 @@ if __name__ == "__main__":
 
     questionsGenerator = QuestionsGenerator(questPatterns)
 
+    questions_answers_file = io.open('../data/Corpus/GeneratedQuestions/questions_superficial_form.txt', 'w')
     for fname in os.listdir(dirName):
         corpus = Corpus(os.path.join(dirName, fname), fname)
         questions, answers = questionsGenerator.generate_from_corpus(corpus, True)
+        for i in range(len(questions)):
+            questions_answers_file.write(questions[i] + "\n" + answers[i] + "\n\n")

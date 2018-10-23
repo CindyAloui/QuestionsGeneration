@@ -30,6 +30,8 @@ class FrameElement:
         return s
 
     def get_string_of_coref(self):
+        if not self.coref:
+            return ''
         mention = ''
         coref = ''
         frame_element = ''

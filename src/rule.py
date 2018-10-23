@@ -55,7 +55,8 @@ class Rule:
         return True
 
     def get_frame_element(self, frame_element):
-        if frame_element.coref and frame_element.coref.mention == frame_element.words:
+        if frame_element.coref and frame_element.coref.mention == frame_element.words and\
+                frame_element.get_string_of_coref() != '':
             return frame_element.get_string_of_coref()
         return frame_element.get_string_of_superficial_form()
 

@@ -33,7 +33,7 @@ class Text:
                 index = annot[len(annot) - 1]
                 if annot[1] == "COREF-TARGET-INDIRECT" or annot[1] == "COREF-TARGET-DIRECT" or annot[1] == "MENTION":
                     if index not in self.corefs:
-                        self.corefs[index] = Coref(index)
+                        self.corefs[index] = Coref(index, row[1])
                     if annot[1] == "COREF-TARGET-INDIRECT" or annot[1] == "COREF-TARGET-DIRECT":
                         self.corefs[index].add_coref(row[3], row[4])
                     else:

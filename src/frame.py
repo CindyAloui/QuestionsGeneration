@@ -23,6 +23,11 @@ class FrameElement:
             s += word + ' '
         return s
 
+    def get_start_index_of_coref(self):
+        if self.coref:
+            return self.coref.start_index
+        return ''
+
     def get_string_of_lemmas(self):
         s = ""
         for word in self.lemmas:

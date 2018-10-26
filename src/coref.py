@@ -1,7 +1,8 @@
 
 class Coref:
-    def __init__(self, index):
+    def __init__(self, index,start_index):
         self.index = index
+        self.start_index = start_index
         self.mention = []
         self.coref = []
         self.coref_lemmas = []

@@ -5,6 +5,8 @@ import io
 
 
 def add_annotations_from_frame(annot, f, txt_index):
+    if len(f.frame_elements) < 3:
+        return annot
     new_annot = {'id': txt_index, 'lu_index': f.index, 'frame': f.semantic_frame,
                  'lu': None, 'frame_elements': []}
     for _, frame_element in f.frame_elements.items():

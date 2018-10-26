@@ -1,6 +1,6 @@
 import json
 import os
-from corpus import Corpus
+from src.corpus import Corpus
 import io
 
 
@@ -23,8 +23,8 @@ def add_annotations_from_frame(annot, f, txt_index):
 
 if __name__ == "__main__":
 
-    corpus_dir_name = "../data/Corpus/corefsCorpus"
-    json_dir_name = "../data/Corpus/json"
+    corpus_dir_name = "../Corpus/corefsCorpus"
+    json_dir_name = "../Corpus/json"
     for fname in os.listdir(corpus_dir_name):
         corpus = Corpus(os.path.join(corpus_dir_name, fname), fname)
         json_file_name = os.path.join(json_dir_name, fname) + '/' + corpus.name + ".json"
@@ -35,19 +35,3 @@ if __name__ == "__main__":
                 annotations = add_annotations_from_frame(annotations, frame, t.name)
         data = {'annotations': annotations}
         json_data = json.dump(data, outfile, indent=4, ensure_ascii=False)
-
-    # corpus_dir_name = "../data/Corpus/corefsCorpus"
-    #
-    # outfile = io.open("../data/Corpus/json/annotations.json", "w", encoding='utf8')
-    # annotations = []
-    # corpus = []
-    #
-    # for fname in os.listdir(corpus_dir_name):
-    #     corpus.append(Corpus(os.path.join(corpus_dir_name, fname), fname))
-    #
-    # for c in corpus:
-    #     for _, t in c.texts.items():
-    #         for _, frame in t.frames.items():
-    #             annotations = add_annotations_from_frame(annotations, frame, t.name)
-    # data = {'annotations': annotations}
-    # json_data = json.dump(data, outfile, indent=4, ensure_ascii=False)

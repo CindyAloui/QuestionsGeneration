@@ -2,8 +2,8 @@
 import csv
 import os
 
-from coref import Coref
-from frame import Frame
+from src.coref import Coref
+from src.frame import Frame
 
 
 ######################################################################################################################

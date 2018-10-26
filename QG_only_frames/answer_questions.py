@@ -24,7 +24,7 @@ def get_questions_and_answers_from_json(dir_name):
 
 
 if __name__ == "__main__":
-    json_dir_name = "../data/Corpus/json_questions"
+    json_dir_name = "../Corpus/json_questions"
     questions, answers = get_questions_and_answers_from_json(json_dir_name)
 
     print(questions)

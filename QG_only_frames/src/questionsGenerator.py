@@ -2,7 +2,7 @@
 import io
 import os
 
-from rule import Rule
+from src.rule import Rule
 
 
 class QuestionsGenerator:

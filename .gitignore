@@ -1,5 +1,6 @@
 *.pyc
 /Corpus
 */data
+*/out
 .idea*
 tmp*

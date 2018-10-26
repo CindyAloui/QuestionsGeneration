@@ -1,4 +1,5 @@
 *.pyc
-data/Corpus
+/Corpus
+*/data
 .idea*
 tmp*

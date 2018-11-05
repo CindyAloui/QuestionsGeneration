@@ -2,20 +2,32 @@
 
 from itertools import chain, combinations
 
-# def powerset(seq):
-#     if len(seq) <= 1:
-#         yield seq
-#         yield []
-#     else:
-#         for item in powerset(seq[1:]):
-#             yield [seq[0]] + item
-#             yield item
 
 def powerset(iterable):
     "powerset([1,2,3]) --> () (1,) (2,) (3,) (1,2) (1,3) (2,3) (1,2,3)"
     s = list(iterable)
-    return chain.from_iterable(combinations(s, r) for r in range(len(s)+1))
+    return chain.from_iterable(combinations(s, r) for r in range(len(s) + 1))
 
+
+def get_frame_element(frame_element):
+    if frame_element.coref and frame_element.coref.mention == frame_element.words and \
+            frame_element.get_string_of_coref() != '':
+        return frame_element.get_string_of_coref()
+    return frame_element.get_string_of_superficial_form()
+
+
+def get_frame_element_with_annot(frame_element):
+    if frame_element.coref and frame_element.coref.mention == frame_element.words and \
+            frame_element.get_string_of_coref() != '':
+        s = frame_element.get_string_of_coref()
+    else:
+        s = frame_element.get_string_of_superficial_form()
+    result = ''
+    s = s.split()
+    result += s[0] + '\t\t' + 'B:' + frame_element.frame + ':FE:' + frame_element.name + '\n'
+    for i in range (1, len(s)):
+        result += s[i] + '\t\t' + 'I:' + frame_element.frame + ':FE:' + frame_element.name + '\n'
+    return result
 
 class Rule:
     def __init__(self, frame_name, question, answer):
@@ -54,13 +66,7 @@ class Rule:
                 return False
         return True
 
-    def get_frame_element(self, frame_element):
-        if frame_element.coref and frame_element.coref.mention == frame_element.words and\
-                frame_element.get_string_of_coref() != '':
-            return frame_element.get_string_of_coref()
-        return frame_element.get_string_of_superficial_form()
-
-    def get_question(self, frame, options):
+    def get_question(self, frame, options, annotation):
         question = ''
         optional = False
         flag = False
@@ -77,19 +83,23 @@ class Rule:
             elif word[0] != '$':
                 if optional:
                     tmp += word + ' '
+                    if annotation:
+                        tmp += '\n'
                 else:
                     question += word + ' '
+                    if annotation:
+                        question += '\n'
             else:
                 frame_element = word[1:]
                 if optional:
                     if frame_element in options:
                         flag = True
-                        tmp += self.get_frame_element(frame.frame_elements[frame_element])
+                        tmp += get_frame_element_with_annot(frame.frame_elements[frame_element])
                 else:
-                    question += self.get_frame_element(frame.frame_elements[frame_element])
+                    question += get_frame_element_with_annot(frame.frame_elements[frame_element])
         return question
 
-    def get_answer(self, frame, options):
+    def get_answer(self, frame, options, annotation):
         answer = ''
         optional = False
         flag = False
@@ -113,12 +123,12 @@ class Rule:
                 if optional:
                     if frame_element in options:
                         flag = True
-                        tmp += self.get_frame_element(frame.frame_elements[frame_element])
+                        tmp += get_frame_element(frame.frame_elements[frame_element])
                 else:
-                    answer += self.get_frame_element(frame.frame_elements[frame_element])
+                    answer += get_frame_element(frame.frame_elements[frame_element])
         return answer
 
-    def apply(self, frame):
+    def apply(self, frame, annotation):
         questions = []
         answers = []
         if not self.is_applicable(frame, self.mandatory):
@@ -126,11 +136,11 @@ class Rule:
         for options in powerset(self.options):
             if not self.is_applicable(frame, options):
                 continue
-            new_question = self.get_question(frame, options)
-            new_answer = self.get_answer(frame, options)
-            questions.append(new_question)
-            answers.append(new_answer)
-
+            new_question = self.get_question(frame, options, annotation)
+            new_answer = self.get_answer(frame, options, annotation)
+            if len(new_question.split()) <= 16:
+                questions.append(new_question)
+                answers.append(new_answer)
         return questions, answers
 
     def __str__(self):

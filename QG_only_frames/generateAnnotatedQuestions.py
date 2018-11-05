@@ -19,9 +19,9 @@ if __name__ == "__main__":
 
     questionsGenerator = QuestionsGenerator(questPatterns)
 
-    questions_answers_file = io.open(sys.argv[3] + "/questions_superficial_form.txt", 'w')
+    questions_file = io.open(sys.argv[3] + "/annotated_questions.txt", 'w')
     for fname in os.listdir(dirName):
         corpus = Corpus(os.path.join(dirName, fname), fname)
-        questions, answers = questionsGenerator.generate_from_corpus(corpus, False)
+        questions = questionsGenerator.generate_annotated_from_corpus(corpus, False)
         for i in range(len(questions)):
-            questions_answers_file.write(questions[i] + "\n" + answers[i] + "\n\n")
+            questions_file.write(questions[i] + "\n\n")

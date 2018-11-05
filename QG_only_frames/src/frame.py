@@ -1,5 +1,6 @@
 class FrameElement:
-    def __init__(self, name, mention, index):
+    def __init__(self, name, mention, index, frame):
+        self.frame = frame
         self.name = name
         self.index = index
         self.words = []
@@ -68,7 +69,7 @@ class Frame:
 
     def add_word(self, row, annot):
         if annot[0] == "B":
-            self.frame_elements[annot[3]] = FrameElement(annot[3], annot[2], row[1])
+            self.frame_elements[annot[3]] = FrameElement(annot[3], annot[2], row[1], self.semantic_frame)
         self.frame_elements[annot[3]].add_word(row[3], row[4])
 
     def __str__(self):

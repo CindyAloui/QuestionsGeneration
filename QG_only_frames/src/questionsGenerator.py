@@ -23,11 +23,11 @@ class QuestionsGenerator:
                 self.rules.append(Rule(frame_name, question, answer))
                 i += 2
 
-    def generate(self, frame):
+    def generate(self, frame, annotation):
         questions = []
         answers = []
         for rule in self.rules:
-            new_questions, new_answers = rule.apply(frame)
+            new_questions, new_answers = rule.apply(frame, annotation)
             questions = questions + new_questions
             answers = answers + new_answers
         return questions, answers
@@ -56,3 +56,19 @@ class QuestionsGenerator:
                 questions = questions + new_questions
                 answers = answers + new_answers
         return questions, answers
+
+    def generate_annotated_from_corpus(self, corpus, display):
+        questions = []
+        if display:
+            print("Corpus : " + corpus.name)
+        for _, text in corpus.texts.items():
+            for _, frame in text.frames.items():
+                new_questions, _ = self.generate(frame, True)
+                if new_questions and display:
+                    print(
+                        'Pour la Frame : \n' + str(frame) + 'Nous avons généré les questions suivantes :')
+                    for i in range(len(new_questions)):
+                        print(new_questions[i] + "\n")
+                    print("\n")
+                questions = questions + new_questions
+        return questions

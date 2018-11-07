@@ -4,7 +4,7 @@ from itertools import chain, combinations
 
 
 def powerset(iterable):
-    "powerset([1,2,3]) --> () (1,) (2,) (3,) (1,2) (1,3) (2,3) (1,2,3)"
+    """powerset([1,2,3]) --> () (1,) (2,) (3,) (1,2) (1,3) (2,3) (1,2,3)"""
     s = list(iterable)
     return chain.from_iterable(combinations(s, r) for r in range(len(s) + 1))
 
@@ -28,6 +28,7 @@ def get_frame_element_with_annot(frame_element):
     for i in range (1, len(s)):
         result += s[i] + '\t\t' + 'I:' + frame_element.frame + ':FE:' + frame_element.name + '\n'
     return result
+
 
 class Rule:
     def __init__(self, frame_name, question, answer):
@@ -138,7 +139,7 @@ class Rule:
                 continue
             new_question = self.get_question(frame, options, annotation)
             new_answer = self.get_answer(frame, options, annotation)
-            if len(new_question.split()) <= 16:
+            if len(new_question.split()) <= 25:
                 questions.append(new_question)
                 answers.append(new_answer)
         return questions, answers

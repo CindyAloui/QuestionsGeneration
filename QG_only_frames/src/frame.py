@@ -58,9 +58,6 @@ class FrameElement:
         return s
 
 
-######################################################################################################################
-
-
 class Frame:
     def __init__(self, index, semantic_frame):
         self.semantic_frame = semantic_frame

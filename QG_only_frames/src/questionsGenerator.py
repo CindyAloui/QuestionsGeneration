@@ -46,7 +46,7 @@ class QuestionsGenerator:
             print("Corpus : " + corpus.name)
         for _, text in corpus.texts.items():
             for _, frame in text.frames.items():
-                new_questions, new_answers = self.generate(frame)
+                new_questions, new_answers = self.generate(frame, False)
                 if new_questions and display:
                     print(
                         'Pour la Frame : \n' + str(frame) + 'Nous avons généré les questions/réponses suivantes :')

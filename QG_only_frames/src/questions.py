@@ -42,9 +42,9 @@ def get_questions_from_file(f):
 
 def get_matching_question(natural_question, generated_questions):
     result = None
-    min = None
+    m = None
     for question in generated_questions:
         distance = natural_question.get_distance_from(question)
-        if not min or distance < min:
+        if not m or distance < m:
             result = question
     return result

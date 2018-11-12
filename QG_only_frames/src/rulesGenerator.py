@@ -5,9 +5,9 @@ from lxml import etree
 def get_question(answer, frame, tgv):
     answer_name = answer.get('value')
     question = answer.get('question')
-    if question == "qui_agent":
+    if question == "qui_agent" or "qui_agent_également":
         question = "qui"
-    question += ' ' + tgv
+    question += ' <' + tgv + ">"
     for fe_list in frame:
         for fe in fe_list:
             if fe.get('value') == answer_name:

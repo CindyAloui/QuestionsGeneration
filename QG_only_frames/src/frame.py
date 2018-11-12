@@ -65,6 +65,9 @@ class Frame:
         self.frame_elements = {}
 
     def add_word(self, row, annot):
+        if row[5] != 'np':
+            row[3] = row[3].lower()
+            row[4] = row[4].lower()
         if annot[0] == "B":
             self.frame_elements[annot[3]] = FrameElement(annot[3], annot[2], row[1], self.semantic_frame)
         self.frame_elements[annot[3]].add_word(row[3], row[4])

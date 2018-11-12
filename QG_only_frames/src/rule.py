@@ -24,9 +24,9 @@ def get_frame_element_with_annot(frame_element):
         s = frame_element.get_string_of_superficial_form()
     result = ''
     s = s.split()
-    result += s[0] + '\t\t' + 'B:' + frame_element.frame + ':FE:' + frame_element.name + '\n'
-    for i in range (1, len(s)):
-        result += s[i] + '\t\t' + 'I:' + frame_element.frame + ':FE:' + frame_element.name + '\n'
+    result += s[0] + '\t' + 'B:' + frame_element.frame + ':FE:' + frame_element.name + '\n'
+    for i in range(1, len(s)):
+        result += s[i] + '\t' + 'I:' + frame_element.frame + ':FE:' + frame_element.name + '\n'
     return result
 
 
@@ -81,23 +81,47 @@ class Rule:
                 optional = False
                 if flag:
                     question += tmp
+            elif word[0] == '<':
+                if optional:
+                    tmp += word[1:-1]
+                    if annotation:
+                        tmp += '\tB:' + frame.name + ':TARGET:' + word[1:-1] + '\n'
+                    else:
+                        tmp += ' '
+                else:
+                    question += word[1:-1]
+                    if annotation:
+                        question += '\tB:' + frame.semantic_frame + ':TARGET:' + word[1:-1] + '\n'
+                    else:
+                        question += ' '
             elif word[0] != '$':
                 if optional:
-                    tmp += word + ' '
+                    tmp += word
                     if annotation:
-                        tmp += '\n'
+                        tmp += '\t_\n'
+                    else:
+                        tmp += ' '
                 else:
-                    question += word + ' '
+                    question += word
                     if annotation:
-                        question += '\n'
+                        question += '\t_\n'
+                    else:
+                        question += ' '
             else:
                 frame_element = word[1:]
                 if optional:
                     if frame_element in options:
                         flag = True
-                        tmp += get_frame_element_with_annot(frame.frame_elements[frame_element])
+                        if annotation:
+                            tmp += get_frame_element_with_annot(frame.frame_elements[frame_element])
+                        else:
+                            tmp += get_frame_element(frame.frame_elements[frame_element])
+
                 else:
-                    question += get_frame_element_with_annot(frame.frame_elements[frame_element])
+                    if annotation :
+                        question += get_frame_element_with_annot(frame.frame_elements[frame_element])
+                    else:
+                        question += get_frame_element(frame.frame_elements[frame_element])
         return question
 
     def get_answer(self, frame, options, annotation):

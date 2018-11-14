@@ -39,8 +39,9 @@ if __name__ == "__main__":
 
     result_file = io.open(sys.argv[1] + 'filtered_annotated_questions.txt', 'w')
 
+    n = 0
     for i in range(len(entropies)):
-        print(questions[i])
-        print("ENTROPY = " + entropies[i])
-        if float(entropies[i]) < 3:
+        if float(entropies[i]) < 2:
+            n += 1
             result_file.write(questions[i])
+    print(n)

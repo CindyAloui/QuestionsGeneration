@@ -18,7 +18,6 @@ if __name__ == "__main__":
     questPatterns = sys.argv[2]
 
     questionsGenerator = QuestionsGenerator(questPatterns)
-
     questions_answers_file = io.open(sys.argv[3] + "/questions_superficial_form.txt", 'w')
     for fname in os.listdir(dirName):
         corpus = Corpus(os.path.join(dirName, fname), fname)

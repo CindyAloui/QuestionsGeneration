@@ -63,12 +63,15 @@ class Corpus:
         reader = csv.reader(f, delimiter='\t')
         text_name = None
         for row in reader:
-            if len(row) > 2:
+            if len(row) > 5:
                 if row[0] != text_name:
                     if text_name:
                         self.texts[text_name].resolve_corefs()
                     text_name = row[0]
                     self.texts[text_name] = Text(text_name)
+                if row[5] != 'np':
+                    row[3] = row[3].lower()
+                    row[4] = row[4].lower()
                 self.texts[text_name].process_row(row)
 
     def __str__(self):

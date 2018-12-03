@@ -28,20 +28,26 @@ def print_usage_and_exit():
 
 
 if __name__ == "__main__":
-    if len(sys.argv) != 2:
-        print_usage_and_exit()
+    # if len(sys.argv) != 2:
+    #    print_usage_and_exit()
 
-    entropies_file = io.open(sys.argv[1] + 'entropies')
-    questions_file = io.open(sys.argv[1] + 'annotated_questions.txt')
+    good_entropies_file = io.open('eval/filter/good_entropies')
+    bad_entropies_file = io.open('eval/filter/bad_entropies')
 
-    questions = get_questions(questions_file)
-    entropies = get_entropies(entropies_file)
+    good_entropies = get_entropies(good_entropies_file)
+    bad_entropies = get_entropies(bad_entropies_file)
+    threshold = -10
+    good_mean = 0.0
+    nb_errors = 0
+    nb_tests = 0
+    for entropie in good_entropies:
+        nb_tests += 1
+        if float(entropie) > threshold:
+            nb_errors += 1
+    print('Precision : ' + str(1 - nb_errors / nb_tests))
 
-    result_file = io.open(sys.argv[1] + 'filtered_annotated_questions.txt', 'w')
-
-    n = 0
-    for i in range(len(entropies)):
-        if float(entropies[i]) < 2:
-            n += 1
-            result_file.write(questions[i])
-    print(n)
+    for entropie in bad_entropies:
+        nb_tests += 1
+        if float(entropie) < threshold:
+            nb_errors += 1
+    print('Precision : ' + str(1 - nb_errors / nb_tests))

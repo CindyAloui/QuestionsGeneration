@@ -15,8 +15,10 @@ class FrameElement:
         return self.mention
 
     def add_word(self, word, lemma):
-        self.words.append(word)
-        self.lemmas.append(lemma)
+        word = word.split('#')
+        self.words = self.words + word
+        lemma = lemma.split('#')
+        self.lemmas = self.lemmas + lemma
 
     def get_string_of_superficial_form(self):
         s = ""
@@ -65,9 +67,6 @@ class Frame:
         self.frame_elements = {}
 
     def add_word(self, row, annot):
-        if row[5] != 'np':
-            row[3] = row[3].lower()
-            row[4] = row[4].lower()
         if annot[0] == "B":
             self.frame_elements[annot[3]] = FrameElement(annot[3], annot[2], row[1], self.semantic_frame)
         self.frame_elements[annot[3]].add_word(row[3], row[4])

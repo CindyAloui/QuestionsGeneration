@@ -13,6 +13,9 @@ def get_frame_element(frame_element):
     if frame_element.coref and frame_element.coref.mention == frame_element.words and \
             frame_element.get_string_of_coref() != '':
         return frame_element.get_string_of_coref()
+    fe = frame_element.get_string_of_superficial_form()
+    if fe == 'on ' or fe == 'il ' or fe == 'elle ':
+        return ''
     return frame_element.get_string_of_superficial_form()
 
 
@@ -64,6 +67,8 @@ class Rule:
             return False
         for m in mandatory:
             if m not in frame.frame_elements:
+                return False
+            if get_frame_element(frame.frame_elements[m]) == '':
                 return False
         return True
 

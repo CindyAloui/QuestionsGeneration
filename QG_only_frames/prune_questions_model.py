@@ -1,5 +1,8 @@
 import io
 import kenlm
+import matplotlib.pyplot as plt
+from scipy.interpolate import spline
+import numpy as np
 
 if __name__ == "__main__":
     pos_model = kenlm.LanguageModel('../Corpus/questions/pos_trigram.bin')
@@ -19,7 +22,8 @@ if __name__ == "__main__":
         morpho += row[2] + ' '
         if row[6] == '1\n':
             nb_good += 1
-            array.append(("good", sentence,  langage_model.score(sentence), pos_model.score(pos), morpho_model.score(morpho)))
+            array.append(("good", sentence, langage_model.score(sentence), pos_model.score(pos),
+                          morpho_model.score(morpho)))
             pos = ''
             sentence = ''
             morpho = ''
@@ -36,7 +40,8 @@ if __name__ == "__main__":
         morpho += row[2] + ' '
         if row[6] == '1\n':
             nb_bad += 1
-            array.append(("bad", sentence, langage_model.score(sentence), pos_model.score(pos), morpho_model.score(morpho)))
+            array.append(("bad", sentence, langage_model.score(sentence), pos_model.score(pos),
+                          morpho_model.score(morpho)))
             pos = ''
             sentence = ''
             morpho = ''
@@ -53,9 +58,138 @@ if __name__ == "__main__":
         if question not in questions_to_delete and question[0] == 'bad':
             remnant_bad.append(question[1])
 
-    print("On a enlevé " + str(len(questions_to_delete)) + " questions, dont " + str(nb_bad - len(remnant_bad)) + " questions fausses")
+    print("On a enlevé " + str(len(questions_to_delete)) + " questions, dont " + str(
+        nb_bad - len(remnant_bad)) + " questions fausses")
     print("Il reste " + str(len(remnant_bad)) + " questions fausses sur les " + str(nb_bad))
-    print("Dans les questions restantes " + str(int(len(remnant_bad) / len(array) * 100)) + "% sont fausses")
+    print("Dans les questions restantes " + str(
+        int(len(remnant_bad) / (len(array) - len(questions_to_delete)) * 100)) + "% sont fausses")
     print("Il reste en tout " + str(len(array) - len(questions_to_delete)) + ' questions.')
-    #for question in remnant_bad:
-    #    print(question)
+
+    #    for question in remnant_bad:
+    #        print(question)
+
+    # plt.plot([1, 2, 2.5, 4])
+    # plt.ylabel('some numbers')
+    # plt.show()
+
+    step = 0.1
+    i = 2
+    plt.subplot(2, 2, 1)
+    array.sort(key=lambda array: array[i])
+    min = array[0][i]
+    max = array[len(array) - 1][i]
+    thresholds = []
+    precisions = []
+    recalls = []
+    threshold = min
+    while threshold < max:
+        true_positive = 0.0
+        false_positive = 0.0
+        true_negative = 0.0
+        false_negative = 0.0
+        thresholds.append(threshold)
+        for question in array:
+            if question[i] < threshold and question[0] == 'bad':
+                true_negative += 1
+            if question[i] < threshold and question[0] == 'good':
+                false_negative += 1
+            if question[i] > threshold and question[0] == 'bad':
+                false_positive += 1
+            if question[i] > threshold and question[0] == 'good':
+                true_positive += 1
+        precision = true_positive / (true_positive + false_positive)
+        recall = true_positive / (true_positive + false_negative)
+        precisions.append(precision)
+        recalls.append(recall)
+        threshold += step
+
+    list_x_new = np.linspace(min, max, 1000)
+    list_y_smooth = spline(thresholds, precisions, list_x_new)
+    list_z_smooth = spline(thresholds, recalls, list_x_new)
+    plt.plot(list_x_new, list_y_smooth, '-', label='Precision')
+    plt.plot(list_x_new, list_z_smooth, '--', label='Recall')
+    plt.axis([min, max, 0, 1])
+    plt.legend()
+    plt.xlabel('Threshold')
+    plt.title('Langage Model (3-gram)')
+
+    i = 3
+    plt.subplot(2, 2, 2)
+    array.sort(key=lambda array: array[i])
+    min = array[0][i]
+    max = array[len(array) - 1][i]
+    thresholds = []
+    precisions = []
+    recalls = []
+    threshold = min
+    while threshold < max:
+        true_positive = 0.0
+        false_positive = 0.0
+        true_negative = 0.0
+        false_negative = 0.0
+        thresholds.append(threshold)
+        for question in array:
+            if question[i] < threshold and question[0] == 'bad':
+                true_negative += 1
+            if question[i] < threshold and question[0] == 'good':
+                false_negative += 1
+            if question[i] > threshold and question[0] == 'bad':
+                false_positive += 1
+            if question[i] > threshold and question[0] == 'good':
+                true_positive += 1
+        precision = true_positive / (true_positive + false_positive)
+        recall = true_positive / (true_positive + false_negative)
+        precisions.append(precision)
+        recalls.append(recall)
+        threshold += step
+
+    list_x_new = np.linspace(min, max, 1000)
+    list_y_smooth = spline(thresholds, precisions, list_x_new)
+    list_z_smooth = spline(thresholds, recalls, list_x_new)
+    plt.plot(list_x_new, list_y_smooth, '-', label='Precision')
+    plt.plot(list_x_new, list_z_smooth, '--', label='Recall')
+    plt.axis([min, max, 0, 1])
+    plt.legend()
+    plt.xlabel('Threshold')
+    plt.title('POS Model (trigram)')
+
+    i = 4
+    plt.subplot(2, 2, 3)
+    array.sort(key=lambda array: array[i])
+    min = array[0][i]
+    max = array[len(array) - 1][i]
+    thresholds = []
+    precisions = []
+    recalls = []
+    threshold = min
+    while threshold < max:
+        true_positive = 0.0
+        false_positive = 0.0
+        true_negative = 0.0
+        false_negative = 0.0
+        thresholds.append(threshold)
+        for question in array:
+            if question[i] < threshold and question[0] == 'bad':
+                true_negative += 1
+            if question[i] < threshold and question[0] == 'good':
+                false_negative += 1
+            if question[i] > threshold and question[0] == 'bad':
+                false_positive += 1
+            if question[i] > threshold and question[0] == 'good':
+                true_positive += 1
+        precision = true_positive / (true_positive + false_positive)
+        recall = true_positive / (true_positive + false_negative)
+        precisions.append(precision)
+        recalls.append(recall)
+        threshold += step
+
+    list_x_new = np.linspace(min, max, 1000)
+    list_y_smooth = spline(thresholds, precisions, list_x_new)
+    list_z_smooth = spline(thresholds, recalls, list_x_new)
+    plt.plot(list_x_new, list_y_smooth, '-', label='Precision')
+    plt.plot(list_x_new, list_z_smooth, '--', label='Recall')
+    plt.axis([min, max, 0, 1])
+    plt.legend()
+    plt.xlabel('Threshold')
+    plt.title('Morpho Model (trigram)')
+    plt.show()

@@ -1,8 +1,7 @@
 import io
 import kenlm
 import matplotlib.pyplot as plt
-from scipy.interpolate import spline
-import numpy as np
+from src.precisionRecallPlot import precision_recall_plot_one_variable, precision_recall_plot_two_variables, precision_recall_plot_three_variables
 
 if __name__ == "__main__":
     pos_model = kenlm.LanguageModel('../Corpus/questions/pos_trigram.bin')
@@ -68,128 +67,32 @@ if __name__ == "__main__":
     #    for question in remnant_bad:
     #        print(question)
 
-    # plt.plot([1, 2, 2.5, 4])
-    # plt.ylabel('some numbers')
-    # plt.show()
+    # ------------------------------------------------------PLOT---------------------------------------------------------
 
-    step = 0.1
-    i = 2
-    plt.subplot(2, 2, 1)
-    array.sort(key=lambda array: array[i])
-    min = array[0][i]
-    max = array[len(array) - 1][i]
-    thresholds = []
-    precisions = []
-    recalls = []
-    threshold = min
-    while threshold < max:
-        true_positive = 0.0
-        false_positive = 0.0
-        true_negative = 0.0
-        false_negative = 0.0
-        thresholds.append(threshold)
-        for question in array:
-            if question[i] < threshold and question[0] == 'bad':
-                true_negative += 1
-            if question[i] < threshold and question[0] == 'good':
-                false_negative += 1
-            if question[i] > threshold and question[0] == 'bad':
-                false_positive += 1
-            if question[i] > threshold and question[0] == 'good':
-                true_positive += 1
-        precision = true_positive / (true_positive + false_positive)
-        recall = true_positive / (true_positive + false_negative)
-        precisions.append(precision)
-        recalls.append(recall)
-        threshold += step
+    # Une variable
 
-    list_x_new = np.linspace(min, max, 1000)
-    list_y_smooth = spline(thresholds, precisions, list_x_new)
-    list_z_smooth = spline(thresholds, recalls, list_x_new)
-    plt.plot(list_x_new, list_y_smooth, '-', label='Precision')
-    plt.plot(list_x_new, list_z_smooth, '--', label='Recall')
-    plt.axis([min, max, 0, 1])
-    plt.legend()
-    plt.xlabel('Threshold')
-    plt.title('Langage Model (3-gram)')
+    step = 1
+    plt.subplot(3, 3, 1)
+    precision_recall_plot_one_variable(array, step, 2, "Langage Model (trigram)")
 
-    i = 3
-    plt.subplot(2, 2, 2)
-    array.sort(key=lambda array: array[i])
-    min = array[0][i]
-    max = array[len(array) - 1][i]
-    thresholds = []
-    precisions = []
-    recalls = []
-    threshold = min
-    while threshold < max:
-        true_positive = 0.0
-        false_positive = 0.0
-        true_negative = 0.0
-        false_negative = 0.0
-        thresholds.append(threshold)
-        for question in array:
-            if question[i] < threshold and question[0] == 'bad':
-                true_negative += 1
-            if question[i] < threshold and question[0] == 'good':
-                false_negative += 1
-            if question[i] > threshold and question[0] == 'bad':
-                false_positive += 1
-            if question[i] > threshold and question[0] == 'good':
-                true_positive += 1
-        precision = true_positive / (true_positive + false_positive)
-        recall = true_positive / (true_positive + false_negative)
-        precisions.append(precision)
-        recalls.append(recall)
-        threshold += step
+    plt.subplot(3, 3, 2)
+    precision_recall_plot_one_variable(array, step, 3, "POS Model (trigram)")
 
-    list_x_new = np.linspace(min, max, 1000)
-    list_y_smooth = spline(thresholds, precisions, list_x_new)
-    list_z_smooth = spline(thresholds, recalls, list_x_new)
-    plt.plot(list_x_new, list_y_smooth, '-', label='Precision')
-    plt.plot(list_x_new, list_z_smooth, '--', label='Recall')
-    plt.axis([min, max, 0, 1])
-    plt.legend()
-    plt.xlabel('Threshold')
-    plt.title('POS Model (trigram)')
+    plt.subplot(3, 3, 3)
+    precision_recall_plot_one_variable(array, step, 4, "Morpho Model (trigram)")
 
-    i = 4
-    plt.subplot(2, 2, 3)
-    array.sort(key=lambda array: array[i])
-    min = array[0][i]
-    max = array[len(array) - 1][i]
-    thresholds = []
-    precisions = []
-    recalls = []
-    threshold = min
-    while threshold < max:
-        true_positive = 0.0
-        false_positive = 0.0
-        true_negative = 0.0
-        false_negative = 0.0
-        thresholds.append(threshold)
-        for question in array:
-            if question[i] < threshold and question[0] == 'bad':
-                true_negative += 1
-            if question[i] < threshold and question[0] == 'good':
-                false_negative += 1
-            if question[i] > threshold and question[0] == 'bad':
-                false_positive += 1
-            if question[i] > threshold and question[0] == 'good':
-                true_positive += 1
-        precision = true_positive / (true_positive + false_positive)
-        recall = true_positive / (true_positive + false_negative)
-        precisions.append(precision)
-        recalls.append(recall)
-        threshold += step
+    # Deux variables
 
-    list_x_new = np.linspace(min, max, 1000)
-    list_y_smooth = spline(thresholds, precisions, list_x_new)
-    list_z_smooth = spline(thresholds, recalls, list_x_new)
-    plt.plot(list_x_new, list_y_smooth, '-', label='Precision')
-    plt.plot(list_x_new, list_z_smooth, '--', label='Recall')
-    plt.axis([min, max, 0, 1])
-    plt.legend()
-    plt.xlabel('Threshold')
-    plt.title('Morpho Model (trigram)')
+    plt.subplot(3, 3, 4)
+    precision_recall_plot_two_variables(array, step, 2, 3, "Langage Model (trigram) + POS Model (trigram)")
+    plt.subplot(3, 3, 5)
+    precision_recall_plot_two_variables(array, step, 2, 4, "Langage Model (trigram) + Morpho Model (trigram)")
+    plt.subplot(3, 3, 6)
+    precision_recall_plot_two_variables(array, step, 3, 4, "Morpho Model (trigram) + POS Model (trigram)")
+
+    #Trois variables
+    plt.subplot(3, 3, 7)
+    precision_recall_plot_three_variables(array, step, 2, 3, 4, "Langage Model (trigram) + POS Model (trigram) + Morpho "
+                                                           "Model (trigram)")
+
     plt.show()

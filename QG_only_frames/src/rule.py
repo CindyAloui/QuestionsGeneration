@@ -1,7 +1,7 @@
 # encoding=utf8
 
 from itertools import chain, combinations
-
+from src.lemmatizer import get_lemma_of
 
 def powerset(iterable):
     """powerset([1,2,3]) --> () (1,) (2,) (3,) (1,2) (1,3) (2,3) (1,2,3)"""
@@ -40,6 +40,7 @@ class Rule:
         self.frame_name = frame_name
         self.options = []
         self.mandatory = []
+        self.answer_fe = None
         optional = False
         for word in question:
             if word == '[':
@@ -51,6 +52,7 @@ class Rule:
                     self.options.append(word[1:])
                 else:
                     self.mandatory.append(word[1:])
+                self.answer_fe = word[1:]
         for word in answer:
             if word == '[':
                 optional = True
@@ -76,12 +78,19 @@ class Rule:
         question = ''
         optional = False
         flag = False
+        to_annot = False
+        start = False
         tmp = ''
         for word in self.question:
             if word == '[':
                 flag = False
                 optional = True
                 tmp = ''
+            elif word == '{':
+                to_annot = True
+                start = True
+            elif word == '}':
+                to_annot = False
             elif word == ']':
                 optional = False
                 if flag:
@@ -95,8 +104,10 @@ class Rule:
                         tmp += ' '
                 else:
                     question += word[1:-1]
+                    if get_lemma_of(word[1:-1]) == '':
+                        print(word[1:-1])
                     if annotation:
-                        question += '\tB:' + frame.semantic_frame + ':TARGET:' + word[1:-1] + '\n'
+                        question += '\tB:' + frame.semantic_frame + ':TARGET:' + get_lemma_of(word[1:-1]) + '\n'
                     else:
                         question += ' '
             elif word[0] != '$':
@@ -109,7 +120,14 @@ class Rule:
                 else:
                     question += word
                     if annotation:
-                        question += '\t_\n'
+                        if to_annot:
+                            if start:
+                                question += '\tB:' + frame.semantic_frame + ':FE:' + self.answer_fe + '\n'
+                                start = False
+                            else:
+                                question += '\tI:' + frame.semantic_frame + ':FE:' + self.answer_fe + '\n'
+                        else:
+                            question += '\t_\n'
                     else:
                         question += ' '
             else:

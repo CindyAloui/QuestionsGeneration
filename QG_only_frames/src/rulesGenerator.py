@@ -5,9 +5,12 @@ from lxml import etree
 def get_question(answer, frame, tgv):
     answer_name = answer.get('value')
     question = answer.get('question')
-    if question == "qui_agent" or "qui_agent_également":
+    if question == "qui_agent" or question == "qui_agent_également":
         question = "qui"
-    question += ' <' + tgv + ">"
+    question = question.replace('_', ' ')
+    question = question.replace('\'', '\' ')
+    question = question.replace('-', ' -')
+    question += ' <' + tgv.lower() + ">"
     for fe_list in frame:
         for fe in fe_list:
             if fe.get('value') == answer_name:
@@ -31,5 +34,5 @@ class RulesGenerator:
             for tgv in frame_tgv:
                 for fe_list in frame:
                     for fe in fe_list:
-                        question = get_question(fe, frame, tgv)
+                        question = get_question(fe, frame, tgv.lower())
                         file.write(question + "\n\n")

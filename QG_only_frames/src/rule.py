@@ -104,8 +104,6 @@ class Rule:
                         tmp += ' '
                 else:
                     question += word[1:-1]
-                    if get_lemma_of(word[1:-1]) == '':
-                        print(word[1:-1])
                     if annotation:
                         question += '\tB:' + frame.semantic_frame + ':TARGET:' + get_lemma_of(word[1:-1]) + '\n'
                     else:

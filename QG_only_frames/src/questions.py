@@ -91,7 +91,7 @@ class Question:
         self.question = question
         self.answer = answer
         if model != None:
-            self.vector = self.get_vector_mean(model)
+            self.vector = self.get_vector_ponderate_mean(model)
         else:
             self.vector = None
         self.wh_word = self.get_wh_word()

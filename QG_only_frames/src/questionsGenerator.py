@@ -1,7 +1,6 @@
 # encoding=utf8
 import io
 import os
-
 from src.rule import Rule
 
 

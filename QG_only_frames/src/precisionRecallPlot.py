@@ -125,7 +125,7 @@ def precision_recall_plot_three_variables(array, step, i, j, z, plot_name):
                 false_positive += 1
             if question[i] > threshold_i and question[j] > threshold_j and question[z] > threshold_z and question[0] == 'good':
                 true_positive += 1
-        if (true_positive + false_positive) == 0 :
+        if (true_positive + false_positive) == 0:
             break
         precision = true_positive / (true_positive + false_positive)
         recall = true_positive / (true_positive + false_negative)

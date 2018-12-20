@@ -67,7 +67,7 @@ class Frame:
         self.frame_elements = {}
 
     def add_word(self, row, annot):
-        if annot[0] == "B":
+        if annot[3] not in self.frame_elements:
             self.frame_elements[annot[3]] = FrameElement(annot[3], annot[2], row[1], self.semantic_frame)
         self.frame_elements[annot[3]].add_word(row[3], row[4])
 

@@ -48,6 +48,8 @@ if __name__ == "__main__":
 
     array.sort(key=lambda array: array[1])
 
+
+
     questions_to_delete = set()
     for j in range(threshold):
         questions_to_delete.add(array[j])

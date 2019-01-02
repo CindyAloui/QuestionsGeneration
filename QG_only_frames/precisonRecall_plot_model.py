@@ -4,8 +4,8 @@ import matplotlib.pyplot as plt
 from src.precisionRecallPlot import precision_recall_plot_one_variable, precision_recall_plot_two_variables, precision_recall_plot_three_variables
 
 if __name__ == "__main__":
-    pos_model = kenlm.LanguageModel('../Corpus/questions/pos_trigram.bin')
-    morpho_model = kenlm.LanguageModel('../Corpus/questions/morpho_trigram.bin')
+    pos_model = kenlm.LanguageModel('../Corpus/questions_with_id/pos_trigram.bin')
+    morpho_model = kenlm.LanguageModel('../Corpus/questions_with_id/morpho_trigram.bin')
     langage_model = kenlm.LanguageModel('../Corpus/langage_model/trigram_model.bin')
 
     good_questions = io.open('eval/filter/good.txt')
@@ -57,12 +57,12 @@ if __name__ == "__main__":
         if question not in questions_to_delete and question[0] == 'bad':
             remnant_bad.append(question[1])
 
-    print("On a enlevé " + str(len(questions_to_delete)) + " questions, dont " + str(
-        nb_bad - len(remnant_bad)) + " questions fausses")
-    print("Il reste " + str(len(remnant_bad)) + " questions fausses sur les " + str(nb_bad))
-    print("Dans les questions restantes " + str(
+    print("On a enlevé " + str(len(questions_to_delete)) + " questions_with_id, dont " + str(
+        nb_bad - len(remnant_bad)) + " questions_with_id fausses")
+    print("Il reste " + str(len(remnant_bad)) + " questions_with_id fausses sur les " + str(nb_bad))
+    print("Dans les questions_with_id restantes " + str(
         int(len(remnant_bad) / (len(array) - len(questions_to_delete)) * 100)) + "% sont fausses")
-    print("Il reste en tout " + str(len(array) - len(questions_to_delete)) + ' questions.')
+    print("Il reste en tout " + str(len(array) - len(questions_to_delete)) + ' questions_with_id.')
 
     #    for question in remnant_bad:
     #        print(question)

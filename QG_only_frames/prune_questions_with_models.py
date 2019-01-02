@@ -4,8 +4,8 @@ import kenlm
 
 if __name__ == "__main__":
     threshold = 80
-    pos_model = kenlm.LanguageModel('../Corpus/questions/pos_trigram.bin')
-    morpho_model = kenlm.LanguageModel('../Corpus/questions/morpho_trigram.bin')
+    pos_model = kenlm.LanguageModel('../Corpus/questions_with_id/pos_trigram.bin')
+    morpho_model = kenlm.LanguageModel('../Corpus/questions_with_id/morpho_trigram.bin')
     langage_model = kenlm.LanguageModel('../Corpus/langage_model/trigram_model.bin')
 
     questions_file = io.open('out/GeneratedQuestions_manual/questions_to_filter.txt', 'r', encoding='utf8')

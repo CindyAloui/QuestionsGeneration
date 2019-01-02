@@ -18,13 +18,13 @@ if __name__ == "__main__":
                     answer = fe["coref"]["text"] + '.'
                 else:
                     answer = fe["text"] + '.'
-                for q in fe["questions"]:
+                for q in fe["questions_with_id"]:
                     question = Question(q, answer)
                     if frame not in questions:
                         questions[frame] = [question]
                     else:
                         questions[frame].append(question)
-    result_file1 = io.open("data/natural_questions/questions.txt", "w")
+    result_file1 = io.open("data/natural_questions/questions_with_id.txt", "w")
     for type in questions:
         result_file2 = io.open("data/natural_questions/" + type, "w")
         for question in questions[type]:

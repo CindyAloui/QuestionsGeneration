@@ -14,8 +14,8 @@ def get_frame_element(frame_element):
             frame_element.get_string_of_coref() != '':
         return frame_element.get_string_of_coref()
     fe = frame_element.get_string_of_superficial_form()
-    if fe == 'on ' or fe == 'il ' or fe == 'elle ':
-        return ''
+    # if fe == 'on ' or fe == 'il ' or fe == 'elle ':
+    #     return ''
     return frame_element.get_string_of_superficial_form()
 
 

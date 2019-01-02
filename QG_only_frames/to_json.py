@@ -17,7 +17,7 @@ def add_annotations_from_frame(annot, f, txt_index):
                    'text': frame_element.get_string_of_superficial_form(),
                    'coref': {"start_index": frame_element.get_start_index_of_coref(),
                     "text": frame_element.get_string_of_coref()},
-                   "questions": []}
+                   "questions_with_id": []}
         new_annot['frame_elements'].append(fe_data)
     annot.append(new_annot)
     return annot

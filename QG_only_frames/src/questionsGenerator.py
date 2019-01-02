@@ -48,7 +48,7 @@ class QuestionsGenerator:
                 new_questions, new_answers = self.generate(frame, False)
                 if new_questions and display:
                     print(
-                        'Pour la Frame : \n' + str(frame) + 'Nous avons généré les questions/réponses suivantes :')
+                        'Pour la Frame : \n' + str(frame) + 'Nous avons généré les questions_with_id/réponses suivantes :')
                     for i in range(len(new_questions)):
                         print(new_questions[i] + " " + new_answers[i])
                     print("\n")
@@ -65,7 +65,7 @@ class QuestionsGenerator:
                 new_questions, _ = self.generate(frame, True)
                 if new_questions and display:
                     print(
-                        'Pour la Frame : \n' + str(frame) + 'Nous avons généré les questions suivantes :')
+                        'Pour la Frame : \n' + str(frame) + 'Nous avons généré les questions_with_id suivantes :')
                     for i in range(len(new_questions)):
                         print(new_questions[i] + "\n")
                     print("\n")

@@ -37,7 +37,7 @@ if __name__ == "__main__":
     #if len(sys.argv) != 2:
     #    print_usage_and_exit()
 
-    corpus = io.open('../Corpus/questions/pos.txt').read()
+    corpus = io.open('../Corpus/questions_with_id/pos.txt').read()
     corpus_ngrams = ngrams(corpus.split(), 3)
     nb_tests = 0.0
     nb_errors = 0.0

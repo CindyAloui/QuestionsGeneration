@@ -122,7 +122,7 @@ def get_questions_from_file(f, model):
             continue
         question = line.split()
         answer = lines[i + 1].split()
-        questions.append(Question(question, answer, model))
+        questions.append(Question(question.lower().replace('#', ' '), answer.lower().replace('#', ' '), model))
         i += 2
     return questions
 

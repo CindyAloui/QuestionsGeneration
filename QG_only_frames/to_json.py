@@ -7,7 +7,7 @@ import io
 def add_annotations_from_frame(annot, f, txt_index):
     if len(f.frame_elements) < 3:
         return annot
-    new_annot = {'id': txt_index, 'lu_index': f.index, 'frame': f.semantic_frame,
+    new_annot = {'id': txt_index, 'lu_index': f.index, 'elem': f.semantic_frame,
                  'lu': None, 'frame_elements': []}
     for _, frame_element in f.frame_elements.items():
         if frame_element.mention:
@@ -24,7 +24,6 @@ def add_annotations_from_frame(annot, f, txt_index):
 
 
 if __name__ == "__main__":
-
     corpus_dir_name = "../Corpus/corefsCorpus"
     json_dir_name = "../Corpus/json"
     for fname in os.listdir(corpus_dir_name):
@@ -37,3 +36,4 @@ if __name__ == "__main__":
                 annotations = add_annotations_from_frame(annotations, frame, t.name)
         data = {'annotations': annotations}
         json_data = json.dump(data, outfile, indent=4, ensure_ascii=False)
+

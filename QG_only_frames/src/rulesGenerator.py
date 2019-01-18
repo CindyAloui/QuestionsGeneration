@@ -26,7 +26,7 @@ class RulesGenerator:
         self.dir_name = dir_name
 
     def generate_and_write(self):
-        for frame in self.descriptor.xpath("/config/frameList/frame"):
+        for frame in self.descriptor.xpath("/config/frameList/elem"):
             frame_name = frame.get("name")
             file = io.open(self.dir_name + "/" + frame_name + ".rules", "w", encoding='utf8')
             frame_tgv = frame.get("tgv")

@@ -11,14 +11,14 @@ if __name__ == "__main__":
         for fname in os.listdir(dir):
             file = open(os.path.join(dir, fname))
             data = json.load(file)
-            frame = data["frame"]
+            frame = data["elem"]
             for fe in data["frame_elements"]:
                 frame_element = fe["name"]
                 if fe["coref"]["text"] != "":
                     answer = fe["coref"]["text"] + '.'
                 else:
                     answer = fe["text"] + '.'
-                for q in fe["questions_with_id"]:
+                for q in fe["questions"]:
                     question = Question(q, answer)
                     if frame not in questions:
                         questions[frame] = [question]

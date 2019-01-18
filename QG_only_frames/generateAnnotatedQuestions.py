@@ -19,9 +19,12 @@ if __name__ == "__main__":
 
     questionsGenerator = QuestionsGenerator(questPatterns)
 
+    sum = 0
     questions_file = io.open(sys.argv[3] + "/annotated_questions.txt", 'w')
     for fname in os.listdir(dirName):
         corpus = Corpus(os.path.join(dirName, fname), fname)
         questions = questionsGenerator.generate_annotated_from_corpus(corpus, False)
         for i in range(len(questions)):
             questions_file.write(questions[i] + "\n\n")
+        sum += (len(questions))
+    print(sum)

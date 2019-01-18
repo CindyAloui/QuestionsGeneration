@@ -18,7 +18,7 @@ if __name__ == "__main__":
             result_file_name = os.path.join(dir2, f)
             data = json.load(io.open(input_file_name))
             id = data["id"]
-            frame_name = data["frame"]
+            frame_name = data["elem"]
             frame = Frame(id, frame_name)
             for fe in data["frame_elements"]:
                 fe["generated_questions_from_manual_patterns"] = []

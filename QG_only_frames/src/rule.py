@@ -14,8 +14,6 @@ def get_frame_element(frame_element):
             frame_element.get_string_of_coref() != '':
         return frame_element.get_string_of_coref()
     fe = frame_element.get_string_of_superficial_form()
-    # if fe == 'on ' or fe == 'il ' or fe == 'elle ':
-    #     return ''
     return frame_element.get_string_of_superficial_form()
 
 
@@ -25,6 +23,8 @@ def get_frame_element_with_annot(frame_element):
         s = frame_element.get_string_of_coref()
     else:
         s = frame_element.get_string_of_superficial_form()
+    if s == 'on ' or s == 'il ' or s == 'elle ':
+        return ''
     result = ''
     s = s.split()
     result += s[0] + '\t' + 'B:' + frame_element.frame + ':FE:' + frame_element.name + '\n'
@@ -34,13 +34,14 @@ def get_frame_element_with_annot(frame_element):
 
 
 class Rule:
-    def __init__(self, frame_name, question, answer):
+    def __init__(self, frame_name, question, answer, name=None):
         self.question = question
         self.answer = answer
         self.frame_name = frame_name
         self.options = []
         self.mandatory = []
         self.answer_fe = None
+        self.name = name
         optional = False
         for word in question:
             if word == '[':
@@ -64,18 +65,24 @@ class Rule:
                 else:
                     self.mandatory.append(word[1:])
 
-    def is_applicable(self, frame, mandatory):
+    def is_applicable(self, frame, mandatory, annotation):
         if self.frame_name != frame.semantic_frame:
             return False
         for m in mandatory:
             if m not in frame.frame_elements:
                 return False
-            if get_frame_element(frame.frame_elements[m]) == '':
-                return False
+            if annotation :
+                if get_frame_element_with_annot(frame.frame_elements[m]) == '':
+                    return False
+            else:
+                if get_frame_element(frame.frame_elements[m]) == '':
+                    return False
         return True
 
     def get_question(self, frame, options, annotation):
         question = ''
+        if self.name and annotation:
+            question += "#" + self.name + '\n'
         optional = False
         flag = False
         to_annot = False
@@ -89,6 +96,8 @@ class Rule:
             elif word == '{':
                 to_annot = True
                 start = True
+            elif '{' in word:
+                print(word)
             elif word == '}':
                 to_annot = False
             elif word == ']':
@@ -137,9 +146,8 @@ class Rule:
                             tmp += get_frame_element_with_annot(frame.frame_elements[frame_element])
                         else:
                             tmp += get_frame_element(frame.frame_elements[frame_element])
-
                 else:
-                    if annotation :
+                    if annotation:
                         question += get_frame_element_with_annot(frame.frame_elements[frame_element])
                     else:
                         question += get_frame_element(frame.frame_elements[frame_element])
@@ -174,23 +182,27 @@ class Rule:
                     answer += get_frame_element(frame.frame_elements[frame_element])
         return answer
 
-    def apply(self, frame, annotation):
+    def apply(self, frame, annotation, patterns_id=False):
         questions = []
         answers = []
-        if not self.is_applicable(frame, self.mandatory):
-            return questions, answers
+        frame_elements = []
+        if not self.is_applicable(frame, self.mandatory, annotation):
+            return questions, answers, frame_elements
         for options in powerset(self.options):
-            if not self.is_applicable(frame, options):
+            if not self.is_applicable(frame, options, annotation):
                 continue
             new_question = self.get_question(frame, options, annotation)
             new_answer = self.get_answer(frame, options, annotation)
             if len(new_question.split()) <= 25:
+                if patterns_id:
+                    new_question = {'text': new_question, 'pattern_used': self.name}
                 questions.append(new_question)
                 answers.append(new_answer)
-        return questions, answers
+                frame_elements.append(self.answer_fe)
+        return questions, answers, frame_elements
 
     def __str__(self):
-        s = "Question applicable à la frame : " + self.frame_name + '\nQuestion : '
+        s = "Question applicable à la elem : " + self.frame_name + '\nQuestion : '
         for word in self.question:
             s += word + ' '
         s += '\nRéponse : '

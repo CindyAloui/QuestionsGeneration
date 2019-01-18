@@ -138,4 +138,3 @@ def get_matching_questions(natural_question, generated_questions):
         elif m == distance:
             result.append(question)
     return result
-

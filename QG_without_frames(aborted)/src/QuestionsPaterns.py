@@ -59,7 +59,7 @@ def get_questions(questions_filename):
 
 def get_wh_words(tree):
     wh_words = set()
-    for fe in tree.xpath("/config/frameList/frame/feList/fe"):
+    for fe in tree.xpath("/config/frameList/elem/feList/fe"):
         wh_word = fe.get("question")
         wh_words.add(wh_word)
     return wh_words

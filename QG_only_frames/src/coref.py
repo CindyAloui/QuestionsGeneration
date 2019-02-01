@@ -1,12 +1,12 @@
 
 class Coref:
-    def __init__(self, index,start_index):
+    def __init__(self, index, start_index):
         self.index = index
         self.start_index = start_index
         self.mention = []
         self.coref = []
         self.coref_lemmas = []
-        
+
     def add_coref(self, word, lemma):
         self.coref.append(word)
         self.coref_lemmas.append(lemma)
@@ -27,7 +27,7 @@ class Coref:
         s = ""
         for word in self.coref_lemmas:
             s += word + ' '
-        return s  
+        return s
 
     def __str__(self):
         s = self.index + ' : ' + self.get_string_of_superficial_form() + '\n'

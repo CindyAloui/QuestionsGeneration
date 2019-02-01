@@ -53,7 +53,6 @@ class Rule:
                     self.options.append(word[1:])
                 else:
                     self.mandatory.append(word[1:])
-                self.answer_fe = word[1:]
         for word in answer:
             if word == '[':
                 optional = True
@@ -64,6 +63,7 @@ class Rule:
                     self.options.append(word[1:])
                 else:
                     self.mandatory.append(word[1:])
+                self.answer_fe = word[1:]
 
     def is_applicable(self, frame, mandatory, annotation):
         if self.frame_name != frame.semantic_frame:

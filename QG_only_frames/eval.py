@@ -29,7 +29,7 @@ if __name__ == "__main__":
     quoi = ["quoi", "quoi_agent", "contre_quoi", "dans_quoi", "avec_quoi", "quoi_précisément", "de_quoi",
             "dans_quelle_entité"]
     tree = etree.parse("../Corpus/frame_description.xml")
-    for fe in tree.xpath("/config/frameList/elem/feList/fe"):
+    for fe in tree.xpath("/config/frameList/frame/feList/fe"):
         question = fe.get("question")
         if question in qui:
             question_type[fe.get("value")] = "qui"
@@ -59,25 +59,27 @@ if __name__ == "__main__":
     lines1 = type_prediction_file.readlines()
     lines2 = test_file.readlines()
     type = 'error'
+    n = 0.0
     for i in range(len(lines1)):
         question = lines2[i].split(',')[0]
         line = lines1[i].split()
-        for j in range(len(line)):
-            if line[j] == '1':
+        for j in range(len(types)):
+            if float(line[len(types) + j]) > 0:
                 type = types[j]
                 break
         natural_questions_by_type[question.lower()] = type
-
     questions_with_id = {}
     questions = []
     natural_questions = {}
     questions_by_type = {}
+    questions_by_type_and_id = {}
     for fname in os.listdir(dirName):
         print(fname)
         corpus = Corpus(os.path.join(dirName, fname), fname)
         for _, text in corpus.texts.items():
             questions_with_id[text.name] = []
             natural_questions[text.name] = []
+            questions_by_type_and_id[text.name] = {}
             for _, frame in text.frames.items():
                 new_questions, new_answers, frame_elements = questionsGenerator.generate(frame, False)
                 for i in range(len(new_answers)):
@@ -87,7 +89,10 @@ if __name__ == "__main__":
                     questions.append(q)
                     if t not in questions_by_type:
                         questions_by_type[t] = []
+                    if t not in questions_by_type_and_id[text.name]:
+                        questions_by_type_and_id[text.name][t] = []
                     questions_by_type[t].append(q)
+                    questions_by_type_and_id[text.name][t].append(q)
 
     dir_name = '../Corpus/questions_json/'
     for dir in os.listdir(dir_name):
@@ -96,7 +101,7 @@ if __name__ == "__main__":
         for fname in os.listdir(dir):
             file = open(os.path.join(dir, fname))
             data = json.load(file)
-            frame = data["elem"]
+            frame = data["frame"]
             id = data["id"]
             for fe in data["frame_elements"]:
                 frame_element = fe["name"]
@@ -112,6 +117,8 @@ if __name__ == "__main__":
     accurate1 = 0.0
     accurate2 = 0.0
     accurate3 = 0.0
+    accurate4 = 0.0
+    tmp = 0.0
     nbMatchs = 0.0
     test = 0.0
     test3 = 0.0
@@ -152,7 +159,6 @@ if __name__ == "__main__":
                 s += word + ' '
             s = s[0:-1]
             if s in natural_questions_by_type:
-                print("ok")
                 test3 += 1
                 t = natural_questions_by_type[s]
                 matchs = get_matching_questions(question, questions_by_type[t])
@@ -160,21 +166,29 @@ if __name__ == "__main__":
                     if question.answer == match.answer:
                         accurate3 += 1
                         break
-            else:
-                print(s)
+                if t not in questions_by_type_and_id[id]:
+                    continue
+                matchs = get_matching_questions(question, questions_by_type_and_id[id][t])
+                for match in matchs:
+                    if question.answer == match.answer:
+                        accurate4 += 1
+                        break
 
             # print("Pour l'instant le système1 a une précision de " + str((accurate1/test) * 100) + "%")
             # print("Pour l'instant le système2 a une précision de " + str((accurate2/test) * 100) + "%")
-            # print("Le système3 (par type) a une précision de " + str((accurate3 / test3) * 100) + "%")
-    print("\n\nLe système1 a une précision de " + str((accurate1 / test) * 100) + "%")
+            if test3 != 0:
+                print("Le système3 (par type) a une précision de " + str((accurate3 / test3) * 100) + "%")
+                print("Le système4 (par type et id) a une précision de " + str((accurate4 / test3) * 100) + "%")
+
+    print("\n\nLe système par id a une précision de " + str((accurate1 / test) * 100) + "%")
     print("Le système2 a une précision de " + str((accurate2 / test) * 100) + "%")
     print("Le système3 (par type) a une précision de " + str((accurate3 / test3) * 100) + "%")
+    print("Le système4 (par type et id) a une précision de " + str((accurate4 / test3) * 100) + "%")
     print("Match en moyenne : " + str(nbMatchs / test))
 
 
 
 #################################################################################################################
-
 
 # natural_questions_file = io.open(sys.argv[1], 'r', encoding='utf-8')
 # natural_questions = get_questions_from_file(natural_questions_file, model)

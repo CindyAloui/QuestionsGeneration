@@ -11,7 +11,7 @@ if __name__ == "__main__":
         for fname in os.listdir(dir):
             file = open(os.path.join(dir, fname))
             data = json.load(file)
-            frame = data["elem"]
+            frame = data["frame"]
             for fe in data["frame_elements"]:
                 frame_element = fe["name"]
                 if fe["coref"]["text"] != "":

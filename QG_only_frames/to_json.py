@@ -7,7 +7,7 @@ import io
 def add_annotations_from_frame(annot, f, txt_index):
     if len(f.frame_elements) < 3:
         return annot
-    new_annot = {'id': txt_index, 'lu_index': f.index, 'elem': f.semantic_frame,
+    new_annot = {'id': txt_index, 'lu_index': f.index, 'frame': f.semantic_frame,
                  'lu': None, 'frame_elements': []}
     for _, frame_element in f.frame_elements.items():
         if frame_element.mention:
@@ -17,7 +17,7 @@ def add_annotations_from_frame(annot, f, txt_index):
                    'text': frame_element.get_string_of_superficial_form(),
                    'coref': {"start_index": frame_element.get_start_index_of_coref(),
                     "text": frame_element.get_string_of_coref()},
-                   "questions_with_id": []}
+                   "questions": []}
         new_annot['frame_elements'].append(fe_data)
     annot.append(new_annot)
     return annot
